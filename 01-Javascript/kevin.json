@@ -1,0 +1,8 @@
+//JSON (Java Script Object Notacion
+{
+  "nombre":"Kevin",
+  "Edad":12,
+  "Sueldo":12.2,
+  "casado":false,
+  "hijos":null
+}
