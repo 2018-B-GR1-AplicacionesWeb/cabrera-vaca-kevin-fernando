@@ -55,8 +55,12 @@ const appendFile = (nombreArchivo, newTexto) => {return new Promise(
                 if(err){
                     reject(err,newTexto);
                 }else{
-                    resolve(contenidoArchivo,newTexto);
+                    resolve(contenidoLeido,newTexto);
                 }
             })
     }
 )};
+
+appendFile().then(
+
+);
