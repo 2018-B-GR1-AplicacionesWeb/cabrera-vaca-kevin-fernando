@@ -58,7 +58,7 @@ const appendFile = (nombreArchivo, newTexto) => {return new Promise(
                         archivo: nombreArchivo,
                         nuevoTexto: newTexto
                     }
-                    reject(parametros);
+                    reject(parametrosReject);
                 }else{
                     const parametrosSolve = {
                         archivo: nombreArchivo,
