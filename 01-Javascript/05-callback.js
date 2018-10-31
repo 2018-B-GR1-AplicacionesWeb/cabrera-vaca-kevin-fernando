@@ -1,18 +1,102 @@
-const fs = require ('fs');
+const fs = require('fs');
 
-fs.readFile('04-operadores.js','utf-8',(err,data)=> {
-    if (err) {
-        console.error(err);
-        try {
-            throw new Error(err);
-        } catch (e) {
-            console.log(e);
-        }
+const contenidoAAgregar = 'Kevin\n';
+const nombreArchivo = '05-texto.txt';
+
+
+console.log('Inicio');
+
+
+fs.readFile(nombreArchivo,
+    'utf-8',
+    (error, contenidoArchivo) => {  // Callback
+        if (error) {
+            console.error(error);
+            try {
+                throw new Error(error);
+            } catch (e) {
+                console.log(e);
+            }
+            console.log('Extra')
+        } else {
+            // Callback Hell!
+            //muy dificil de entender
+            fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                if (err) throw err;
+                console.log('Archivo completado!');
+                fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                    if (err) throw err;
+                    console.log('Archivo completado!');
+                    fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                        if (err) throw err;
+                        console.log('Archivo completado!');
+                        fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                            if (err) throw err;
+                            console.log('Archivo completado!');
+                            fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                                if (err) throw err;
+                                console.log('Archivo completado!');
+                                fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                                    if (err) throw err;
+                                    console.log('Archivo completado!');
+                                    fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                                        if (err) throw err;
+                                        console.log('Archivo completado!');
+                                        fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                                            if (err) throw err;
+                                            console.log('Archivo completado!');
+                                            fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                                                if (err) throw err;
+                                                console.log('Archivo completado!');
+                                                fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                                                    if (err) throw err;
+                                                    console.log('Archivo completado!');
+                                                    fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                                                        if (err) throw err;
+                                                        console.log('Archivo completado!');
+                                                        fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                                                            if (err) throw err;
+                                                            console.log('Archivo completado!');
+                                                            fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                                                                if (err) throw err;
+                                                                console.log('Archivo completado!');
+                                                                fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                                                                    if (err) throw err;
+                                                                    console.log('Archivo completado!');
+                                                                    fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                                                                        if (err) throw err;
+                                                                        console.log('Archivo completado!');
+                                                                        fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                                                                            if (err) throw err;
+                                                                            console.log('Archivo completado!');
+                                                                            fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                                                                                if (err) throw err;
+                                                                                console.log('Archivo completado!');
+                                                                                fs.writeFile(nombreArchivo, contenidoArchivo + contenidoAAgregar, (err) => {
+                                                                                    if (err) throw err;
+                                                                                    console.log('Archivo completado!');
+
+                                                                                });
+                                                                            });
+                                                                        });
+                                                                    });
+                                                                });
+                                                            });
+                                                        });
+                                                    });
+                                                });
+                                            });
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
 
         }
-        //throw  new Error(err);
-    }
-    else {
-        console.log(data);
-    }
-});
+    });
+
+
+console.log('Fin');
