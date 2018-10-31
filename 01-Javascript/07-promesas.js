@@ -105,3 +105,18 @@ appendFile()
                 )
         }
     );
+
+
+const funcionConCallback = function (parametros,callback) {
+    callback() //...
+};
+
+const funcionConPromesa = function (parametros) {
+    return new Promise(resolve, reject)
+=>
+    {
+        resolve();
+        reject();
+    }
+};
+};
