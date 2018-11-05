@@ -81,5 +81,15 @@ observableDePromesa$
         },
         (error) => {
             console.log(error);
-        }
-    );
+        });
+
+async  function   ejecutarCodigoSyncrono(){
+    console.log('Inicio');
+    try{
+        const resultadoPromesa = await promesita();
+        console.log(resultadoPromesa);
+    }catch (e) {
+        console.log('Error en promesita')
+    }
+    console.log('Fin');
+}
