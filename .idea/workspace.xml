@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="669aa6bf-b7ab-4691-8068-bea102c1988c" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1898860340">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.68" value="1" />
+          <entry key="project.opened" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JSON" value="2" />
+          <entry key="JavaScript" value="17" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="TypeScript" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="TypeScriptServerServiceImpl" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gitignore" value="3" />
+          <entry key="js" value="17" />
+          <entry key="json" value="2" />
+          <entry key="md" value="1" />
+          <entry key="ts" value="3" />
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JSON" value="130" />
+          <entry key="JavaScript" value="4326" />
+          <entry key="Markdown" value="159" />
+          <entry key="PLAIN_TEXT" value="49" />
+          <entry key="TypeScript" value="65" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="gitignore" value="48" />
+          <entry key="js" value="4326" />
+          <entry key="json" value="130" />
+          <entry key="md" value="159" />
+          <entry key="ts" value="65" />
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-Javascript/07-promesas.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="834">
+              <caret line="123" column="2" selection-start-line="123" selection-start-column="2" selection-end-line="123" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-Javascript/06-callback-propio.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="481">
+              <caret line="139" selection-start-line="139" selection-end-line="139" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/02-typescript/01-variables.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="472">
+              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/02-typescript/02-observables.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="93" column="23" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/02-typescript/02-observables.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="15" selection-start-column="15" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/02-typescript/01-variables.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1199">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/02-typescript/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="518">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-Javascript/kevin.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-Javascript/02-funciones.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3145">
+              <caret line="85" column="66" selection-start-line="85" selection-start-column="66" selection-end-line="85" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="package.json" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/01-Javascript/01-variables.js" />
+        <option value="$PROJECT_DIR$/01-Javascript/kevin.json" />
+        <option value="$PROJECT_DIR$/01-Javascript/03-arreglos.js" />
+        <option value="$PROJECT_DIR$/01-Javascript/02-funciones.js" />
+        <option value="$PROJECT_DIR$/01-Javascript/04-operadores.js" />
+        <option value="$PROJECT_DIR$/01-Javascript/05-nodejs/02-calculadora.js" />
+        <option value="$PROJECT_DIR$/01-Javascript/05-nodejs/tiempo/01-tiempo.js" />
+        <option value="$PROJECT_DIR$/01-Javascript/05-nodejs-02/01-util.js" />
+        <option value="$PROJECT_DIR$/01-Javascript/05-nodejs/01-app.js" />
+        <option value="$PROJECT_DIR$/01-Javascript/05-callback.js" />
+        <option value="$PROJECT_DIR$/01-Javascript/05-nodejs/.gitignore" />
+        <option value="$PROJECT_DIR$/01-Javascript/05-nodejs-02/06-callback-propio.js" />
+        <option value="$PROJECT_DIR$/02-typescript/variables.ts" />
+        <option value="$PROJECT_DIR$/02-typescript/01-varibles.ts" />
+        <option value="$PROJECT_DIR$/02-typescript/package.json" />
+        <option value="$PROJECT_DIR$/01-Javascript/07-promesas.js" />
+        <option value="$PROJECT_DIR$/01-Javascript/06-callback-propio.js" />
+        <option value="$PROJECT_DIR$/02-typescript/01-variables.js" />
+        <option value="$PROJECT_DIR$/02-typescript/02-observables.js" />
+        <option value="$PROJECT_DIR$/02-typescript/02-observables.ts" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/02-typescript/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/accepts/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/array-flatten/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/art-template/loader/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/art-template/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/async/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/body-parser/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/bytes/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/colors/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/commander/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/content-disposition/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/content-type/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/cookie-signature/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/cookie/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/depd/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/destroy/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/ee-first/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/encodeurl/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/escape-html/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/etag/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/express/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/finalhandler/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/forwarded/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/fresh/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/http-errors/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/iconv-lite/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/inherits/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/ipaddr.js/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/lodash/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/media-typer/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/merge-descriptors/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/methods/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/mime-db/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/mime-types/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/mime/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/ms/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/negotiator/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/on-finished/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/parseurl/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/path-to-regexp/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/proxy-addr/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/qs/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/range-parser/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/raw-body/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/safe-buffer/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/safer-buffer/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/send/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/serve-static/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/setprototypeof/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/statuses/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/type-is/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/unpipe/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/utils-merge/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/vary/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/xpress/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/xpress/sample/api/package.json" />
+      <path value="$PROJECT_DIR$/01-Javascript/05-nodejs/node_modules/xpress/sample/web/package.json" />
+      <path value="$PROJECT_DIR$/02-typescript/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="106" />
+    <option name="y" value="322" />
+    <option name="width" value="1232" />
+    <option name="height" value="981" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cabrera-vaca-kevin-fernando" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cabrera-vaca-kevin-fernando" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cabrera-vaca-kevin-fernando" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cabrera-vaca-kevin-fernando" type="462c0819:PsiDirectoryNode" />
+              <item name="02-typescript" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.07-promesas.js">
+    <configuration name="01-variables.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="01-variables.js" working-dir="$PROJECT_DIR$/01-Javascript">
+      <method v="2" />
+    </configuration>
+    <configuration name="02-funciones.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="02-funciones.js" working-dir="$PROJECT_DIR$/01-Javascript">
+      <method v="2" />
+    </configuration>
+    <configuration name="03-arreglos.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="03-arreglos.js" working-dir="$PROJECT_DIR$/01-Javascript">
+      <method v="2" />
+    </configuration>
+    <configuration name="07-promesas.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="07-promesas.js" working-dir="$PROJECT_DIR$/01-Javascript">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Node.js.01-variables.js" />
+      <item itemvalue="Node.js.03-arreglos.js" />
+      <item itemvalue="Node.js.02-funciones.js" />
+      <item itemvalue="Node.js.07-promesas.js" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.07-promesas.js" />
+        <item itemvalue="Node.js.02-funciones.js" />
+        <item itemvalue="Node.js.03-arreglos.js" />
+        <item itemvalue="Node.js.01-variables.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="669aa6bf-b7ab-4691-8068-bea102c1988c" name="Default Changelist" comment="" />
+      <created>1538578472654</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1538578472654</updated>
+      <workItem from="1538578475404" duration="1899000" />
+      <workItem from="1539181321421" duration="2963000" />
+      <workItem from="1539612552904" duration="4349000" />
+      <workItem from="1540217322968" duration="1422000" />
+      <workItem from="1540391451568" duration="2898000" />
+      <workItem from="1540821686601" duration="5276000" />
+      <workItem from="1540995060073" duration="1976000" />
+      <workItem from="1541427735481" duration="2334000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="23117000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="106" y="322" width="1232" height="981" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24543947" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3290461" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39974126" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49915683" weight="0.3279743" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50084317" side_tool="true" weight="0.32983193" />
+      <window_info anchor="bottom" id="TypeScript" order="11" weight="0.3290461" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/02-typescript/02-observables.js" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="37">
+            <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Javascript/03-arreglos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="962">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Javascript/01-variables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1406">
+          <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Javascript/04-operadores.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2183">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Javascript/05-callback.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Javascript/05-nodejs-02/06-callback-propio.js" />
+    <entry file="file://$PROJECT_DIR$/01-Javascript/05-texto.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Javascript/05-nodejs/01-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Javascript/05-nodejs/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Javascript/05-nodejs-02/01-util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Javascript/05-nodejs/02-calculadora.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Javascript/kevin.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Javascript/02-funciones.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3145">
+          <caret line="85" column="66" selection-start-line="85" selection-start-column="66" selection-end-line="85" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-typescript/variables.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Javascript/05-nodejs/tiempo/01-tiempo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-typescript/01-variables.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1199">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-typescript/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Javascript/07-promesas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="834">
+          <caret line="123" column="2" selection-start-line="123" selection-start-column="2" selection-end-line="123" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Javascript/06-callback-propio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="139" selection-start-line="139" selection-end-line="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-typescript/01-variables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-typescript/02-observables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-typescript/02-observables.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="93" column="23" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.1853786" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
