@@ -59,10 +59,35 @@ const promesita = () => {
     // @ts-ignore
     return new Promise(
         (resolve, reject) => {
-            reject(':(');
+            resolve(':)');
         }
     )
 };
+
+
+const ejecutarCodigoSyncrono = async () => {
+    console.log('Inicio');
+
+    try {
+        const resultadoPromesita = await promesita();
+        console.log(resultadoPromesita);
+    } catch (e) {
+        console.log('Error en promesita', e)
+    }
+    console.log('Fin');
+};
+
+
+class Usuario{
+
+    private async llamar(){
+        await promesita();
+    }
+}
+
+ejecutarCodigoSyncrono();
+
+/*
 const observableDePromesa$ = rxjs.from(promesita());
 
 observableDePromesa$
@@ -81,15 +106,7 @@ observableDePromesa$
         },
         (error) => {
             console.log(error);
-        });
+        }
+    );
 
-async  function   ejecutarCodigoSyncrono(){
-    console.log('Inicio');
-    try{
-        const resultadoPromesa = await promesita();
-        console.log(resultadoPromesa);
-    }catch (e) {
-        console.log('Error en promesita')
-    }
-    console.log('Fin');
-}
+ */

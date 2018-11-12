@@ -10,37 +10,58 @@ const observableUno$ = rxjs.of([1, 2, 3], 3, 'Hola', 3, true, 3, { nombre: 'Adri
 console.log(observableUno$);
 observableUno$
     .pipe(disctinct(), map((valor) => {
-        console.log('Valor', valor);
-        return {
-            data: valor
-        };
-    }))
+    console.log('Valor', valor);
+    return {
+        data: valor
+    };
+}))
     .pipe()
     .pipe()
     .subscribe((ok) => {
-        console.log('En ok', ok);
-    }, (error) => {
-        console.log(error);
-    }, () => {
-        console.log('Completado');
-    });
+    console.log('En ok', ok);
+}, (error) => {
+    console.log(error);
+}, () => {
+    console.log('Completado');
+});
 const promesita = () => {
     // @ts-ignore
     return new Promise((resolve, reject) => {
-        reject(':(');
+        resolve(':)');
     });
 };
+const ejecutarCodigoSyncrono = async () => {
+    console.log('Inicio');
+    try {
+        const resultadoPromesita = await promesita();
+        console.log(resultadoPromesita);
+    }
+    catch (e) {
+        console.log('Error en promesita', e);
+    }
+    console.log('Fin');
+};
+ejecutarCodigoSyncrono();
+/*
 const observableDePromesa$ = rxjs.from(promesita());
+
 observableDePromesa$
-    .pipe(map((valor) => {
-        return {
-            data: valor
-        };
-    }))
-    .subscribe((objetoFeliz) => {
-        console.log(objetoFeliz);
-    }, (error) => {
-        console.log(error);
-    });
+    .pipe(
+        map(
+            (valor) => {
+                return {
+                    data: valor
+                }
+            }
+        )
+    )
+    .subscribe(
+        (objetoFeliz) => {
+            console.log(objetoFeliz);
+        },
+        (error) => {
+            console.log(error);
+        }
+    );
 
-
+ */ 

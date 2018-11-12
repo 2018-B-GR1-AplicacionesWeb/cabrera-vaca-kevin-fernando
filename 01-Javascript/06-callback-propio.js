@@ -13,10 +13,10 @@ function appendFile(nombreArchivo, contenidoArchivo, callback) {
                     (err) => {
                         if (err) {
                             console.error('Error escribiendo');
-                            callback(undefined,'err');
+                            callback(err);
                         } else {
                             console.log('Archivo creado');
-                            callback( contenidoArchivo);
+                            callback(undefined, contenidoArchivo);
                         }
                     }
                 );
@@ -27,10 +27,10 @@ function appendFile(nombreArchivo, contenidoArchivo, callback) {
                     (err) => {
                         if (err) {
                             console.error('Error escribiendo');
-                            callback(undefined,err)
+                            callback(err);
                         } else {
                             console.log('Archivo creado');
-                            callback( contenidoArchivoLeido + contenidoArchivo);
+                            callback(undefined, contenidoArchivoLeido + contenidoArchivo);
                         }
                     }
                 );
@@ -86,12 +86,12 @@ function ejercicioDeArchivos(arregloStrings, callback) {
                     });
             }
         );
-
-    //omitido for each
-    //hacer de ejercicio con promesa
     /*
         for (let i = 0; i < arregloStrings.length; i++) {
+
+
             ;
+
             fs.writeFile(`${i}-${arregloStrings[i]}.txt`,
                 contenido,
                 (err) => {
@@ -107,13 +107,26 @@ function ejercicioDeArchivos(arregloStrings, callback) {
                     }
                 });
         }
+
         */
 }
 
+const arregloStrings = ['A', 'B', 'C'];
+
+ejercicioDeArchivos(arregloStrings,
+    (arregloRespuestas) => {
+        console.log(arregloRespuestas);
+    });
+
+
+
+
 function ejercicioDeArchivosPromesa(arregloStrings) {
+
     return new Promise(
         (resolve,reject)=>{
             const arregloRespuestas = [];
+
             arregloStrings
                 .forEach(
                     (string, indice) => {
@@ -137,11 +150,21 @@ function ejercicioDeArchivosPromesa(arregloStrings) {
                 );
         }
     );
+
 }
 
-const arregloStrings = ['A', 'B', 'C'];
 
-ejercicioDeArchivos(arregloStrings,
-    (arregloRespuestas) => {
-        console.log(arregloRespuestas);
-    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
