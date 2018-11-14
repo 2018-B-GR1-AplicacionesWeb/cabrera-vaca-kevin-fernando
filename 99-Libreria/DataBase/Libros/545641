@@ -1,0 +1,8 @@
+{
+  "menuPrincipal": "Libros",
+  "accionLibros": "crear",
+  "libroTitulo": "asdsa",
+  "libroISBN": "545641",
+  "libroStock": "5",
+  "libroAvaluo": "6.5"
+}

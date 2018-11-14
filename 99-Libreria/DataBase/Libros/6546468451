@@ -1,0 +1,8 @@
+{
+  "menuPrincipal": "Libros",
+  "accionLibros": "crear",
+  "libroTitulo": "La Casa de los Mueros",
+  "libroISBN": "6546468451",
+  "libroStock": "5",
+  "libroAvaluo": "3.25"
+}

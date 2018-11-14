@@ -89,7 +89,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="1028" />
+          <entry key="JavaScript" value="1188" />
           <entry key="PLAIN_TEXT" value="19" />
           <entry key="TypeScript" value="899" />
         </counts>
@@ -112,7 +112,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="19" />
-          <entry key="js" value="1028" />
+          <entry key="js" value="1188" />
           <entry key="ts" value="899" />
         </counts>
       </usages-collector>
@@ -141,8 +141,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/99-Libreria/Libreria2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="136" column="46" selection-start-line="136" selection-start-column="46" selection-end-line="136" selection-end-column="46" />
+            <state relative-caret-position="1364">
+              <caret line="204" column="55" selection-start-line="204" selection-start-column="55" selection-end-line="204" selection-end-column="55" />
               <folding>
                 <element signature="e#624#840#0" />
                 <element signature="e#851#959#0" />
@@ -153,6 +153,14 @@
                 <element signature="e#1473#1591#0" />
                 <element signature="e#1608#1720#0" />
                 <element signature="e#1737#1853#0" />
+                <element signature="e#2077#2556#0" />
+                <element signature="e#2639#3124#0" />
+                <element signature="e#3201#3665#0" />
+                <element signature="e#3745#4202#0" />
+                <element signature="e#4282#4769#0" />
+                <element signature="e#4854#5345#0" />
+                <element signature="e#5424#5894#0" />
+                <element signature="e#5976#6439#0" />
                 <element signature="n#!!block;n#mkdirpath#0" />
                 <element signature="e#6765#7162#0" />
                 <element signature="e#7227#8326#0" />
@@ -350,23 +358,42 @@
       <path value="$PROJECT_DIR$/node_modules/xpress/sample/web/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="432" />
+    <option name="y" value="-18" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cabrera-vaca-kevin-fernando" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cabrera-vaca-kevin-fernando" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cabrera-vaca-kevin-fernando" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cabrera-vaca-kevin-fernando" type="462c0819:PsiDirectoryNode" />
+              <item name="99-Libreria" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RunDashboard">
@@ -429,18 +456,18 @@
       <workItem from="1541427735481" duration="2334000" />
       <workItem from="1542124884142" duration="1721000" />
       <workItem from="1542197104275" duration="6518000" />
-      <workItem from="1542204102342" duration="728000" />
+      <workItem from="1542204102342" duration="4511000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35406000" />
+    <option name="totallyTimeSpent" value="39189000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="781" height="830" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24462366" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24454726" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -452,7 +479,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49915683" visible="true" weight="0.32808024" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49915683" visible="true" weight="0.3243626" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50084317" side_tool="true" weight="0.32983193" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.3290461" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -629,8 +656,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/99-Libreria/Libreria2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="136" column="46" selection-start-line="136" selection-start-column="46" selection-end-line="136" selection-end-column="46" />
+        <state relative-caret-position="1364">
+          <caret line="204" column="55" selection-start-line="204" selection-start-column="55" selection-end-line="204" selection-end-column="55" />
           <folding>
             <element signature="e#624#840#0" />
             <element signature="e#851#959#0" />
@@ -641,6 +668,14 @@
             <element signature="e#1473#1591#0" />
             <element signature="e#1608#1720#0" />
             <element signature="e#1737#1853#0" />
+            <element signature="e#2077#2556#0" />
+            <element signature="e#2639#3124#0" />
+            <element signature="e#3201#3665#0" />
+            <element signature="e#3745#4202#0" />
+            <element signature="e#4282#4769#0" />
+            <element signature="e#4854#5345#0" />
+            <element signature="e#5424#5894#0" />
+            <element signature="e#5976#6439#0" />
             <element signature="n#!!block;n#mkdirpath#0" />
             <element signature="e#6765#7162#0" />
             <element signature="e#7227#8326#0" />

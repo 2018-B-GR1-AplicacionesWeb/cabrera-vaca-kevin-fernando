@@ -17,7 +17,7 @@ const observe = Observable.create(function(obs) {
         type: 'list',
         name: 'accionLibros',
         message: 'Acción a realizar',
-        choices: [ 'Crear Libro', 'Actualizar Libro', 'Eliminar Libro','Leer Libro','Salir' ],
+        choices: [ 'crear', 'actualizar', 'eliminar','leer','Salir' ],
     });
 
     /*obs.next({
@@ -76,10 +76,10 @@ const observe = Observable.create(function(obs) {
     });
     */
 
-
-
     obs.complete();
 });
+
+
 
 inquirer.prompt(observe).
 then(answers => {
@@ -87,130 +87,136 @@ then(answers => {
    /* if (answers.menuPrincipal == 'Libros'){
         return false;
     }*/
-    if (answers.accion == 'Crear Libro' && answers.menuPrincipal == 'Libros'){
-        mkdirpath(`${"Libros"}`);
-        //string Info
-        const promesaEscritura$ = rxjs.from(promesaEscritura(`${'Libros'}/${answers.libroISBN}`, JSON.stringify(answers, null, '  ') ));
-        promesaEscritura$
-            .subscribe((ok) => {
-                console.log('Creación Exitosa', ok);
-            }, (error) => {
-                console.log('Creación Fallida', error);
-            }, () => {
-                console.log('completado');
-            });
 
-    }
-    else if (answers.accion == 'Actualizar Libro'  && answers.menuPrincipal == 'Libros'){
+    if (answers.menuPrincipal == 'Libros') {
+        if (answers.accionLibros == 'crear') {
+            mkdirpath(`${'DataBase'}/${'Libros'}`);
+            //string Info
+            const respuestasJSON = JSON.stringify(answers, null, '  ');
+            //delete respuestasJSON[1];
+            //delete respuestasJSON.first;
+            const promesaEscritura$ = rxjs.from(promesaEscritura(`${'DataBase'}/${'Libros'}/${answers.libroISBN}`,respuestasJSON));
+            promesaEscritura$
+                .subscribe((ok) => {
+                    console.log('Creación Exitosa', ok);
+                }, (error) => {
+                    console.log('Creación Fallida', error);
+                }, () => {
+                    console.log('completado');
+                });
 
-        const respuestasJSON = JSON.stringify(answers, null, '  ');
+        }
+        else if (answers.accionLibros == 'actualizar') {
 
-        const promesaActualizar$ = rxjs.from(promesaActualizar(`${'Libros'}/${answers.libroISBN}`, respuestasJSON));
-        promesaActualizar$
-            .subscribe((ok) => {
-                console.log('Actualización Exitosa', ok);
+            const respuestasJSON = JSON.stringify(answers, null, '  ');
+            //respuestasJSON.del
 
-            }, (error) => {
-                console.log('Actualización Fallida', error);
-            }, () => {
-                console.log('completado');
+            const promesaActualizar$ = rxjs.from(promesaActualizar(`${'DataBase'}/${'Libros'}/${answers.libroISBN}`, respuestasJSON));
+            promesaActualizar$
+                .subscribe((ok) => {
+                    console.log('Actualización Exitosa', ok);
 
-            });
-    }
+                }, (error) => {
+                    console.log('Actualización Fallida', error);
+                }, () => {
+                    console.log('completado');
 
-    else if (answers.accion == 'Leer Libro' && answers.menuPrincipal == 'Libros'){
-        const respuestasJSON = JSON.stringify(answers, null, '  ');
+                });
+        }
+        else if (answers.accionLibros == 'leer' ) {
+            const respuestasJSON = JSON.stringify(answers, null, '  ');
 
-        const promesaLectura$ = rxjs.from(promesaLectura(`${'Libros'}/${answers.libroISBN}`, respuestasJSON));
-        promesaLectura$
-            .subscribe((ok) => {
-                console.log('Lectura Exitosa', ok);
+            const promesaLectura$ = rxjs.from(promesaLectura(`${'DataBase'}/${'Libros'}/${answers.libroISBN}`, respuestasJSON));
+            promesaLectura$
+                .subscribe((ok) => {
+                    console.log('Lectura Exitosa', ok);
 
-            }, (error) => {
-                console.log('LEctura Fallida', error);
-            }, () => {
-                console.log('completado');
+                }, (error) => {
+                    console.log('LEctura Fallida', error);
+                }, () => {
+                    console.log('completado');
 
-            });
+                });
 
-    }
-    else if (answers.accion == 'Eliminar Libro' && answers.menuPrincipal == 'Libros'){
-        const respuestasJSON = JSON.stringify(answers, null, '  ');
+        }
+        else if (answers.accionLibros == 'eliminar' ) {
+            const respuestasJSON = JSON.stringify(answers, null, '  ');
 
-        const promesaEliminar$ = rxjs.from(promesaEliminar(`${'Libros'}/${answers.libroISBN}`));
-        promesaEliminar$
-            .subscribe((ok) => {
-                console.log('Eliminación Exitosa', ok);
+            const promesaEliminar$ = rxjs.from(promesaEliminar(`${'DataBase'}/${'Libros'}/${answers.libroISBN}`));
+            promesaEliminar$
+                .subscribe((ok) => {
+                    console.log('Eliminación Exitosa', ok);
 
-            }, (error) => {
-                console.log('Eliminación Fallida', error);
-            }, () => {
-                console.log('completado');
-            });
-    }
-
-    else if (answers.accion == 'crear' && answers.menuPrincipal == 'Clientes'){
-        mkdirpath(`${"Clientes"}`);
-        //string Info
-        const promesaEscritura$ = rxjs.from(promesaEscritura(`${'clientes'}/${answers.clienteCedula}`, JSON.stringify(answers, null, '  ') ));
-        promesaEscritura$
-            .subscribe((ok) => {
-                console.log('Creación Exitosa', ok);
-            }, (error) => {
-                console.log('Creación Fallida', error);
-            }, () => {
-                console.log('completado');
-            });
-
-    }
-    else if (answers.accion == 'actualizar'  && answers.menuPrincipal == 'Clientes'){
-
-        const respuestasJSON = JSON.stringify(answers, null, '  ');
-
-        const promesaActualizar$ = rxjs.from(promesaActualizar(`${'Clientes'}/${answers.clienteCedula}`, respuestasJSON));
-        promesaActualizar$
-            .subscribe((ok) => {
-                console.log('Actualización Exitosa', ok);
-
-            }, (error) => {
-                console.log('Actualización Fallida', error);
-            }, () => {
-                console.log('completado');
-
-            });
+                }, (error) => {
+                    console.log('Eliminación Fallida', error);
+                }, () => {
+                    console.log('completado');
+                });
+        }
     }
 
-    else if (answers.accion == 'leer' && answers.menuPrincipal == 'Clientes'){
-        const respuestasJSON = JSON.stringify(answers, null, '  ');
+    else if (answers.menuPrincipal == 'Clientes') {
+        if (answers.accionClientes == 'crear') {
+            mkdirpath(`${'DataBase'}/${"Clientes"}`);
+            //string Info
+            const promesaEscritura$ = rxjs.from(promesaEscritura(`${'DataBase'}/${'Clientes'}/${answers.clienteCedula}`, JSON.stringify(answers, null, '  ')));
+            promesaEscritura$
+                .subscribe((ok) => {
+                    console.log('Creación Exitosa', ok);
+                }, (error) => {
+                    console.log('Creación Fallida', error);
+                }, () => {
+                    console.log('completado');
+                });
 
-        const promesaLectura$ = rxjs.from(promesaLectura(`${'Clientes'}/${answers.clienteCedula}`, respuestasJSON));
-        promesaLectura$
-            .subscribe((ok) => {
-                console.log('Lectura Exitosa', ok);
+        }
+        else if (answers.accionClientes == 'actualizar') {
 
-            }, (error) => {
-                console.log('LEctura Fallida', error);
-            }, () => {
-                console.log('completado');
+            const respuestasJSON = JSON.stringify(answers, null, '  ');
 
-            });
+            const promesaActualizar$ = rxjs.from(promesaActualizar(`${'DataBase'}/${'Clientes'}/${answers.clienteCedula}`, respuestasJSON));
+            promesaActualizar$
+                .subscribe((ok) => {
+                    console.log('Actualización Exitosa', ok);
 
+                }, (error) => {
+                    console.log('Actualización Fallida', error);
+                }, () => {
+                    console.log('completado');
+
+                });
+        }
+        else if (answers.accionClientes == 'leer') {
+            const respuestasJSON = JSON.stringify(answers, null, '  ');
+
+            const promesaLectura$ = rxjs.from(promesaLectura(`${'DataBase'}/${'Clientes'}/${answers.clienteCedula}`, respuestasJSON));
+            promesaLectura$
+                .subscribe((ok) => {
+                    console.log('Lectura Exitosa', ok);
+
+                }, (error) => {
+                    console.log('LEctura Fallida', error);
+                }, () => {
+                    console.log('completado');
+
+                });
+
+        }
+        else if (answers.accionClientes == 'eliminar') {
+            const respuestasJSON = JSON.stringify(answers, null, '  ');
+
+            const promesaEliminar$ = rxjs.from(promesaEliminar(`${'DataBase'}/${'Clientes'}/${answers.clienteCedula}`));
+            promesaEliminar$
+                .subscribe((ok) => {
+                    console.log('Eliminación Exitosa', ok);
+
+                }, (error) => {
+                    console.log('Eliminación Fallida', error);
+                }, () => {
+                    console.log('completado');
+                });
+        }
     }
-    else if (answers.accion == 'eliminar' && answers.menuPrincipal == 'Clientes'){
-        const respuestasJSON = JSON.stringify(answers, null, '  ');
-
-        const promesaEliminar$ = rxjs.from(promesaEliminar(`${'Clientes'}/${answers.clienteCedula}`));
-        promesaEliminar$
-            .subscribe((ok) => {
-                console.log('Eliminación Exitosa', ok);
-
-            }, (error) => {
-                console.log('Eliminación Fallida', error);
-            }, () => {
-                console.log('completado');
-            });
-    }
-
 });
 
 
