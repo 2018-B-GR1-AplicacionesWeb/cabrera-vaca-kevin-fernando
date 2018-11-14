@@ -75,38 +75,45 @@
     <session id="1395189891">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="TypeScriptServerServiceImpl" value="1" />
+          <entry key="TypeScriptServerServiceImpl" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="12" />
-          <entry key="TypeScript" value="270" />
+          <entry key="JavaScript" value="1028" />
+          <entry key="PLAIN_TEXT" value="19" />
+          <entry key="TypeScript" value="899" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="JavaScript" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="TypeScript" value="1" />
+          <entry key="TypeScript" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="ts" value="1" />
+          <entry key="js" value="1" />
+          <entry key="ts" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="gitignore" value="12" />
-          <entry key="ts" value="270" />
+          <entry key="gitignore" value="19" />
+          <entry key="js" value="1028" />
+          <entry key="ts" value="899" />
         </counts>
       </usages-collector>
     </session>
@@ -114,19 +121,44 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/99-Libreria/Libreria.ts">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/99-Libreria/Libreria2.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/99-Libreria/Libreria2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" selection-start-column="12" selection-end-column="12" />
+            <state relative-caret-position="527">
+              <caret line="136" column="46" selection-start-line="136" selection-start-column="46" selection-end-line="136" selection-end-column="46" />
+              <folding>
+                <element signature="e#624#840#0" />
+                <element signature="e#851#959#0" />
+                <element signature="e#975#1079#0" />
+                <element signature="e#1096#1203#0" />
+                <element signature="e#1219#1327#0" />
+                <element signature="e#1344#1456#0" />
+                <element signature="e#1473#1591#0" />
+                <element signature="e#1608#1720#0" />
+                <element signature="e#1737#1853#0" />
+                <element signature="n#!!block;n#mkdirpath#0" />
+                <element signature="e#6765#7162#0" />
+                <element signature="e#7227#8326#0" />
+                <element signature="e#8370#8775#0" />
+                <element signature="e#8819#9291#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,10 +169,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="JavaScript File" />
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>observe</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -169,8 +206,9 @@
         <option value="$PROJECT_DIR$/02-typescript/01-variables.js" />
         <option value="$PROJECT_DIR$/02-typescript/02-observables.js" />
         <option value="$PROJECT_DIR$/02-typescript/02-observables.ts" />
-        <option value="$PROJECT_DIR$/99-Libreria/Libreria.ts" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/99-Libreria/Libreria.ts" />
+        <option value="$PROJECT_DIR$/99-Libreria/Libreria2.js" />
       </list>
     </option>
   </component>
@@ -184,36 +222,144 @@
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/02-typescript/package.json" />
       <path value="$PROJECT_DIR$/03-http/videos/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/accepts/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/ansi-escapes/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/ansi-regex/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/ansi-styles/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/array-flatten/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/art-template/loader/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/art-template/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/async/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/body-parser/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/body-parser/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/bytes/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/chalk/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/chardet/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/cli-cursor/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/cli-width/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/color-convert/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/color-name/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/colors/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/commander/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/content-disposition/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/content-type/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/cookie-signature/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/cookie/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/corser/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/depd/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/destroy/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/ecstatic/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/ee-first/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/encodeurl/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/escape-html/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/escape-string-regexp/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/etag/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/eventemitter3/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/express/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/express/node_modules/qs/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/express/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/external-editor/node_modules/iconv-lite/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/external-editor/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/figures/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/finalhandler/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/finalhandler/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/follow-redirects/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/forwarded/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/fresh/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/has-flag/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/he/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/http-errors/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/http-proxy/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/http-server/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/iconv-lite/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/inherits/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/inquirer/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/ipaddr.js/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/is-fullwidth-code-point/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/is-promise/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/lodash/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/media-typer/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/merge-descriptors/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/methods/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/mime-db/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/mime-types/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/mime/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/mimic-fn/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/minimist/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/mkdirp/node_modules/minimist/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/mkdirp/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/ms/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/mute-stream/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/negotiator/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/on-finished/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/onetime/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/opener/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/optimist/node_modules/minimist/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/optimist/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/os-tmpdir/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/parseurl/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/path-to-regexp/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/portfinder/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/portfinder/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/proxy-addr/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/qs/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/range-parser/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/raw-body/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/requires-port/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/restore-cursor/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/run-async/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/rxjs/ajax/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/rxjs/internal-compatibility/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/rxjs/operators/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/rxjs/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/rxjs/src/ajax/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/rxjs/src/internal-compatibility/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/rxjs/src/operators/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/rxjs/src/testing/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/rxjs/src/webSocket/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/rxjs/testing/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/rxjs/webSocket/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/safe-buffer/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/safer-buffer/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/send/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/send/node_modules/mime/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/send/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/serve-static/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/setprototypeof/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/signal-exit/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/statuses/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/string-width/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/strip-ansi/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/supports-color/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/through/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/tmp/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/tslib/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/type-is/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/union/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/unpipe/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/url-join/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/utils-merge/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/vary/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/wordwrap/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/xpress/node_modules/colors/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/xpress/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/xpress/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/xpress/sample/api/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/xpress/sample/web/package.json" />
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="955" />
-    <option name="width" value="975" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="cabrera-vaca-kevin-fernando" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cabrera-vaca-kevin-fernando" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cabrera-vaca-kevin-fernando" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cabrera-vaca-kevin-fernando" type="462c0819:PsiDirectoryNode" />
-              <item name="99-Libreria" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -282,17 +428,19 @@
       <workItem from="1540995060073" duration="1976000" />
       <workItem from="1541427735481" duration="2334000" />
       <workItem from="1542124884142" duration="1721000" />
+      <workItem from="1542197104275" duration="6518000" />
+      <workItem from="1542204102342" duration="728000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24838000" />
+    <option name="totallyTimeSpent" value="35406000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="764" y="0" width="780" height="832" extended-state="0" />
+    <frame x="-6" y="0" width="781" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24495289" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24462366" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -304,7 +452,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49915683" weight="0.32714286" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49915683" visible="true" weight="0.32808024" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50084317" side_tool="true" weight="0.32983193" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.3290461" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -403,9 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -423,9 +568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="46" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -471,17 +613,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/99-Libreria/Libreria.ts">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/99-Libreria/Libreria2.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        <state relative-caret-position="782">
+          <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/99-Libreria/Libreria2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="136" column="46" selection-start-line="136" selection-start-column="46" selection-end-line="136" selection-end-column="46" />
+          <folding>
+            <element signature="e#624#840#0" />
+            <element signature="e#851#959#0" />
+            <element signature="e#975#1079#0" />
+            <element signature="e#1096#1203#0" />
+            <element signature="e#1219#1327#0" />
+            <element signature="e#1344#1456#0" />
+            <element signature="e#1473#1591#0" />
+            <element signature="e#1608#1720#0" />
+            <element signature="e#1737#1853#0" />
+            <element signature="n#!!block;n#mkdirpath#0" />
+            <element signature="e#6765#7162#0" />
+            <element signature="e#7227#8326#0" />
+            <element signature="e#8370#8775#0" />
+            <element signature="e#8819#9291#0" />
+          </folding>
         </state>
       </provider>
     </entry>
