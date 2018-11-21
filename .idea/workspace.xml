@@ -75,7 +75,7 @@
     <session id="1395189891">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.20" value="1" />
@@ -358,7 +358,7 @@
       <path value="$PROJECT_DIR$/node_modules/xpress/sample/web/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="432" />
     <option name="y" value="-18" />
     <option name="width" value="978" />
@@ -456,16 +456,15 @@
       <workItem from="1541427735481" duration="2334000" />
       <workItem from="1542124884142" duration="1721000" />
       <workItem from="1542197104275" duration="6518000" />
-      <workItem from="1542204102342" duration="4511000" />
+      <workItem from="1542204102342" duration="5108000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39189000" />
+    <option name="totallyTimeSpent" value="39786000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24454726" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
