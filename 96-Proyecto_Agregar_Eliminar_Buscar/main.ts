@@ -1,8 +1,15 @@
+//Rapido y Sucio
+//declare var require: any
+//"Limpio"
+//npm install @types/node --save-dev
+//npm i inquirer
 const inquirer = require('inquirer');
 const fs = require('fs');
+//npm i rxjs
 const rxjs = require('rxjs');
 const mergeMap = require('rxjs/operators').mergeMap;
 const map = require('rxjs/operators').map;
+declare var Promise;
 
 const preguntaMenu = {
     type: 'list',
@@ -99,6 +106,8 @@ function main() {
                     switch (respuesta.respuestaUsuario.opcionMenu) {
                         case 'Crear':
                             const usuario = respuesta.usuario;
+                            console.log(respuesta.respuestaBDD.bdd.usuarios);
+
                             respuesta.respuestaBDD.bdd.usuarios.push(usuario)
                             return respuesta;
 
@@ -198,7 +207,6 @@ function preguntarMenu() {
 
 
 function leerBDD(): Promise<RespuestaBDD> {
-    // @ts-ignore
     return new Promise(
         (resolve) => {
             fs.readFile(
@@ -225,7 +233,6 @@ function leerBDD(): Promise<RespuestaBDD> {
 
 function crearBDD() {
     const contenidoInicialBDD = '{"usuarios":[],"mascotas":[]}';
-    // @ts-ignore
     return new Promise(
         (resolve, reject) => {
             fs.writeFile(
@@ -252,7 +259,6 @@ function crearBDD() {
 }
 
 function guardarBase(bdd: BaseDeDatos) {
-    // @ts-ignore
     return new Promise(
         (resolve, reject) => {
             fs.writeFile(
@@ -277,7 +283,6 @@ function guardarBase(bdd: BaseDeDatos) {
 
 
 function anadirUsuario(usuario) {
-    // @ts-ignore
     return new Promise(
         (resolve, reject) => {
             fs.readFile('bdd.json', 'utf-8',
@@ -286,6 +291,7 @@ function anadirUsuario(usuario) {
                         reject({mensaje: 'Error leyendo'});
                     } else {
                         const bdd = JSON.parse(contenido);
+
 
 
                         bdd.usuarios.push(usuario);
@@ -309,7 +315,6 @@ function anadirUsuario(usuario) {
 }
 
 function editarUsuario(nombre, nuevoNombre) {
-    // @ts-ignore
     return new Promise(
         (resolve, reject) => {
             fs.readFile('bdd.json', 'utf-8',
@@ -348,7 +353,6 @@ function editarUsuario(nombre, nuevoNombre) {
 }
 
 function buscarUsuarioPorNombre(nombre) {
-    // @ts-ignore
     return new Promise(
         (resolve, reject) => {
             fs.readFile('bdd.json', 'utf-8',
@@ -377,7 +381,7 @@ main();
 
 interface RespuestaBDD {
     mensaje: string,
-    bdd: BaseDeDatos
+        bdd: BaseDeDatos
 }
 
 interface BaseDeDatos {
@@ -402,6 +406,6 @@ interface OpcionesPregunta {
 
 interface RespuestaUsuario {
     respuestaUsuario: OpcionesPregunta,
-    respuestaBDD: RespuestaBDD
+        respuestaBDD: RespuestaBDD
     usuario?: Usuario
 }

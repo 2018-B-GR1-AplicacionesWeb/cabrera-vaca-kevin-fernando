@@ -1,5 +1,11 @@
+//Rapido y Sucio
+//declare var require: any
+//"Limpio"
+//npm install @types/node --save-dev
+//npm i inquirer
 var inquirer = require('inquirer');
 var fs = require('fs');
+//npm i rxjs
 var rxjs = require('rxjs');
 var mergeMap = require('rxjs/operators').mergeMap;
 var map = require('rxjs/operators').map;
@@ -76,6 +82,7 @@ function main() {
         switch (respuesta.respuestaUsuario.opcionMenu) {
             case 'Crear':
                 var usuario = respuesta.usuario;
+                console.log(respuesta.respuestaBDD.bdd.usuarios);
                 respuesta.respuestaBDD.bdd.usuarios.push(usuario);
                 return respuesta;
         }
@@ -152,7 +159,6 @@ function preguntarMenu() {
     return rxjs.from(inquirer.prompt(preguntaMenu));
 }
 function leerBDD() {
-    // @ts-ignore
     return new Promise(function (resolve) {
         fs.readFile('bdd.json', 'utf-8', function (error, contenidoLeido) {
             if (error) {
@@ -172,7 +178,6 @@ function leerBDD() {
 }
 function crearBDD() {
     var contenidoInicialBDD = '{"usuarios":[],"mascotas":[]}';
-    // @ts-ignore
     return new Promise(function (resolve, reject) {
         fs.writeFile('bdd.json', contenidoInicialBDD, function (err) {
             if (err) {
@@ -191,7 +196,6 @@ function crearBDD() {
     });
 }
 function guardarBase(bdd) {
-    // @ts-ignore
     return new Promise(function (resolve, reject) {
         fs.writeFile('bdd.json', JSON.stringify(bdd), function (err) {
             if (err) {
@@ -209,7 +213,6 @@ function guardarBase(bdd) {
     });
 }
 function anadirUsuario(usuario) {
-    // @ts-ignore
     return new Promise(function (resolve, reject) {
         fs.readFile('bdd.json', 'utf-8', function (err, contenido) {
             if (err) {
@@ -231,7 +234,6 @@ function anadirUsuario(usuario) {
     });
 }
 function editarUsuario(nombre, nuevoNombre) {
-    // @ts-ignore
     return new Promise(function (resolve, reject) {
         fs.readFile('bdd.json', 'utf-8', function (err, contenido) {
             if (err) {
@@ -257,7 +259,6 @@ function editarUsuario(nombre, nuevoNombre) {
     });
 }
 function buscarUsuarioPorNombre(nombre) {
-    // @ts-ignore
     return new Promise(function (resolve, reject) {
         fs.readFile('bdd.json', 'utf-8', function (err, contenido) {
             if (err) {

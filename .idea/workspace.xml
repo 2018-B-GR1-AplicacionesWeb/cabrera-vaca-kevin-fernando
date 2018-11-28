@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="669aa6bf-b7ab-4691-8068-bea102c1988c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -75,139 +80,72 @@
     <session id="1395189891">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.20" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="TypeScriptServerServiceImpl" value="4" />
+          <entry key="TypeScriptServerServiceImpl" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="1188" />
+          <entry key="JSON" value="4" />
+          <entry key="JavaScript" value="1380" />
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="TypeScript" value="899" />
+          <entry key="TypeScript" value="2613" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="2" />
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="TypeScript" value="3" />
+          <entry key="JSON" value="7" />
+          <entry key="JavaScript" value="6" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="TypeScript" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gitignore" value="2" />
-          <entry key="js" value="2" />
-          <entry key="json" value="4" />
-          <entry key="ts" value="3" />
+          <entry key="gitignore" value="4" />
+          <entry key="js" value="6" />
+          <entry key="json" value="7" />
+          <entry key="ts" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="19" />
-          <entry key="js" value="1188" />
-          <entry key="ts" value="899" />
+          <entry key="js" value="1380" />
+          <entry key="json" value="4" />
+          <entry key="ts" value="2613" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/99-Libreria/Libreria2.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/99-Libreria/Libreria2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="204" column="55" selection-start-line="204" selection-start-column="55" selection-end-line="204" selection-end-column="55" />
-              <folding>
-                <element signature="n#!!block;n#mkdirpath#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03-http/videos/nest-cli.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/98-proyecto/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" selection-start-column="12" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/98-proyecto/bdd.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/98-proyecto/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="270" column="7" selection-start-line="270" selection-start-column="7" selection-end-line="270" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/98-proyecto/main.ts">
+        <entry file="file://$PROJECT_DIR$/97-Proyecto_Libreria/main.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/98-proyecto/package-lock.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="243" column="1" selection-start-line="243" selection-start-column="1" selection-end-line="243" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/98-proyecto/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="3366">
+              <caret line="273" selection-start-line="273" selection-end-line="273" />
+              <folding>
+                <element signature="n#!!block;n#inicializarBDD#0" />
+                <element signature="n#!!block;n#guardarBDD#0" />
+                <element signature="n#!!block;n#Usuario#0" />
+                <element signature="n#!!block;n#Libro#0" />
+                <element signature="n#!!block;n#OpcionesPregunta#0" />
+                <element signature="n#!!block;n#OpcionesPregunta#1" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -218,8 +156,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="TypeScript File" />
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -227,6 +165,9 @@
     <findStrings>
       <find>observe</find>
     </findStrings>
+    <dirStrings>
+      <dir>C:\Users\Kevin Cabrera\Documents\GitHub\cabrera-vaca-kevin-fernando</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -261,9 +202,18 @@
         <option value="$PROJECT_DIR$/98-proyecto/.gitignore" />
         <option value="$PROJECT_DIR$/98-proyecto/bdd.json" />
         <option value="$PROJECT_DIR$/98-proyecto/main.js" />
-        <option value="$PROJECT_DIR$/98-proyecto/main.ts" />
         <option value="$PROJECT_DIR$/98-proyecto/package-lock.json" />
         <option value="$PROJECT_DIR$/98-proyecto/package.json" />
+        <option value="$PROJECT_DIR$/98-proyecto/main.ts" />
+        <option value="$PROJECT_DIR$/97-Proyecto/96-Proyecto_Agregar_Eliminar_Buscar/main.js" />
+        <option value="$PROJECT_DIR$/96-Proyecto_Agregar_Eliminar_Buscar/main.js" />
+        <option value="$PROJECT_DIR$/96-Proyecto_Agregar_Eliminar_Buscar/main.ts" />
+        <option value="$PROJECT_DIR$/97-Proyecto/main.ts" />
+        <option value="$PROJECT_DIR$/97-Proyecto_Libreria/bdd.json" />
+        <option value="$PROJECT_DIR$/97-Proyecto_Libreria/main.js" />
+        <option value="$PROJECT_DIR$/97-Proyecto_Libreria/Prueba.js" />
+        <option value="$PROJECT_DIR$/97-Proyecto_Libreria/Pruebas.ts" />
+        <option value="$PROJECT_DIR$/97-Proyecto_Libreria/main.ts" />
       </list>
     </option>
   </component>
@@ -272,6 +222,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/98-proyecto/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
@@ -300,6 +253,7 @@
       <path value="$PROJECT_DIR$/node_modules/commander/package.json" />
       <path value="$PROJECT_DIR$/node_modules/content-disposition/package.json" />
       <path value="$PROJECT_DIR$/node_modules/content-type/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/cookie-parser/package.json" />
       <path value="$PROJECT_DIR$/node_modules/cookie-signature/package.json" />
       <path value="$PROJECT_DIR$/node_modules/cookie/package.json" />
       <path value="$PROJECT_DIR$/node_modules/corser/package.json" />
@@ -407,13 +361,12 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="428" />
-    <option name="y" value="158" />
-    <option name="width" value="979" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -424,11 +377,38 @@
               <item name="cabrera-vaca-kevin-fernando" type="b2602c69:ProjectViewProjectNode" />
               <item name="cabrera-vaca-kevin-fernando" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="cabrera-vaca-kevin-fernando" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cabrera-vaca-kevin-fernando" type="462c0819:PsiDirectoryNode" />
+              <item name="96-Proyecto_Agregar_Eliminar_Buscar" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="cabrera-vaca-kevin-fernando" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="cabrera-vaca-kevin-fernando" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="96-Proyecto_Agregar_Eliminar_Buscar" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="cabrera-vaca-kevin-fernando" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="97-Proyecto_Libreria" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -436,8 +416,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kevin Cabrera\Documents\GitHub\cabrera-vaca-kevin-fernando" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -451,7 +437,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.07-promesas.js">
+  <component name="RunManager" selected="Node.js.main.js">
     <configuration name="01-variables.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="01-variables.js" working-dir="$PROJECT_DIR$/01-Javascript">
       <method v="2" />
     </configuration>
@@ -464,17 +450,19 @@
     <configuration name="07-promesas.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="07-promesas.js" working-dir="$PROJECT_DIR$/01-Javascript">
       <method v="2" />
     </configuration>
+    <configuration name="main.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="main.js" working-dir="$PROJECT_DIR$/97-Proyecto_Libreria">
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Node.js.01-variables.js" />
-      <item itemvalue="Node.js.03-arreglos.js" />
       <item itemvalue="Node.js.02-funciones.js" />
+      <item itemvalue="Node.js.03-arreglos.js" />
       <item itemvalue="Node.js.07-promesas.js" />
+      <item itemvalue="Node.js.main.js" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.07-promesas.js" />
-        <item itemvalue="Node.js.02-funciones.js" />
-        <item itemvalue="Node.js.03-arreglos.js" />
+        <item itemvalue="Node.js.main.js" />
         <item itemvalue="Node.js.01-variables.js" />
       </list>
     </recent_temporary>
@@ -501,18 +489,59 @@
       <workItem from="1542197104275" duration="6518000" />
       <workItem from="1542204102342" duration="5108000" />
       <workItem from="1542809196522" duration="1645000" />
+      <workItem from="1543398341648" duration="1844000" />
+      <workItem from="1543401996650" duration="1445000" />
+      <workItem from="1543403561980" duration="9930000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41431000" />
+    <option name="totallyTimeSpent" value="54650000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24454726" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14011897" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39974126" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49915683" weight="0.3186969" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50084317" side_tool="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32719547" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.24454726" />
+      <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3290461" />
@@ -522,19 +551,25 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49915683" visible="true" weight="0.3243626" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49915683" visible="true" weight="0.3233618" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50084317" side_tool="true" weight="0.32983193" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.3290461" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="1" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
     <option name="exactExcludedFiles">
       <list>
+        <option value="$PROJECT_DIR$/96-Proyecto_Agregar_Eliminar_Buscar/main.js" />
         <option value="$PROJECT_DIR$/02-typescript/02-observables.js" />
+        <option value="$PROJECT_DIR$/97-Proyecto_Libreria/main.js" />
+        <option value="$PROJECT_DIR$/97-Proyecto_Libreria/Pruebas.js" />
       </list>
     </option>
   </component>
@@ -680,39 +715,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/99-Libreria/Libreria2.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
+        <state relative-caret-position="389">
           <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/99-Libreria/Libreria2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
+        <state relative-caret-position="389">
           <caret line="204" column="55" selection-start-line="204" selection-start-column="55" selection-end-line="204" selection-end-column="55" />
-          <folding>
-            <element signature="n#!!block;n#mkdirpath#0" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/03-http/videos/nest-cli.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/98-proyecto/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/98-proyecto/bdd.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -723,15 +741,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/98-proyecto/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="270" column="7" selection-start-line="270" selection-start-column="7" selection-end-line="270" selection-end-column="7" />
+        <state relative-caret-position="4709">
+          <caret line="277" selection-start-line="277" selection-end-line="277" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/98-proyecto/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3536">
+          <caret line="208" column="21" selection-start-line="208" selection-start-column="21" selection-end-line="208" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/97-Proyecto_Libreria/Prueba.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3332">
+          <caret line="196" column="40" selection-start-line="196" selection-start-column="40" selection-end-line="196" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/96-Proyecto_Agregar_Eliminar_Buscar/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1428" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/97-Proyecto_Libreria/bdd.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/97-Proyecto_Libreria/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="169" selection-start-line="169" selection-end-line="169" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/98-proyecto/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/98-proyecto/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="243" column="1" selection-start-line="243" selection-start-column="1" selection-end-line="243" selection-end-column="1" />
+        <state relative-caret-position="381">
+          <caret line="244" selection-start-line="244" selection-end-line="244" />
         </state>
       </provider>
     </entry>
@@ -742,10 +813,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/98-proyecto/main.ts">
+    <entry file="file://$PROJECT_DIR$/97-Proyecto_Libreria/Pruebas.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state relative-caret-position="2788">
+          <caret line="164" column="23" lean-forward="true" selection-start-line="164" selection-start-column="23" selection-end-line="164" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/97-Proyecto_Libreria/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3366">
+          <caret line="273" selection-start-line="273" selection-end-line="273" />
+          <folding>
+            <element signature="n#!!block;n#inicializarBDD#0" />
+            <element signature="n#!!block;n#guardarBDD#0" />
+            <element signature="n#!!block;n#Usuario#0" />
+            <element signature="n#!!block;n#Libro#0" />
+            <element signature="n#!!block;n#OpcionesPregunta#0" />
+            <element signature="n#!!block;n#OpcionesPregunta#1" />
+          </folding>
         </state>
       </provider>
     </entry>
