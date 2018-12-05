@@ -5,55 +5,91 @@ const mergeMap = require('rxjs/operators').mergeMap;
 const map = require('rxjs/operators').map;
 declare var Promise;
 
-const categoriaLibros=['Drama', 'Ficcion','Salud & Bienestar', 'Humor','Historia','Educacion','Otros'];
+const preguntaMenu = {
+    type: 'list',
+    name: 'opcionMenu',
+    message: 'Que quieres hacer',
+    choices: [
+        'Crear',
+        'Borrar',
+        'Buscar',
+        'Actualizar',
+        'Agregar Categoria'
+    ]
+};
 
-
-const preguntaMenuPrincipal = { type: 'list', name: 'opcionMenuPrincipal', message: 'Elige una opción:', choices: ['Libros', 'Clientes', 'Salir',] };
-const preguntaMenuSecundario = { type: 'list',  name: 'opcionMenuSecundario',  message: 'Elige una opción:', choices: ['Crear', 'Buscar', 'Actualizar', 'Borrar',]};
-
-const preguntasBuscarCliente = { type: 'input', name: 'idCliente', message: 'Ingrese el número de cedula del Cliente: ' };
-const preguntasBuscarLibro = { type: 'input', name: 'idLibro', message: 'Ingrese el número de ISBN: ' };
-
-const preguntasEliminarCliente = { type: 'input', name: 'idCliente', message: 'Ingrese el número de cedula del Cliente a eliminar: ' };
-const preguntasEliminarLibro = { type: 'input', name: 'idLibro', message: 'Ingrese el ISBN del Libro a eliminar: ' };
-
-const preguntasActualizarCliente = { type: 'input', name: 'idCliente', message: 'Ingrese el número de motor del auto a actualizar: ' };
-const preguntasActualizarLibro = { type: 'input', name: 'idLibro', message: 'Ingrese el ISBN del Libro a actualizar: ' };
-
-var preguntasIngresarCliente = [
-    { type: 'input', name: 'idCliente', message: 'Ingrese el numero de la cedula del Cliente: ' },
-    { type: 'input', name: 'nombreCliente', message: 'Ingrese el nombre del Cliente: ' },
-    { type: 'input', name: 'correoCliente', message: 'Ingrese el correo electronico: ' }
-];
-var preguntasIngresarLibro = [
-    { type: 'input', name: 'idLibro', message: 'Ingrese el ISBN del Libro: ' },
-    { type: 'input', name: 'tituloLibro', message: 'Ingrese el titulo del Libro' },
-    { type: 'list', name: 'categoriaLibro', message: 'Selecciome la categoria: ', choices: categoriaLibros },
-    { type: 'input', name: 'stockLibro', message: 'Ingrese el stock del Libro' },
-    { type: 'input', name: 'avaluoLibro', message: 'Ingrese el avaluo del Libro: ' }
+const preguntaBuscarLibro = [
+    {
+        type: 'input',
+        name: 'idLibro',
+        message: 'Ingrese el ISB den Libro',
+    }
 ];
 
-var preguntasEditarCliente = [
-    { type: 'input', name: 'nombreCliente', message: 'Ingrese el nuevo nombre del Cliente' },
-    { type: 'input', name: 'stockLibro', message: 'Ingrese el nuevo correo electronico del Cliente' },
+const preguntaLibro = [
+    {
+        type: 'input',
+        name: 'ISBN',
+        message: 'Cual es el ISBN del libro?'
+    },
+    {
+        type: 'input',
+        name: 'titulo',
+        message: 'Cual es el titulo del Libro'
+    },
+    {
+        type: 'input',
+        name: 'autor',
+        message: 'Cual es el autor del Libro?'
+    },
+    {
+        type: 'input',
+        name: 'categoria',
+        message: 'Cual es la categoria del Libro?'
+    },
 ];
-var preguntasEditarLibro = [
-    { type: 'input', name: 'tituloLibro', message: 'Ingrese el nuevo titulo del Libro' },
-    { type: 'input', name: 'stockLibro', message: 'Ingrese el nuevo stock del Libro' },
+const preguntaCategoria = [
+    {
+        type: 'input',
+        name: 'idCategoria',
+        message: 'Cual es el id de la categoria?'
+    },
+    {
+        type: 'input',
+        name: 'nombreCategoria',
+        message: 'Cual es el nombre de la categoria?'
+    },
+
+
+];
+
+const preguntaEdicionLibro = [
+    {
+        type: 'input',
+        name: 'tituloLibro',
+        message: 'Cual es el nuevo titulo del Libro?'
+    },
+    {
+        type: 'input',
+        name: 'autorLibro',
+        message: 'Cual es el nuevo autor del Libro?'
+    },
 ];
 
 
-function inicializarBDD() {
+function inicialiarBDD() {
+
     return new Promise(
         (resolve, reject) => {
             fs.readFile(
                 'bdd.json',
                 'utf-8',
-                (error, contenidoArchivo) => { // CALLBACK
+                (error, contenidoArchivo) => {
                     if (error) {
+
                         fs.writeFile(
                             'bdd.json',
-                            '{"Libros":[],"Clientes":[]}',
+                            '{"libros":[],"categorias":[]}',
                             (error) => {
                                 if (error) {
                                     reject({
@@ -63,7 +99,7 @@ function inicializarBDD() {
                                 } else {
                                     resolve({
                                         mensaje: 'BDD leida',
-                                        bdd: JSON.parse('{"usuarios":[],"facultades":[]}')
+                                        bdd: JSON.parse('{"libros":[],"categorias":[]}')
                                     })
                                 }
 
@@ -82,6 +118,37 @@ function inicializarBDD() {
     );
 
 }
+
+async function main() {
+
+    const respuestaBDD$ = rxjs.from(inicialiarBDD());
+
+    respuestaBDD$
+        .pipe(
+            preguntarOpcionesMenu(),
+            opcionesRespuesta(),
+            ejecutarAcccion(),
+            guardarBaseDeDatos()
+        )
+        .subscribe(
+            (data) => {
+                //
+                console.log(data);
+            },
+            (error) => {
+                //
+                console.log(error);
+            },
+            () => {
+                main();
+                console.log('Complete');
+            }
+        )
+
+
+
+}
+
 function guardarBDD(bdd: BDD) {
     return new Promise(
         (resolve, reject) => {
@@ -107,189 +174,309 @@ function guardarBDD(bdd: BDD) {
     )
 }
 
-//---------------Interfaces
-interface BDD {
-    usuarios: Usuario[] | any;
-    libros: Libro[] | any;
-}
-interface Usuario {
-    idCliente: number;
-    nombreCliente: string;
-    correoCliente: string;
-}
-interface Libro {
-    idLibro: number;
-    tituloLibro: string;
-    categoriaLibro: string;
-    stockLibro: number;
-    avaluoLibro:number;
-}
-interface RespuestaBDD {
-    mensaje: string,
-    bdd: BDD
-}
-interface OpcionesPregunta {
-    opcionMenu: 'Crear' | 'Borrar' | 'Buscar' | 'Actualizar'
-}
-interface OpcionesPreguntaPrincipal {
-    opcionMenu: 'Libros' | 'Clientes' | 'Salir'
-}
-interface RespuestasUsuario {
-    respuestaUsuario: OpcionesPregunta,
-    respuestasBDD: RespuestaBDD,
-    Libro?: Libro,
-    Usuario?: Usuario,
-    ISBN? : number
-}
 
-function preguntarMenu(){
-    return rxjs.from(inquirer.prompt(preguntaMenuSecundario));
-}
-
-async function main() {
-    const respuestaBDD$ = rxjs.from(inicializarBDD());
-
-    respuestaBDD$
-        .pipe(
-            mergeMap(
-            (respuestaBDD$) => {
-                return preguntarMenu()
-                    .pipe(
-                        map((respuesta : OpcionesPregunta) => {
-                            console.log("Su opcion es ", respuesta);
-                            return {
-                                respuestaUsuario: respuesta,
-                                respuestasBDD: respuestaBDD$
-                            }
-                        }))}),
-    mergeMap(
-    (respuesta : RespuestasUsuario) =>{
-        console.log('Selecciono',respuesta);
-        switch (respuesta.respuestaUsuario.opcionMenu) {
-            case 'Crear':
-                return rxjs.from(inquirer.prompt(preguntasIngresarLibro))
-                    .pipe(map((Libro) => {
-                    respuesta.Libro = Libro;
-                return respuesta;
-        }))
-                    .pipe(map(
-                        (respuesta) => {
-                            //console.log('respuesta en accion', respuesta);
-                            switch (respuesta.respuestaUsuario.opcionMenu) {
-                                case 'Crear':
-                                    const LibroNuevo = respuesta.Libros;
-                                    respuesta.respuestasBDD.Libros.push(LibroNuevo);
-                                    return respuesta;
-                            }
-                        }),
-                    mergeMap((respuesta : RespuestasUsuario) => {
-                        return guardarBDD(respuesta.respuestasBDD.bdd);
-                    }));
-                break;
-
-
-            case 'Buscar':
-                return rxjs.from(inquirer.prompt(preguntasBuscarLibro))
-                    .pipe(
-                        map(
-                            (respuestaSeleccionada)=>{
-                                respuesta.ISBN=respuestaSeleccionada.idLibro;
-                                return respuesta
-                            }))
-                    .pipe(
-                        map(
-                            (respuesta: RespuestasUsuario)=>{
-                                const bdd =  respuesta.respuestasBDD.bdd.libros;
-                                const libroEncontrado= bdd
-                                    .find(
-                                        (libroObtenidos)=>{
-                                            return libroObtenidos.ISBN===respuesta.ISBN
-                                        }
-                                    );
-                                return libroEncontrado;
-                            }
-                        ));
-
-                break;
-
-            case 'Borrar':
-                return rxjs.from(inquirer.prompt(preguntasEliminarLibro))
-                    .pipe(
-                        map(
-                            (respuestaIngresada)=>{
-                                respuesta.ISBN=respuestaIngresada.idLibro;
-                                return respuesta
-                            })
-                    )
-                    .pipe(
-                        map(
-                            (respuesta : RespuestasUsuario)=>{
-                                const bdd =  respuesta.respuestasBDD.bdd.libros;
-                                const libroEncontrado= bdd
-                                    .findIndex(
-                                        (librosObtenidos)=>{
-                                            return librosObtenidos.idLibro===respuesta.ISBN
-                                        }
-                                    );
-
-                                respuesta.respuestasBDD.bdd.libros.splice(libroEncontrado,1)
-                                return respuesta
-                            }
-
-                        ),
-                        mergeMap(
-                            (respuesta: RespuestasUsuario) => {
-                                return guardarBDD(respuesta.respuestasBDD.bdd);
-                            } )
-                    );
-
-                break;
-
-            case 'Actualizar':
-                return rxjs.from(inquirer.prompt(preguntasActualizarLibro))
-                    .pipe(
-                        map(
-                            (respuestaIngresada)=>{
-                                respuesta.ISBN=respuestaIngresada.idLibro;
-                                return respuesta
-                            })
-                    )
-                    .pipe(
-                        map(
-                            (respuesta : RespuestasUsuario)=>{
-                                const bdd =  respuesta.respuestasBDD.bdd.libros;
-                                const libroEncontrado= bdd
-                                    .find(
-                                        (libroObtenido)=>{
-                                            return libroObtenido.idLibro===respuesta.ISBN
-                                        }
-                                    );
-                            }
-                        )
-                    );
-                break;
-
-        } })
-        )
-
-        .subscribe(
-            (data) => {
-                //
-                console.log(data);
-            },
-            (error) => {
-                //
-                console.log(error);
-            },
-            () => {
-                main();
-                console.log('Complete');
-            }
-        )
-
-
-
-}
 main();
 
 
+function preguntarOpcionesMenu() {
+    return mergeMap( // Respuesta Anterior Observable
+        (respuestaBDD: RespuestaBDD) => {
+
+            return rxjs
+                .from(inquirer.prompt(preguntaMenu))
+                .pipe(
+                    map( // respuesta ant obs
+                        (respuesta: OpcionMenu) => {
+                            respuestaBDD.opcionMenu = respuesta;
+                            return respuestaBDD
+                        }
+                    )
+                );
+
+        }
+    )
+}
+
+function opcionesRespuesta() {
+    return mergeMap(
+        (respuestaBDD: RespuestaBDD) => {
+            const opcion = respuestaBDD.opcionMenu.opcionMenu;
+            switch (opcion) {
+                case 'Crear':
+
+                    return rxjs
+                        .from(inquirer.prompt(preguntaLibro))
+                        .pipe(
+                            mergeMap(
+                                (respuesta : VerificarIdCategoria) =>{
+                                    console.log(respuesta)
+                                    console.log(respuestaBDD.bdd.categorias)
+                                    const indiceCategoria = respuestaBDD.bdd
+                                        .categorias
+                                        .findIndex(
+                                            (categoria: any)=>{
+                                                return categoria.categoria === respuesta.idCategoria
+                                            });
+                                    console.log('indice' +indiceCategoria)
+                                    if (indiceCategoria === -1){
+                                        console.log("No existe esa categoria, preguntando de nuevo")
+                                        return rxjs
+                                            .from(inquirer.prompt(preguntaLibro))
+                                    }
+                                    else{
+                                        return rxjs.from(promesaCrear(respuesta))
+                                            .pipe(
+                                                map(
+                                                    (libro: Libro) => {
+                                                        respuestaBDD.libro = libro;
+                                                        return respuestaBDD;
+
+                                                    }
+                                                )
+                                            )
+                                    }
+                                })
+                        );
+
+
+
+                case 'Buscar':
+                    return buscarLibro(respuestaBDD);
+                    break;
+                case 'Actualizar':
+                    return preguntarISBNLibro(respuestaBDD);
+                case 'Borrar':
+                    return borrarLibro(respuestaBDD);
+                    break;
+                case 'Agregar Categoria':
+
+
+                    return rxjs
+                        .from(inquirer.prompt(preguntaCategoria))
+                        .pipe(
+                            map(
+                                (categoria: Categoria) => { // resp ant OBS
+                                    respuestaBDD.categoria = categoria;
+                                    return respuestaBDD;
+                                }
+                            )
+                        );
+            }
+        }
+    )
+}
+
+function guardarBaseDeDatos() {
+    return mergeMap(// Respuesta del anterior OBS
+        (respuestaBDD: RespuestaBDD) => {
+            // OBS
+            return rxjs.from(guardarBDD(respuestaBDD.bdd))
+        }
+    )
+}
+
+function ejecutarAcccion() {
+    return map( // Respuesta del anterior OBS
+        (respuestaBDD: RespuestaBDD) => {
+            const opcion = respuestaBDD.opcionMenu.opcionMenu;
+            switch (opcion) {
+                case 'Crear':
+                    const libro = respuestaBDD.libro;
+                    respuestaBDD.bdd.libros.push(libro);
+                    return respuestaBDD;
+                case 'Actualizar':
+                    const indice = respuestaBDD.ISBNLibro;
+                    respuestaBDD.bdd.libros[indice].titulo = respuestaBDD.libro.titulo;
+                    respuestaBDD.bdd.libros[indice].autor= respuestaBDD.libro.autor;
+                    return respuestaBDD;
+
+                case 'Borrar':
+                    return borrarLibro(respuestaBDD);
+                case 'Buscar':
+
+                    return buscarLibro(respuestaBDD);
+                case 'Agregar Categoria':
+                    const categoriar = respuestaBDD.categoria;
+                    respuestaBDD.bdd.categorias.push(categoriar);
+                    return respuestaBDD;
+
+            }
+        }
+    )
+}
+
+interface RespuestaBDD {
+    mensaje: string;
+    bdd: BDD;
+    opcionMenu?: OpcionMenu;
+
+    ISBNLibro?: number;
+    libro?: Libro;
+    categoria?: Categoria;
+}
+
+interface BDD {
+    libros: Libro[] | any;
+    categorias: Categoria[] | any;
+}
+
+
+interface Libro {
+    ISBN: number;
+    titulo: string;
+    autor: string;
+    idCategoria: number;
+}
+
+interface Categoria {
+    idCategoria: number;
+    nombreCategoria: string;
+
+}
+
+interface OpcionMenu {
+    opcionMenu: 'Crear' | 'Borrar' | 'Buscar' | 'Actualizar' | 'Agregar Categoria';
+}
+
+interface BuscarLibroporISBN {
+    ISBN: string;
+}
+interface VerificarIdCategoria {
+    idCategoria: number;
+}
+
+function preguntarISBNLibro(respuestaBDD: RespuestaBDD) {
+    return rxjs
+        .from(inquirer.prompt(preguntaBuscarLibro))
+        .pipe(
+            mergeMap( // RESP ANT OBS
+                (respuesta: BuscarLibroporISBN) => {
+                    const indiceLibro = respuestaBDD.bdd
+                        .libros
+                        .findIndex( // -1
+                            (libro: any) => {
+
+                                return libro.ISBN === respuesta.ISBN
+                            }
+                        );
+                    if (indiceLibro === -1) {
+                        console.log('preguntando de nuevo');
+                        return preguntarISBNLibro(respuestaBDD);
+                    } else {
+                        console.log(indiceLibro);
+
+                        respuestaBDD.ISBNLibro = indiceLibro;
+                        return rxjs
+                            .from(inquirer.prompt(preguntaEdicionLibro))
+                            .pipe(
+                                map(
+                                    (nombre:{titulo:string, autor: string})=>{
+
+                                        // @ts-ignore
+                                        respuestaBDD.libro ={
+                                            ISBN:null,
+                                            titulo:nombre.titulo,
+                                            autor:nombre.autor
+                                        };
+                                        return respuestaBDD;
+                                    }
+                                )
+                            );
+                    }
+                }
+            )
+        );
+}
+
+
+
+function borrarLibro(respuestaBDD: RespuestaBDD) {
+    return rxjs
+        .from(inquirer.prompt(preguntaBuscarLibro))
+        .pipe(
+            mergeMap( // RESP ANT OBS
+                (respuesta: BuscarLibroporISBN) => {
+                    const indiceLibro = respuestaBDD.bdd
+                        .libros
+                        .findIndex( // -1
+                            (libro: any) => {
+                                return libro.ISBN === respuesta.ISBN
+                            }
+                        );
+                    if (indiceLibro === -1) {
+                        console.log('preguntando de nuevo');
+                        return preguntarISBNLibro(respuestaBDD);
+                    } else {
+                        console.log(indiceLibro);
+                        return rxjs.from(promesaEliminar(respuestaBDD.bdd.libros,indiceLibro)
+                        )
+                            .pipe(
+                                map(() =>{
+                                        return respuestaBDD
+
+                                    }
+                                )
+                            )
+                    }
+                }
+            )
+        );
+}
+const promesaEliminar = (respuestaBDD,indiceUsuario) =>{
+    return new Promise(
+        (resolve, reject) => {
+            resolve(respuestaBDD.splice(indiceUsuario, 1))
+        }
+    )};
+
+function buscarLibro(respuestaBDD: RespuestaBDD) {
+    return rxjs
+        .from(inquirer.prompt(preguntaBuscarLibro))
+        .pipe(
+            mergeMap( // RESP ANT OBS
+                (respuesta: BuscarLibroporISBN) => {
+                    const indiceUsuario = respuestaBDD.bdd
+                        .libros
+                        .findIndex( // -1
+                            (libro: any) => {
+                                return libro.ISBN === respuesta.ISBN
+                            }
+                        );
+                    if (indiceUsuario === -1) {
+                        console.log('preguntando de nuevo');
+                        return preguntarISBNLibro(respuestaBDD);
+                    } else {
+                        console.log(indiceUsuario);
+                        return rxjs.from(promesaBuscar(respuestaBDD.bdd.libros[indiceUsuario])
+                        )
+                            .pipe(
+                                map(() =>{
+                                        return respuestaBDD
+
+                                    }
+
+
+                                )
+
+                            )
+                    }
+                }
+            )
+        );
+}
+const promesaBuscar = (respuestaBDD) =>{
+    return new Promise(
+        (resolve, reject) => {
+            const rspursta ={
+                mensage: respuestaBDD
+            }
+            resolve(rspursta)
+        }
+    )};
+const promesaCrear = (respuestaBDD) =>{
+    console.log(JSON.stringify(respuestaBDD))
+    return new Promise(
+        (resolve, reject) => {
+            resolve(respuestaBDD)
+        }
+    )};

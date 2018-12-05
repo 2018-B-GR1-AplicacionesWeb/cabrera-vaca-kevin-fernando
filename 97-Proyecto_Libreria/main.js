@@ -38,40 +38,76 @@ var fs = require('fs');
 var rxjs = require('rxjs');
 var mergeMap = require('rxjs/operators').mergeMap;
 var map = require('rxjs/operators').map;
-var categoriaLibros = ['Drama', 'Ficcion', 'Salud & Bienestar', 'Humor', 'Historia', 'Educacion', 'Otros'];
-var preguntaMenuPrincipal = { type: 'list', name: 'opcionMenuPrincipal', message: 'Elige una opción:', choices: ['Libros', 'Clientes', 'Salir',] };
-var preguntaMenuSecundario = { type: 'list', name: 'opcionMenuSecundario', message: 'Elige una opción:', choices: ['Crear', 'Buscar', 'Actualizar', 'Borrar',] };
-var preguntasBuscarCliente = { type: 'input', name: 'idCliente', message: 'Ingrese el número de cedula del Cliente: ' };
-var preguntasBuscarLibro = { type: 'input', name: 'idLibro', message: 'Ingrese el número de ISBN: ' };
-var preguntasEliminarCliente = { type: 'input', name: 'idCliente', message: 'Ingrese el número de cedula del Cliente a eliminar: ' };
-var preguntasEliminarLibro = { type: 'input', name: 'idLibro', message: 'Ingrese el ISBN del Libro a eliminar: ' };
-var preguntasActualizarCliente = { type: 'input', name: 'idCliente', message: 'Ingrese el número de motor del auto a actualizar: ' };
-var preguntasActualizarLibro = { type: 'input', name: 'idLibro', message: 'Ingrese el ISBN del Libro a actualizar: ' };
-var preguntasIngresarCliente = [
-    { type: 'input', name: 'idCliente', message: 'Ingrese el numero de la cedula del Cliente: ' },
-    { type: 'input', name: 'nombreCliente', message: 'Ingrese el nombre del Cliente: ' },
-    { type: 'input', name: 'correoCliente', message: 'Ingrese el correo electronico: ' }
+var preguntaMenu = {
+    type: 'list',
+    name: 'opcionMenu',
+    message: 'Que quieres hacer',
+    choices: [
+        'Crear',
+        'Borrar',
+        'Buscar',
+        'Actualizar',
+        'Agregar Categoria'
+    ]
+};
+var preguntaBuscarLibro = [
+    {
+        type: 'input',
+        name: 'idLibro',
+        message: 'Ingrese el ISB den Libro',
+    }
 ];
-var preguntasIngresarLibro = [
-    { type: 'input', name: 'idLibro', message: 'Ingrese el ISBN del Libro: ' },
-    { type: 'input', name: 'tituloLibro', message: 'Ingrese el titulo del Libro' },
-    { type: 'list', name: 'categoriaLibro', message: 'Selecciome la categoria: ', choices: categoriaLibros },
-    { type: 'input', name: 'stockLibro', message: 'Ingrese el stock del Libro' },
-    { type: 'input', name: 'avaluoLibro', message: 'Ingrese el avaluo del Libro: ' }
+var preguntaLibro = [
+    {
+        type: 'input',
+        name: 'ISBN',
+        message: 'Cual es el ISBN del libro?'
+    },
+    {
+        type: 'input',
+        name: 'titulo',
+        message: 'Cual es el titulo del Libro'
+    },
+    {
+        type: 'input',
+        name: 'autor',
+        message: 'Cual es el autor del Libro?'
+    },
+    {
+        type: 'input',
+        name: 'categoria',
+        message: 'Cual es la categoria del Libro?'
+    },
 ];
-var preguntasEditarCliente = [
-    { type: 'input', name: 'nombreCliente', message: 'Ingrese el nuevo nombre del Cliente' },
-    { type: 'input', name: 'stockLibro', message: 'Ingrese el nuevo correo electronico del Cliente' },
+var preguntaCategoria = [
+    {
+        type: 'input',
+        name: 'idCategoria',
+        message: 'Cual es el id de la categoria?'
+    },
+    {
+        type: 'input',
+        name: 'nombreCategoria',
+        message: 'Cual es el nombre de la categoria?'
+    },
 ];
-var preguntasEditarLibro = [
-    { type: 'input', name: 'tituloLibro', message: 'Ingrese el nuevo titulo del Libro' },
-    { type: 'input', name: 'stockLibro', message: 'Ingrese el nuevo stock del Libro' },
+var preguntaEdicionLibro = [
+    {
+        type: 'input',
+        name: 'tituloLibro',
+        message: 'Cual es el nuevo titulo del Libro?'
+    },
+    {
+        type: 'input',
+        name: 'autorLibro',
+        message: 'Cual es el nuevo autor del Libro?'
+    },
 ];
-function inicializarBDD() {
+function inicialiarBDD() {
     return new Promise(function (resolve, reject) {
         fs.readFile('bdd.json', 'utf-8', function (error, contenidoArchivo) {
             if (error) {
-                fs.writeFile('bdd.json', '{"Libros":[],"Clientes":[]}', function (error) {
+                fs.writeFile('bdd.json', '{"libros":[],"categorias":[]}', function (error) {
                     if (error) {
                         reject({
                             mensaje: 'Error creando',
@@ -81,7 +117,7 @@ function inicializarBDD() {
                     else {
                         resolve({
                             mensaje: 'BDD leida',
-                            bdd: JSON.parse('{"usuarios":[],"facultades":[]}')
+                            bdd: JSON.parse('{"libros":[],"categorias":[]}')
                         });
                     }
                 });
@@ -92,6 +128,27 @@ function inicializarBDD() {
                     bdd: JSON.parse(contenidoArchivo)
                 });
             }
+        });
+    });
+}
+function main() {
+    return __awaiter(this, void 0, void 0, function () {
+        var respuestaBDD$;
+        return __generator(this, function (_a) {
+            respuestaBDD$ = rxjs.from(inicialiarBDD());
+            respuestaBDD$
+                .pipe(preguntarOpcionesMenu(), opcionesRespuesta(), ejecutarAcccion(), guardarBaseDeDatos())
+                .subscribe(function (data) {
+                //
+                console.log(data);
+            }, function (error) {
+                //
+                console.log(error);
+            }, function () {
+                main();
+                console.log('Complete');
+            });
+            return [2 /*return*/];
         });
     });
 }
@@ -113,106 +170,194 @@ function guardarBDD(bdd) {
         });
     });
 }
-function preguntarMenu() {
-    return rxjs.from(inquirer.prompt(preguntaMenuSecundario));
-}
-function main() {
-    return __awaiter(this, void 0, void 0, function () {
-        var respuestaBDD$;
-        return __generator(this, function (_a) {
-            respuestaBDD$ = rxjs.from(inicializarBDD());
-            respuestaBDD$
-                .pipe(mergeMap(function (respuestaBDD$) {
-                return preguntarMenu()
-                    .pipe(map(function (respuesta) {
-                    console.log("Su opcion es ", respuesta);
-                    return {
-                        respuestaUsuario: respuesta,
-                        respuestasBDD: respuestaBDD$
-                    };
-                }));
-            }), mergeMap(function (respuesta) {
-                console.log('Selecciono', respuesta);
-                switch (respuesta.respuestaUsuario.opcionMenu) {
-                    case 'Crear':
-                        return rxjs.from(inquirer.prompt(preguntasIngresarLibro))
-                            .pipe(map(function (Libro) {
-                            respuesta.Libro = Libro;
-                            return respuesta;
-                        }))
-                            .pipe(map(function (respuesta) {
-                            //console.log('respuesta en accion', respuesta);
-                            switch (respuesta.respuestaUsuario.opcionMenu) {
-                                case 'Crear':
-                                    var LibroNuevo = respuesta.Libros;
-                                    respuesta.respuestasBDD.Libros.push(LibroNuevo);
-                                    return respuesta;
-                            }
-                        }), mergeMap(function (respuesta) {
-                            return guardarBDD(respuesta.respuestasBDD.bdd);
-                        }));
-                        break;
-                    case 'Buscar':
-                        return rxjs.from(inquirer.prompt(preguntasBuscarLibro))
-                            .pipe(map(function (respuestaSeleccionada) {
-                            respuesta.ISBN = respuestaSeleccionada.idLibro;
-                            return respuesta;
-                        }))
-                            .pipe(map(function (respuesta) {
-                            var bdd = respuesta.respuestasBDD.bdd.libros;
-                            var libroEncontrado = bdd
-                                .find(function (libroObtenidos) {
-                                return libroObtenidos.ISBN === respuesta.ISBN;
-                            });
-                            return libroEncontrado;
-                        }));
-                        break;
-                    case 'Borrar':
-                        return rxjs.from(inquirer.prompt(preguntasEliminarLibro))
-                            .pipe(map(function (respuestaIngresada) {
-                            respuesta.ISBN = respuestaIngresada.idLibro;
-                            return respuesta;
-                        }))
-                            .pipe(map(function (respuesta) {
-                            var bdd = respuesta.respuestasBDD.bdd.libros;
-                            var libroEncontrado = bdd
-                                .findIndex(function (librosObtenidos) {
-                                return librosObtenidos.idLibro === respuesta.ISBN;
-                            });
-                            respuesta.respuestasBDD.bdd.libros.splice(libroEncontrado, 1);
-                            return respuesta;
-                        }), mergeMap(function (respuesta) {
-                            return guardarBDD(respuesta.respuestasBDD.bdd);
-                        }));
-                        break;
-                    case 'Actualizar':
-                        return rxjs.from(inquirer.prompt(preguntasActualizarLibro))
-                            .pipe(map(function (respuestaIngresada) {
-                            respuesta.ISBN = respuestaIngresada.idLibro;
-                            return respuesta;
-                        }))
-                            .pipe(map(function (respuesta) {
-                            var bdd = respuesta.respuestasBDD.bdd.libros;
-                            var libroEncontrado = bdd
-                                .find(function (libroObtenido) {
-                                return libroObtenido.idLibro === respuesta.ISBN;
-                            });
-                        }));
-                        break;
-                }
-            }))
-                .subscribe(function (data) {
-                //
-                console.log(data);
-            }, function (error) {
-                //
-                console.log(error);
-            }, function () {
-                main();
-                console.log('Complete');
-            });
-            return [2 /*return*/];
-        });
+main();
+function preguntarOpcionesMenu() {
+    return mergeMap(// Respuesta Anterior Observable
+    function (respuestaBDD) {
+        return rxjs
+            .from(inquirer.prompt(preguntaMenu))
+            .pipe(map(// respuesta ant obs
+        function (respuesta) {
+            respuestaBDD.opcionMenu = respuesta;
+            return respuestaBDD;
+        }));
     });
 }
-main();
+function opcionesRespuesta() {
+    return mergeMap(function (respuestaBDD) {
+        var opcion = respuestaBDD.opcionMenu.opcionMenu;
+        switch (opcion) {
+            case 'Crear':
+                return rxjs
+                    .from(inquirer.prompt(preguntaLibro))
+                    .pipe(mergeMap(function (respuesta) {
+                    console.log(respuesta);
+                    console.log(respuestaBDD.bdd.categorias);
+                    var indiceCategoria = respuestaBDD.bdd
+                        .categorias
+                        .findIndex(function (categoria) {
+                        return categoria.categoria === respuesta.idCategoria;
+                    });
+                    console.log('indice' + indiceCategoria);
+                    if (indiceCategoria === -1) {
+                        console.log("No existe esa categoria, preguntando de nuevo");
+                        return rxjs
+                            .from(inquirer.prompt(preguntaLibro));
+                    }
+                    else {
+                        return rxjs.from(promesaCrear(respuesta))
+                            .pipe(map(function (libro) {
+                            respuestaBDD.libro = libro;
+                            return respuestaBDD;
+                        }));
+                    }
+                }));
+            case 'Buscar':
+                return buscarLibro(respuestaBDD);
+                break;
+            case 'Actualizar':
+                return preguntarISBNLibro(respuestaBDD);
+            case 'Borrar':
+                return borrarLibro(respuestaBDD);
+                break;
+            case 'Agregar Categoria':
+                return rxjs
+                    .from(inquirer.prompt(preguntaCategoria))
+                    .pipe(map(function (categoria) {
+                    respuestaBDD.categoria = categoria;
+                    return respuestaBDD;
+                }));
+        }
+    });
+}
+function guardarBaseDeDatos() {
+    return mergeMap(// Respuesta del anterior OBS
+    function (respuestaBDD) {
+        // OBS
+        return rxjs.from(guardarBDD(respuestaBDD.bdd));
+    });
+}
+function ejecutarAcccion() {
+    return map(// Respuesta del anterior OBS
+    function (respuestaBDD) {
+        var opcion = respuestaBDD.opcionMenu.opcionMenu;
+        switch (opcion) {
+            case 'Crear':
+                var libro = respuestaBDD.libro;
+                respuestaBDD.bdd.libros.push(libro);
+                return respuestaBDD;
+            case 'Actualizar':
+                var indice = respuestaBDD.ISBNLibro;
+                respuestaBDD.bdd.libros[indice].titulo = respuestaBDD.libro.titulo;
+                respuestaBDD.bdd.libros[indice].autor = respuestaBDD.libro.autor;
+                return respuestaBDD;
+            case 'Borrar':
+                return borrarLibro(respuestaBDD);
+            case 'Buscar':
+                return buscarLibro(respuestaBDD);
+            case 'Agregar Categoria':
+                var categoriar = respuestaBDD.categoria;
+                respuestaBDD.bdd.categorias.push(categoriar);
+                return respuestaBDD;
+        }
+    });
+}
+function preguntarISBNLibro(respuestaBDD) {
+    return rxjs
+        .from(inquirer.prompt(preguntaBuscarLibro))
+        .pipe(mergeMap(// RESP ANT OBS
+    function (respuesta) {
+        var indiceLibro = respuestaBDD.bdd
+            .libros
+            .findIndex(// -1
+        function (libro) {
+            return libro.ISBN === respuesta.ISBN;
+        });
+        if (indiceLibro === -1) {
+            console.log('preguntando de nuevo');
+            return preguntarISBNLibro(respuestaBDD);
+        }
+        else {
+            console.log(indiceLibro);
+            respuestaBDD.ISBNLibro = indiceLibro;
+            return rxjs
+                .from(inquirer.prompt(preguntaEdicionLibro))
+                .pipe(map(function (nombre) {
+                // @ts-ignore
+                respuestaBDD.libro = {
+                    ISBN: null,
+                    titulo: nombre.titulo,
+                    autor: nombre.autor
+                };
+                return respuestaBDD;
+            }));
+        }
+    }));
+}
+function borrarLibro(respuestaBDD) {
+    return rxjs
+        .from(inquirer.prompt(preguntaBuscarLibro))
+        .pipe(mergeMap(// RESP ANT OBS
+    function (respuesta) {
+        var indiceLibro = respuestaBDD.bdd
+            .libros
+            .findIndex(// -1
+        function (libro) {
+            return libro.ISBN === respuesta.ISBN;
+        });
+        if (indiceLibro === -1) {
+            console.log('preguntando de nuevo');
+            return preguntarISBNLibro(respuestaBDD);
+        }
+        else {
+            console.log(indiceLibro);
+            return rxjs.from(promesaEliminar(respuestaBDD.bdd.libros, indiceLibro))
+                .pipe(map(function () {
+                return respuestaBDD;
+            }));
+        }
+    }));
+}
+var promesaEliminar = function (respuestaBDD, indiceUsuario) {
+    return new Promise(function (resolve, reject) {
+        resolve(respuestaBDD.splice(indiceUsuario, 1));
+    });
+};
+function buscarLibro(respuestaBDD) {
+    return rxjs
+        .from(inquirer.prompt(preguntaBuscarLibro))
+        .pipe(mergeMap(// RESP ANT OBS
+    function (respuesta) {
+        var indiceUsuario = respuestaBDD.bdd
+            .libros
+            .findIndex(// -1
+        function (libro) {
+            return libro.ISBN === respuesta.ISBN;
+        });
+        if (indiceUsuario === -1) {
+            console.log('preguntando de nuevo');
+            return preguntarISBNLibro(respuestaBDD);
+        }
+        else {
+            console.log(indiceUsuario);
+            return rxjs.from(promesaBuscar(respuestaBDD.bdd.libros[indiceUsuario]))
+                .pipe(map(function () {
+                return respuestaBDD;
+            }));
+        }
+    }));
+}
+var promesaBuscar = function (respuestaBDD) {
+    return new Promise(function (resolve, reject) {
+        var rspursta = {
+            mensage: respuestaBDD
+        };
+        resolve(rspursta);
+    });
+};
+var promesaCrear = function (respuestaBDD) {
+    console.log(JSON.stringify(respuestaBDD));
+    return new Promise(function (resolve, reject) {
+        resolve(respuestaBDD);
+    });
+};
