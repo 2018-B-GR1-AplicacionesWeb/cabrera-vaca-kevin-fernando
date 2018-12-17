@@ -21,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/src/main.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="187">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -30,14 +30,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/src/app.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="255">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
               <folding>
-                <element signature="e#0#49#0" expanded="true" />
-                <element signature="n#AppController#0" />
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/03-http/videos/src/app.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1002">
+              <caret line="259" lean-forward="true" selection-start-line="259" selection-end-line="259" />
+              <folding>
+                <element signature="e#0#203#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,13 +126,15 @@
         <option value="$PROJECT_DIR$/68-Proyecto Libreria/libreria/.gitignore" />
         <option value="$PROJECT_DIR$/68-Proyecto Libreria/libreria/package.json" />
         <option value="$PROJECT_DIR$/68-Proyecto Libreria/libreria/src/main.ts" />
+        <option value="$PROJECT_DIR$/68-Proyecto Libreria/libreria/src/app.controller.ts" />
+        <option value="$PROJECT_DIR$/03-http/videos/src/app.controller.ts" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="951" />
-    <option name="width" value="978" />
-    <option name="height" value="1039" />
+    <option name="x" value="950" />
+    <option name="width" value="979" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
@@ -154,19 +167,19 @@
             <path>
               <item name="cabrera-vaca-kevin-fernando" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="68-Proyecto Libreria" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="03-http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="cabrera-vaca-kevin-fernando" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="68-Proyecto Libreria" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="libreria" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="03-http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="videos" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="cabrera-vaca-kevin-fernando" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="68-Proyecto Libreria" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="libreria" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="03-http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="videos" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
@@ -184,7 +197,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="C:\Users\Kevin Cabrera\Documents\GitHub\cabrera-vaca-kevin-fernando\68-Proyecto Libreria\libreria\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -266,11 +279,12 @@
       <workItem from="1544450383755" duration="425000" />
       <workItem from="1544451551710" duration="3314000" />
       <workItem from="1544980139877" duration="9717000" />
+      <workItem from="1545061731574" duration="115000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83639000" />
+    <option name="totallyTimeSpent" value="83754000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -282,9 +296,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="761" y="0" width="782" height="831" extended-state="0" />
+    <frame x="760" y="0" width="783" height="832" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28456375" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2841823" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -299,7 +313,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49915683" visible="true" weight="0.32188842" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49915683" visible="true" weight="0.32142857" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50084317" side_tool="true" weight="0.3286119" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32719547" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -348,7 +362,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/01-Javascript/03-arreglos.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="962">
@@ -641,8 +654,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="187">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
@@ -651,11 +664,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/src/app.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding>
-            <element signature="e#0#49#0" expanded="true" />
-            <element signature="n#AppController#0" />
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-http/videos/src/app.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1002">
+          <caret line="259" lean-forward="true" selection-start-line="259" selection-end-line="259" />
+          <folding>
+            <element signature="e#0#203#0" expanded="true" />
           </folding>
         </state>
       </provider>
