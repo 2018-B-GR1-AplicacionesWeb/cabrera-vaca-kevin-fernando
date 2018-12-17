@@ -1,14 +1,19 @@
+// @ts-ignore
 import {NestFactory} from '@nestjs/core';
 import {AppModule} from './app.module';
 
 // const http_server = require('http-server'); // JS
-import * as httpserver from 'http-server';
-
-console.log(httpserver);
+import * as cookieParser from 'cookie-parser';
 
 
 async function bootstrap() {
     const app = await NestFactory.create(AppModule);
+    app.use(cookieParser(
+        'me gustan los tacos', // secreto
+        {  // opciones
+
+        }
+    ));
     await app.listen(3000);
 }
 

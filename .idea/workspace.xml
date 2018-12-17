@@ -16,149 +16,23 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1898860340">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="7" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.19" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.68" value="1" />
-          <entry key="project.opened" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="17" />
-          <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="4" />
-          <entry key="TypeScript" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.vcs.git.usages" />
-      <usages-collector id="statistics.js.language.service.starts">
-        <counts>
-          <entry key="TypeScriptServerServiceImpl" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="gitignore" value="3" />
-          <entry key="js" value="17" />
-          <entry key="json" value="2" />
-          <entry key="md" value="1" />
-          <entry key="ts" value="3" />
-          <entry key="txt" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JSON" value="130" />
-          <entry key="JavaScript" value="4326" />
-          <entry key="Markdown" value="159" />
-          <entry key="PLAIN_TEXT" value="49" />
-          <entry key="TypeScript" value="65" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="gitignore" value="48" />
-          <entry key="js" value="4326" />
-          <entry key="json" value="130" />
-          <entry key="md" value="159" />
-          <entry key="ts" value="65" />
-          <entry key="txt" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="1395189891">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="10" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.17" value="2" />
-          <entry key="project.open.time.18" value="2" />
-          <entry key="project.open.time.20" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="12" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.js.language.service.starts">
-        <counts>
-          <entry key="TypeScriptServerServiceImpl" value="12" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JSON" value="19" />
-          <entry key="JavaScript" value="1382" />
-          <entry key="PLAIN_TEXT" value="19" />
-          <entry key="TypeScript" value="4531" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JSON" value="9" />
-          <entry key="JavaScript" value="10" />
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="TypeScript" value="12" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.vcs.git.usages" />
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="gitignore" value="5" />
-          <entry key="js" value="10" />
-          <entry key="json" value="9" />
-          <entry key="ts" value="12" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="gitignore" value="19" />
-          <entry key="js" value="1382" />
-          <entry key="json" value="19" />
-          <entry key="ts" value="4531" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/tsconfig.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/tslint.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-12" />
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/97-Proyecto_Libreria/main.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="221" column="19" lean-forward="true" selection-start-line="221" selection-start-column="19" selection-end-line="221" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/97-Proyecto_Libreria/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2233">
-              <caret line="198" column="50" selection-start-line="198" selection-start-column="50" selection-end-line="198" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/97-Proyecto_Libreria/bdd.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="177" selection-start-column="177" selection-end-column="177" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -229,158 +103,14 @@
         <option value="$PROJECT_DIR$/97-Proyecto_Libreria/bdd.json" />
         <option value="$PROJECT_DIR$/97-Proyecto_Libreria/main.js" />
         <option value="$PROJECT_DIR$/97-Proyecto_Libreria/main.ts" />
+        <option value="$PROJECT_DIR$/03-http/videos/src/main.ts" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/98-proyecto/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/02-typescript/package.json" />
-      <path value="$PROJECT_DIR$/03-http/videos/package.json" />
-      <path value="$PROJECT_DIR$/98-proyecto/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/@types/node/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/accepts/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/ansi-escapes/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/ansi-regex/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/ansi-styles/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/array-flatten/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/art-template/loader/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/art-template/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/async/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/body-parser/node_modules/debug/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/body-parser/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/bytes/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/chalk/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/chardet/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/cli-cursor/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/cli-width/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/color-convert/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/color-name/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/colors/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/commander/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/content-disposition/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/content-type/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/cookie-parser/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/cookie-signature/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/cookie/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/corser/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/debug/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/depd/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/destroy/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/ecstatic/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/ee-first/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/encodeurl/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/escape-html/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/escape-string-regexp/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/etag/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/eventemitter3/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/express/node_modules/debug/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/express/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/express/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/external-editor/node_modules/iconv-lite/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/external-editor/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/figures/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/finalhandler/node_modules/debug/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/finalhandler/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/follow-redirects/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/forwarded/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/fresh/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/has-flag/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/he/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/http-errors/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/http-proxy/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/http-server/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/iconv-lite/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/inherits/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/inquirer/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/ipaddr.js/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/is-fullwidth-code-point/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/is-promise/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/lodash/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/media-typer/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/merge-descriptors/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/methods/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/mime-db/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/mime-types/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/mime/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/mimic-fn/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/minimist/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/mkdirp/node_modules/minimist/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/mkdirp/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/ms/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/mute-stream/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/negotiator/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/on-finished/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/onetime/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/opener/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/optimist/node_modules/minimist/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/optimist/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/os-tmpdir/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/parseurl/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/path-to-regexp/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/portfinder/node_modules/debug/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/portfinder/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/proxy-addr/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/range-parser/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/raw-body/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/requires-port/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/restore-cursor/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/run-async/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/rxjs/ajax/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/rxjs/internal-compatibility/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/rxjs/operators/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/rxjs/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/rxjs/src/ajax/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/rxjs/src/internal-compatibility/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/rxjs/src/operators/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/rxjs/src/testing/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/rxjs/src/webSocket/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/rxjs/testing/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/rxjs/webSocket/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/safe-buffer/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/safer-buffer/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/send/node_modules/debug/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/send/node_modules/mime/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/send/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/serve-static/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/setprototypeof/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/signal-exit/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/statuses/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/string-width/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/strip-ansi/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/supports-color/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/through/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/tmp/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/tslib/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/type-is/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/union/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/unpipe/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/url-join/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/utils-merge/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/vary/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/wordwrap/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/xpress/node_modules/colors/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/xpress/node_modules/debug/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/xpress/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/xpress/sample/api/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/xpress/sample/web/package.json" />
-    </packageJsonPaths>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="193" />
-    <option name="y" value="-17" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="951" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
@@ -413,17 +143,13 @@
             <path>
               <item name="cabrera-vaca-kevin-fernando" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="96-Proyecto_Agregar_Eliminar_Buscar" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="68-Proyecto Libreria" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="cabrera-vaca-kevin-fernando" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="97-Proyecto_Libreria" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="cabrera-vaca-kevin-fernando" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="99-Libreria" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="68-Proyecto Libreria" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="libreria" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -460,19 +186,19 @@
     </option>
   </component>
   <component name="RunManager" selected="Node.js.main.js">
-    <configuration name="01-variables.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="01-variables.js" working-dir="$PROJECT_DIR$/01-Javascript">
+    <configuration name="01-variables.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="01-variables.js" working-dir="$PROJECT_DIR$/01-Javascript">
       <method v="2" />
     </configuration>
-    <configuration name="02-funciones.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="02-funciones.js" working-dir="$PROJECT_DIR$/01-Javascript">
+    <configuration name="02-funciones.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="02-funciones.js" working-dir="$PROJECT_DIR$/01-Javascript">
       <method v="2" />
     </configuration>
-    <configuration name="03-arreglos.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="03-arreglos.js" working-dir="$PROJECT_DIR$/01-Javascript">
+    <configuration name="03-arreglos.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="03-arreglos.js" working-dir="$PROJECT_DIR$/01-Javascript">
       <method v="2" />
     </configuration>
-    <configuration name="07-promesas.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="07-promesas.js" working-dir="$PROJECT_DIR$/01-Javascript">
+    <configuration name="07-promesas.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="07-promesas.js" working-dir="$PROJECT_DIR$/01-Javascript">
       <method v="2" />
     </configuration>
-    <configuration name="main.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="main.js" working-dir="$PROJECT_DIR$/97-Proyecto_Libreria">
+    <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="main.js" working-dir="$PROJECT_DIR$/97-Proyecto_Libreria">
       <method v="2" />
     </configuration>
     <list>
@@ -518,12 +244,15 @@
       <workItem from="1543421191388" duration="1990000" />
       <workItem from="1543845893828" duration="1401000" />
       <workItem from="1543849177610" duration="2314000" />
-      <workItem from="1544013552926" duration="6358000" />
+      <workItem from="1544013552926" duration="7104000" />
+      <workItem from="1544450383755" duration="425000" />
+      <workItem from="1544451551710" duration="3314000" />
+      <workItem from="1544980139877" duration="4488000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69437000" />
+    <option name="totallyTimeSpent" value="78410000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -535,10 +264,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="761" y="0" width="782" height="831" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14011897" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28456375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -553,7 +282,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49915683" visible="true" weight="0.3186969" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49915683" visible="true" weight="0.32188842" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50084317" side_tool="true" weight="0.3286119" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32719547" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -600,9 +329,6 @@
         <option value="$USER_HOME$/Downloads/2018-b-prueba-master/2018-b-prueba-master/01-arreglos/Solucion.js" />
       </list>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md" />
@@ -824,13 +550,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/97-Proyecto_Libreria/caca.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="32" selection-start-line="32" selection-end-line="292" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/97-Proyecto_Libreria/caca.ts" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -842,9 +562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -855,26 +572,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/97-Proyecto_Libreria/bdd.json">
+    <entry file="file://$PROJECT_DIR$/97-Proyecto_Libreria/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="177" selection-start-column="177" selection-end-column="177" />
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-http/videos/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/97-Proyecto_Libreria/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2233">
-          <caret line="198" column="50" selection-start-line="198" selection-start-column="50" selection-end-line="198" selection-end-column="50" />
+        <state relative-caret-position="389">
+          <caret line="198" column="56" selection-start-line="198" selection-start-column="56" selection-end-line="198" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/97-Proyecto_Libreria/main.ts">
+    <entry file="file://$PROJECT_DIR$/97-Proyecto_Libreria/bdd.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="221" column="19" lean-forward="true" selection-start-line="221" selection-start-column="19" selection-end-line="221" selection-end-column="19" />
+        <state>
+          <caret column="250" selection-start-column="250" selection-end-column="250" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/tslint.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
