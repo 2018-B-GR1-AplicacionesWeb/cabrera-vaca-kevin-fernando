@@ -32,7 +32,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="12" selection-start-column="12" selection-end-column="12" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -104,6 +108,7 @@
         <option value="$PROJECT_DIR$/97-Proyecto_Libreria/main.js" />
         <option value="$PROJECT_DIR$/97-Proyecto_Libreria/main.ts" />
         <option value="$PROJECT_DIR$/03-http/videos/src/main.ts" />
+        <option value="$PROJECT_DIR$/68-Proyecto Libreria/libreria/.gitignore" />
       </list>
     </option>
   </component>
@@ -247,12 +252,12 @@
       <workItem from="1544013552926" duration="7104000" />
       <workItem from="1544450383755" duration="425000" />
       <workItem from="1544451551710" duration="3314000" />
-      <workItem from="1544980139877" duration="4488000" />
+      <workItem from="1544980139877" duration="4552000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78410000" />
+    <option name="totallyTimeSpent" value="78474000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -609,7 +614,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
