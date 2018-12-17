@@ -19,22 +19,26 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/tsconfig.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/tslint.json">
+        <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/src/main.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-12" />
+            <state relative-caret-position="204">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/.gitignore">
+        <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/src/app.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" selection-start-column="12" selection-end-column="12" />
+            <state relative-caret-position="85">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
+                <element signature="n#AppController#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,6 +113,8 @@
         <option value="$PROJECT_DIR$/97-Proyecto_Libreria/main.ts" />
         <option value="$PROJECT_DIR$/03-http/videos/src/main.ts" />
         <option value="$PROJECT_DIR$/68-Proyecto Libreria/libreria/.gitignore" />
+        <option value="$PROJECT_DIR$/68-Proyecto Libreria/libreria/package.json" />
+        <option value="$PROJECT_DIR$/68-Proyecto Libreria/libreria/src/main.ts" />
       </list>
     </option>
   </component>
@@ -155,6 +161,13 @@
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="68-Proyecto Libreria" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="libreria" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="cabrera-vaca-kevin-fernando" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="68-Proyecto Libreria" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="libreria" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -252,12 +265,12 @@
       <workItem from="1544013552926" duration="7104000" />
       <workItem from="1544450383755" duration="425000" />
       <workItem from="1544451551710" duration="3314000" />
-      <workItem from="1544980139877" duration="4552000" />
+      <workItem from="1544980139877" duration="9717000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78474000" />
+    <option name="totallyTimeSpent" value="83639000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -270,7 +283,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="761" y="0" width="782" height="831" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28456375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -605,6 +617,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-145">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -617,6 +636,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/68-Proyecto Libreria/libreria/src/app.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+            <element signature="n#AppController#0" />
+          </folding>
         </state>
       </provider>
     </entry>
