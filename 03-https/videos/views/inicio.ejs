@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gestion de Noticias</title>
+    <link rel="stylesheet"
+          href="/bootstrap/css/bootstrap.css">
+
+    <link rel="stylesheet" href="/css/estilos-generales.css">
+
+    <link rel="stylesheet" href="/css/animate.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img height="400px" class="d-block w-100" src="https://scontent.fuio13-1.fna.fbcdn.net/v/t1.0-9/50857091_775406352820788_229215768863047680_n.jpg?_nc_cat=1&_nc_ht=scontent.fuio13-1.fna&oh=efaeb94c218dbc8a6491e618a99cb6ec&oe=5CFE50F5" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img height="400px" class="d-block w-100" src="https://scontent.fuio13-1.fna.fbcdn.net/v/t1.0-9/50829558_2274500305934487_2725531476618641408_n.jpg?_nc_cat=108&_nc_ht=scontent.fuio13-1.fna&oh=adbb67377e2fd63d9c0336b9f46e691e&oe=5CC53B16" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img height="400px" class="d-block w-100" src="https://scontent.fuio13-1.fna.fbcdn.net/v/t1.0-9/50826219_2444337709122453_7957339342987329536_n.jpg?_nc_cat=106&_nc_ht=scontent.fuio13-1.fna&oh=4f9026fe6104fb37ee1298d180a33441&oe=5CCAA9C0" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="button"
+            class="btn btn-lg btn-danger popover-contenido"
+            data-toggle="popover"
+            title="WTF?"
+            data-placement="top"
+            data-content="Que te pasa animal?">Click to toggle popover
+    </button>
+
+    <% const existeMensaje = typeof mensaje !== "undefined" %>
+
+    <% if(existeMensaje){ %>
+
+        <div class="<%= clase %>" role="alert">
+            <span class="font-weight-bold">
+                MENSAJE
+            </span> : <%= mensaje %>
+        </div>
+    <% } %>
+
+
+    <h1>Gestion de noticias</h1>
+
+    <p>Busque, cree actualice y elimine noticias. Puede buscar noticias por el titulo o la descripcion.</p>
+
+    <!-- ul -> unordered list  -->
+    <!-- ol -> ordered list  -->
+
+    <!-- a -> anchor -->
+
+    <form method="get" action="/noticia/inicio">
+
+        <div class="row">
+            <div class="col-sm-9">
+
+                <div class="form-group">
+
+                    <label for="busqueda">Busqueda</label>
+
+                    <input id="busqueda"
+                           type="text"
+                           name="busqueda"
+                           class="form-control">
+                </div>
+
+            </div>
+            <div class="col-sm-3">
+
+                <button
+                        class="btn btn-outline-success btn-block espaciado-busqueda">
+
+                    Buscar
+
+                </button>
+
+            </div>
+        </div>
+    </form>
+
+    <div class="row">
+        <div class="col-sm-9">
+
+        </div>
+        <div class="col-sm-3">
+            <a href="/noticia/crear-noticia"
+               class="quitar-link">
+
+                <button class="btn btn-outline-success btn-block">
+
+                    Crear noticia
+
+
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <h2>Lista de Noticias</h2>
+    <p>Listado de las noticias, actualice o elimine noticias.</p>
+
+    <div class="scroll-tabla">
+        <table class="table table-hover animated slideInLeft">
+            <!-- tr -> table row -->
+            <thead>
+            <tr>
+                <!-- th -> table header -->
+                <th width="30%">Titulo</th>
+                <th width="50%">Descripcion</th>
+                <th width="20%">Acciones</th>
+            </tr>
+            </thead>
+            <!-- tr -> table row -->
+            <tbody>
+            <% arreglo.forEach( (noticia)=> { %>
+                <tr>
+                    <!-- td -> table detail -->
+                    <td><%= noticia.titulo %></td>
+                    <td><%= noticia.descripcion %></td>
+                    <td>
+                        <form action="/noticia/eliminar/<%= noticia.id %>" method="POST">
+                            <!--<button type="button"> clickea sin problemas</button>
+                            <button>Yo tambien envio informacion</button>
+                            -->
+                            <button class="btn btn-outline-danger btn-block espaciado-boton"
+                                    type="submit">
+                                Eliminar
+                            </button>
+                        </form>
+                        <a  href="/noticia/actualizar-noticia/<%= noticia.id %>"
+                            class="quitar-link">
+                            <button
+                                    class="btn btn-outline-info btn-block espaciado-boton">
+                                Actualizar
+                            </button>
+                        </a>
+
+
+                    </td>
+                </tr>
+            <% }) %>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+    <script>
+        function imprimirEnConsola(evento){
+            evento.preventDefault();
+            console.log('ASDASDAS');
+        }
+    </script>
+</div>
+
+
+<script src="/js/jquery.js"></script>
+<script src="/js/popper.js"></script>
+<script src="/bootstrap/js/bootstrap.js"></script>
+
+<script>
+    //Nuestro Script
+
+    $(function () {
+        $('.popover-contenido').popover({
+            container: 'body'
+        })
+    })
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

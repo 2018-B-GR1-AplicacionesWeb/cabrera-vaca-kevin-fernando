@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gestion de Noticias</title>
+    <link rel="stylesheet"
+          href="/bootstrap/css/bootstrap.css">
+
+    <link rel="stylesheet" href="/css/estilos-generales.css">
+</head>
+<body>
+
+<div class="container">
+
+    <% const existeMensaje = typeof mensaje !== "undefined" %>
+
+    <% if(existeMensaje){ %>
+
+        <div class="<%= clase %>" role="alert">
+            <span class="font-weight-bold">
+                MENSAJE
+            </span> : <%= mensaje %>
+        </div>
+    <% } %>
+
+
+    <h1>Gestion de noticias</h1>
+
+    <p>Busque, cree actualice y elimine noticias. Puede buscar noticias por el titulo o la descripcion.</p>
+
+    <!-- ul -> unordered list  -->
+    <!-- ol -> ordered list  -->
+
+    <!-- a -> anchor -->
+
+    <form method="get" action="/noticia/inicio">
+
+        <div class="row">
+            <div class="col-sm-9">
+
+                <div class="form-group">
+
+                    <label for="busqueda">Busqueda</label>
+
+                    <input id="busqueda"
+                           type="text"
+                           name="busqueda"
+                           class="form-control">
+                </div>
+
+            </div>
+            <div class="col-sm-3">
+
+                <button
+                        class="btn btn-outline-success btn-block espaciado-busqueda">
+
+                    Buscar
+
+                </button>
+
+            </div>
+        </div>
+    </form>
+
+    <div class="row">
+        <div class="col-sm-9">
+
+        </div>
+        <div class="col-sm-3">
+            <a href="/noticia/crear-noticia"
+               class="quitar-link">
+
+                <button class="btn btn-outline-success btn-block">
+
+                    Crear noticia
+
+
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <h2>Lista de Noticias</h2>
+    <p>Listado de las noticias, actualice o elimine noticias.</p>
+
+    <table class="table table-hover">
+        <!-- tr -> table row -->
+        <thead>
+            <tr>
+                <!-- th -> table header -->
+                <th width="30%">Titulo</th>
+                <th width="50%">Descripcion</th>
+                <th width="20%">Acciones</th>
+            </tr>
+        </thead>
+        <!-- tr -> table row -->
+        <tbody>
+        <% arreglo.forEach( (noticia)=> { %>
+            <tr>
+                <!-- td -> table detail -->
+                <td><%= noticia.titulo %></td>
+                <td><%= noticia.descripcion %></td>
+                <td>
+                    <form action="/noticia/eliminar/<%= noticia.id %>" method="POST">
+                        <!--<button type="button"> clickea sin problemas</button>
+                        <button>Yo tambien envio informacion</button>
+                        -->
+                        <button class="btn btn-outline-danger btn-block espaciado-boton"
+                                type="submit">
+                            Eliminar
+                        </button>
+                    </form>
+                    <a  href="/noticia/actualizar-noticia/<%= noticia.id %>"
+                        class="quitar-link">
+                        <button
+                                class="btn btn-outline-info btn-block espaciado-boton">
+                            Actualizar
+                        </button>
+                    </a>
+
+
+                </td>
+            </tr>
+        <% }) %>
+        </tbody>
+    </table>
+
+
+    <script>
+        function imprimirEnConsola(evento){
+            evento.preventDefault();
+            console.log('ASDASDAS');
+        }
+    </script>
+</div>
+
+
+</body>
+</html>
+
+
+
+
