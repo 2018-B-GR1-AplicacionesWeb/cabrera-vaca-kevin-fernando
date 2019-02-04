@@ -1,0 +1,59 @@
+<style>
+    table,th,td{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+
+<header>
+
+</header>
+
+<body>
+
+<h1>Usuarios</h1>
+
+<form action="/Usuarios"
+      method="post"
+>
+    <div>
+        <label for="busqueda">Buscar</label>
+        <input id="busqueda" type="text" name="busqueda">
+        <button type="button">Search</button>
+    </div>
+
+</form>
+
+<table>
+
+    <tr>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Fecha de Nacimiento</th>
+        <th>Acciones</th>
+    </tr>
+
+
+    <% usuarios.forEach((usuario)=> {%>
+    <tr>
+        <td>
+            <%= usuario.nombre%>
+        </td>
+        <td>
+            <%= usuario.correo%>
+        </td>
+        <td>
+            <%= usuario.fecha_nacimiento%>
+        </td>
+        <td>
+            <form action="/Inicio" method="POST">
+                <button type="button">Eliminar</button>
+            </form>
+
+        </td>
+    </tr>
+    <%})%>
+
+</table>
+
+</body>

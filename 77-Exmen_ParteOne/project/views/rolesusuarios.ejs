@@ -1,0 +1,82 @@
+<html>
+
+<header>
+
+
+</header>
+
+
+<body>
+
+<h2>Usuario</h2>
+
+<table>
+
+    <tr>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Fecha de Nacimiento</th>
+    </tr>
+        <tr>
+            <td>
+                <%= usuario.nombre%>
+            </td>
+            <td>
+                <%= usuario.correo%>
+            </td>
+            <td>
+                <%= usuario.fecha_nacimiento%>
+            </td>
+        </tr>
+</table>
+
+<h2>Roles</h2>
+
+<table>
+
+    <tr>
+        <th>Rol</th>
+    </tr>
+
+
+    <% roles.forEach((rol)=> {%>
+        <tr>
+            <td>
+                <%= rol.nombre%>
+            </td>
+
+            <td>
+                <form action="/rolesusuarios" method="POST">
+                    <button type="button">Eliminar</button>
+                </form>
+
+            </td>
+        </tr>
+    <%})%>
+
+</table>
+
+
+<h2> Agregar Roels</h2>
+
+<select>
+    <option value="usuario">Usuario</option>
+    <option value="administrador">Administrador</option>
+
+</select>
+
+
+<button type="button">Agregar Rol</button>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>

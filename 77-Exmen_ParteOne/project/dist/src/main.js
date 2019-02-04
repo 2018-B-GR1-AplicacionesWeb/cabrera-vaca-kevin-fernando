@@ -10,12 +10,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@nestjs/core");
 const app_module_1 = require("./app.module");
-const httpserver = require("http-server");
-console.log(httpserver);
+const http_server = require('http-server');
+const cookieParser = require("cookie-parser");
+console.log(http_server);
 function bootstrap() {
     return __awaiter(this, void 0, void 0, function* () {
         const app = yield core_1.NestFactory.create(app_module_1.AppModule);
-        yield app.listen(3000);
+        app.use(cookieParser('ante la duda la mas tetuda', {}));
+        app.set('view engine', 'ejs');
+        yield app.listen(3001);
     });
 }
 bootstrap();

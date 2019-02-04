@@ -1,8 +1,8 @@
 {
-  "name": "biblioteca",
+  "name": "project",
   "version": "0.0.1",
-  "description": "Biblioteca - Manejo de Libros y usuarios - Prestamos y reservas.",
-  "author": "Scrooge",
+  "description": "PartOne",
+  "author": "Cabrera y el otro men",
   "license": "MIT",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
@@ -23,6 +23,7 @@
     "@nestjs/common": "^5.4.0",
     "@nestjs/core": "^5.4.0",
     "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
     "http-server": "^0.11.1",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",

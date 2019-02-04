@@ -8,15 +8,23 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const core_1 = require("@nestjs/core");
-const app_module_1 = require("./app.module");
-const httpserver = require("http-server");
-console.log(httpserver);
-function bootstrap() {
-    return __awaiter(this, void 0, void 0, function* () {
-        const app = yield core_1.NestFactory.create(app_module_1.AppModule);
-        yield app.listen(3000);
+const testing_1 = require("@nestjs/testing");
+const request = require("supertest");
+const app_module_1 = require("./../src/app.module");
+describe('AppController (e2e)', () => {
+    let app;
+    beforeEach(() => __awaiter(this, void 0, void 0, function* () {
+        const moduleFixture = yield testing_1.Test.createTestingModule({
+            imports: [app_module_1.AppModule],
+        }).compile();
+        app = moduleFixture.createNestApplication();
+        yield app.init();
+    }));
+    it('/ (GET)', () => {
+        return request(app.getHttpServer())
+            .get('/')
+            .expect(200)
+            .expect('Hello World!');
     });
-}
-bootstrap();
-//# sourceMappingURL=main.js.map
+});
+//# sourceMappingURL=app.e2e-spec.js.map
