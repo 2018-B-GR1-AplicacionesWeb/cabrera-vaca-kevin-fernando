@@ -13,7 +13,7 @@
 
 <p>Ingresar Informacion</p>
 
-<form action="/Inicio"
+<form action="/login"
       method="post"
 >
     <div>
@@ -24,7 +24,8 @@
         <label for="passwordlg">Password</label>
         <input id="passwordlg" type="password" name="passwordlg">
     </div>
-    <button>Login</button>
+
+    <button type="submit">Ingresar</button>
 
 </form>
 
@@ -32,21 +33,24 @@
 
 <p>Ingresa tus credenciales</p>
 
-<form action="/Inicio"
+<form action="crearUsuario"
       method="post"
 >
     <div>
-        <label for="nombre">Nombre</label>
-        <input id="nombre" type="text" name="nombre">
+        <label for="nombreUsuario">Nombre</label>
+        <input id="nombreUsuario" type="text" name="nombreUsuario">
     </div>
+
     <div>
         <label for="correo">Correo</label>
         <input id="correo" type="text" name="correo">
     </div>
+
     <div>
         <label for="password">Password</label>
         <input id="password" type="password" name="password">
     </div>
+
     <div>
         <label for="fechaNacimiento">Fecha de Nacimiento</label>
         <input id="fechaNacimiento" type="date" name="fechaNacimiento">

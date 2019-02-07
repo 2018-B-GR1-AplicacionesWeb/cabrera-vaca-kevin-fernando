@@ -1,67 +1,13 @@
 import {Controller, Get, HttpCode, Res, Req, Post, Body, Session, Param} from '@nestjs/common';
 import { AppService } from './app.service';
-import {Request, Response} from "express";
-import {options} from "tsconfig-paths/lib/options";
-import {get} from "https";
+import {UsuarioService} from "./usuario/usuario.service";
 
 @Controller()
 export class AppController {
-  constructor(private readonly _appService: AppService) {
+  constructor(private readonly _appService: AppService,
+              private readonly _usuarioService: UsuarioService
+              ) {
   }
-
-  usuarios= [
-      {
-        nombre: 'pedor',
-        correo: 'casd',
-        fecha_nacimiento : 'ayer'
-      },
-    {
-      nombre: 'manco',
-      correo: 'casd',
-      fecha_nacimiento : 'ayer'
-    },
-    {
-      nombre: 'derp',
-      correo: 'casd',
-      fecha_nacimiento : 'ayer'
-    }
-
-      ]
-
-  @Get()
-  getHello(): string {
-    return 'All Ok';
-  }
-
-
-  /*
-  @Post("Inicio")
-  @HttpCode(200)
-
-  crearUsuario(
-      @Body() usuario: Usuario,
-      @Res() res: Response,
-      @Req() req: Request,
-  ) {
-
-    const bdd = this._appService.crearUsuario(usuario);
-    //creacion de usuario
-    res.cookie("app", "WEB");
-
-    res.cookie("segura", "secreto", {
-      // secure: true,
-      signed: true
-    })
-    console.log('Cookies', req.cookies);
-
-    console.log('Cookie Firmada', req.signedCookies);
-
-    res.json(bdd);
-
-    //res.send('OK');
-  }
-  */
-
 
   @Get('Inicio')
   Login(
@@ -70,28 +16,8 @@ export class AppController {
     res.render('inicio')
   }
 
-  @Get('Usuarios')
-  Usuarios(
-      @Res() res,
-  )
-  {
-    res.render('usuarios',{
-      usuarios:this.usuarios
-        }
 
-    )
-  }
-
-  @Post('eliminar/:idUsuario')
-  eliminar(
-      @Res() response,
-      @Param('idUsuario') idUsuario :string,
-  ){
-  
-  }
-
-
-  @Post('Inicio')
+  @Post('login')
   @HttpCode(200)
   async ejecutarLogin(
       @Body('email') correo: string,
@@ -105,11 +31,8 @@ export class AppController {
       nombre: 'Juancho',
       roles: [1,2]
     }
-    /*const respuestas = await this._usuarioService
-        .autenticar(correo, password);
-*/
 
-    //const respuesta =true;
+
         console.log(sesion);
 
     if (respuestas.valido) {
@@ -119,7 +42,6 @@ export class AppController {
     } else {
       res.redirect('Inicio');
     }
-
   }
 
 
@@ -133,52 +55,19 @@ export class AppController {
     sesion.destroy();
     res.redirect('Inicio');
   }
-
-  @Get('RolUsuario')
-  rolusuario(
-      @Res() res,
-  ){
-      res.render('rolesusuarios',{
-        usuario : {
-          nombre:'Kevin',
-          correo : 'asdas@asdas.com',
-          fecha_nacimiento: '05/25/25'
-        },
-        roles:[
-          {
-            id: 1,
-            nombre:'administrador'
-          },
-          {
-            id: 2,
-            nombre:'usuario'
-          }
-        ]
-
-      })
-  }
-
-
-
-
-  @Get('NewRol')
-  NuevoRol(): string{
-    return 'Se Agrego Nuevo Rol';
-  }
-
 }
 
 
 export interface Usuario {
-  usuario_id: number;
-  nombre: string;
+  idUsuario?: number;
+  nombreUsuario: string;
   correo: string;
   password: string;
-  fecha_nacimiento: string;
+  fechaNacimiento: string;
 }
 
 export interface RespuestaSession {
   valido:boolean;
-  nombre:string;
-  roles: []
+  nombre?:string;
+  roles?: []
 }

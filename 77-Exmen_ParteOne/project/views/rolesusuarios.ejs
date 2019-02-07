@@ -46,8 +46,8 @@
             </td>
 
             <td>
-                <form action="/rolesusuarios" method="POST">
-                    <button type="button">Eliminar</button>
+                <form action="/eliminarRol/<%= rol.nombre%>/<%= usuario.usuarioId%>" method="POST">
+                    <button type="submit">Eliminar</button>
                 </form>
 
             </td>
@@ -67,11 +67,6 @@
 
 
 <button type="button">Agregar Rol</button>
-
-
-
-
-
 
 
 </body>

@@ -14,12 +14,12 @@
 <h1>Usuarios</h1>
 
 <form action="/Usuarios"
-      method="post"
+      method="GET"
 >
     <div>
         <label for="busqueda">Buscar</label>
         <input id="busqueda" type="text" name="busqueda">
-        <button type="button">Search</button>
+        <button >Search</button>
     </div>
 
 </form>
@@ -37,17 +37,20 @@
     <% usuarios.forEach((usuario)=> {%>
     <tr>
         <td>
-            <%= usuario.nombre%>
+            <%= usuario.nombreUsuario%>
         </td>
         <td>
             <%= usuario.correo%>
         </td>
         <td>
-            <%= usuario.fecha_nacimiento%>
+            <%= usuario.fechaNacimiento%>
         </td>
         <td>
-            <form action="/Inicio" method="POST">
-                <button type="button">Eliminar</button>
+            <form action="/eliminarUsuario/<%usuario.idUsuario%>" method="POST">
+                <button type="submit">Eliminar</button>
+            </form>
+            <form action="/RolUsuario/<%usuario.idUsuario%>" method="GET">
+                <button type="submit">Actualizar</button>
             </form>
 
         </td>

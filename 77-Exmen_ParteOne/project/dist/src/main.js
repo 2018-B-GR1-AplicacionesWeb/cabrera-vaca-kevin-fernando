@@ -12,12 +12,18 @@ const core_1 = require("@nestjs/core");
 const app_module_1 = require("./app.module");
 const http_server = require('http-server');
 const cookieParser = require("cookie-parser");
-console.log(http_server);
+const session = require("express-session");
 function bootstrap() {
     return __awaiter(this, void 0, void 0, function* () {
         const app = yield core_1.NestFactory.create(app_module_1.AppModule);
         app.use(cookieParser('ante la duda la mas tetuda', {}));
         app.set('view engine', 'ejs');
+        app.use(session({
+            resave: false,
+            saveUninitialized: true,
+            cookie: { secure: false },
+            name: 'server-session-id',
+        }));
         yield app.listen(3001);
     });
 }

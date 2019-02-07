@@ -22,39 +22,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const app_service_1 = require("./app.service");
+const usuario_service_1 = require("./usuario/usuario.service");
 let AppController = class AppController {
-    constructor(_appService) {
+    constructor(_appService, _usuarioService) {
         this._appService = _appService;
-        this.usuarios = [
-            {
-                nombre: 'pedor',
-                correo: 'casd',
-                fecha_nacimiento: 'ayer'
-            },
-            {
-                nombre: 'manco',
-                correo: 'casd',
-                fecha_nacimiento: 'ayer'
-            },
-            {
-                nombre: 'derp',
-                correo: 'casd',
-                fecha_nacimiento: 'ayer'
-            }
-        ];
-    }
-    getHello() {
-        return 'All Ok';
+        this._usuarioService = _usuarioService;
     }
     Login(res) {
         res.render('inicio');
-    }
-    Usuarios(res) {
-        res.render('usuarios', {
-            usuarios: this.usuarios
-        });
-    }
-    eliminar(response, idUsuario) {
     }
     ejecutarLogin(correo, password, res, sesion) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -80,35 +55,7 @@ let AppController = class AppController {
         sesion.destroy();
         res.redirect('Inicio');
     }
-    rolusuario(res) {
-        res.render('rolesusuarios', {
-            usuario: {
-                nombre: 'Kevin',
-                correo: 'asdas@asdas.com',
-                fecha_nacimiento: '05/25/25'
-            },
-            roles: [
-                {
-                    id: 1,
-                    nombre: 'administrador'
-                },
-                {
-                    id: 2,
-                    nombre: 'usuario'
-                }
-            ]
-        });
-    }
-    NuevoRol() {
-        return 'Se Agrego Nuevo Rol';
-    }
 };
-__decorate([
-    common_1.Get(),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", String)
-], AppController.prototype, "getHello", null);
 __decorate([
     common_1.Get('Inicio'),
     __param(0, common_1.Res()),
@@ -117,22 +64,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "Login", null);
 __decorate([
-    common_1.Get('Usuarios'),
-    __param(0, common_1.Res()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", void 0)
-], AppController.prototype, "Usuarios", null);
-__decorate([
-    common_1.Post('eliminar/:idUsuario'),
-    __param(0, common_1.Res()),
-    __param(1, common_1.Param('idUsuario')),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, String]),
-    __metadata("design:returntype", void 0)
-], AppController.prototype, "eliminar", null);
-__decorate([
-    common_1.Post('Inicio'),
+    common_1.Post('login'),
     common_1.HttpCode(200),
     __param(0, common_1.Body('email')),
     __param(1, common_1.Body('password')),
@@ -150,22 +82,10 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "logout", null);
-__decorate([
-    common_1.Get('RolUsuario'),
-    __param(0, common_1.Res()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", void 0)
-], AppController.prototype, "rolusuario", null);
-__decorate([
-    common_1.Get('NewRol'),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", String)
-], AppController.prototype, "NuevoRol", null);
 AppController = __decorate([
     common_1.Controller(),
-    __metadata("design:paramtypes", [app_service_1.AppService])
+    __metadata("design:paramtypes", [app_service_1.AppService,
+        usuario_service_1.UsuarioService])
 ], AppController);
 exports.AppController = AppController;
 //# sourceMappingURL=app.controller.js.map
