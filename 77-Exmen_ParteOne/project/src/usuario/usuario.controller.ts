@@ -28,9 +28,6 @@ export class UsuarioController {
 
 
 
-
-
-
     @Get('Usuarios')
     async Usuarios(
         @Res() res,
@@ -57,6 +54,11 @@ export class UsuarioController {
         } else {
             usuariosct = await this._usuarioService.buscarUsuarios();
         }
+
+
+        //const derp = await this._usuarioService.obtenerRoles(5);
+        //console.log(derp);
+
 
         res.render(
             'Usuarios',
@@ -85,12 +87,13 @@ export class UsuarioController {
         @Param('idUsuario') idUsuario :string,
     ){
 
-        const usuarioFound = await this._usuarioService.buscarUsuarioPorId(Number(idUsuario))
+        const usuarioFound = await this._usuarioService.buscarUsuarioPorId(Number(idUsuario));
 
-        const rolesUsuarioFound = await this._usuarioService.obtenerRoles(Number(idUsuario))
+        const rolesUsuario = await this._usuarioService.obtenerRoles(Number(idUsuario));
+
         res.render('rolesusuarios',{
             usuario : usuarioFound,
-            roles:rolesUsuarioFound
+            roles:rolesUsuario
         })
     }
 

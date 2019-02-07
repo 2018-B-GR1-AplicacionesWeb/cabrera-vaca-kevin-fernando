@@ -65,16 +65,16 @@ let UsuarioService = class UsuarioService {
         return this._usuarioRepository.findOne(usuarioId);
     }
     obtenerRoles(usuarioId) {
-        return [
-            {
-                id: 1,
-                nombre: 'administrador'
-            },
-            {
-                id: 2,
-                nombre: 'usuario'
-            }
-        ];
+        return __awaiter(this, void 0, void 0, function* () {
+            const usuriosMasRoles = yield this._usuarioRepository.find({ relations: ["roles"] });
+            var roles = [];
+            usuriosMasRoles.forEach((usuario) => {
+                if (usuario.idUsuario === usuarioId) {
+                    roles = usuario.roles;
+                }
+            });
+            return roles;
+        });
     }
     camposValidos(newUsuario) {
         if (!this.correoValido(newUsuario.correo)) {

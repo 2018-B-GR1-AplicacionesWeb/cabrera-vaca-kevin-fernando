@@ -68,10 +68,10 @@ let UsuarioController = class UsuarioController {
     rolePorUsuario(res, idUsuario) {
         return __awaiter(this, void 0, void 0, function* () {
             const usuarioFound = yield this._usuarioService.buscarUsuarioPorId(Number(idUsuario));
-            const rolesUsuarioFound = yield this._usuarioService.obtenerRoles(Number(idUsuario));
+            const rolesUsuario = yield this._usuarioService.obtenerRoles(Number(idUsuario));
             res.render('rolesusuarios', {
                 usuario: usuarioFound,
-                roles: rolesUsuarioFound
+                roles: rolesUsuario
             });
         });
     }

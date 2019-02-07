@@ -19,7 +19,7 @@ UsuarioModule = __decorate([
         imports: [
             typeorm_1.TypeOrmModule.forFeature([
                 usuario_entity_1.UsuarioEntity,
-                rol_entity_1.RolEntity
+                rol_entity_1.RolEntity,
             ])
         ],
         controllers: [

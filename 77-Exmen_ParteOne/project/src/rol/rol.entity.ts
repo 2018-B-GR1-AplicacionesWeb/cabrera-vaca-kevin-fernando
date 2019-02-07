@@ -1,6 +1,5 @@
 //rol entity
-
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import {Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn} from "typeorm";
 
 @Entity('rol')
 export class RolEntity {
@@ -9,6 +8,5 @@ export class RolEntity {
 
     @Column()
     nombreRol: string;
-
 
 }

@@ -29,7 +29,7 @@ AppModule = __decorate([
                 dropSchema: false,
                 entities: [
                     usuario_entity_1.UsuarioEntity,
-                    rol_entity_1.RolEntity
+                    rol_entity_1.RolEntity,
                 ]
             }),
             usuario_module_1.UsuarioModule

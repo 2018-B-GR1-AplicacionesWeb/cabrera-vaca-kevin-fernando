@@ -12,7 +12,7 @@ import {RolEntity} from "../rol/rol.entity";
     imports: [
         TypeOrmModule.forFeature([
             UsuarioEntity,
-            RolEntity
+            RolEntity,
         ])
 
     ],

@@ -21,7 +21,7 @@ import {UsuarioModule} from "./usuario/usuario.module";
       dropSchema:false,
       entities : [
         UsuarioEntity,
-        RolEntity
+        RolEntity,
       ]
     }),
       UsuarioModule

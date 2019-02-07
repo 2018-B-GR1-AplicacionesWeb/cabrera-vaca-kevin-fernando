@@ -15,7 +15,11 @@ export class UsuarioService {
         private readonly _usuarioRepository: Repository<UsuarioEntity>,
 
         @InjectRepository(RolEntity)
-        private readonly _rolRepository:Repository<RolEntity>
+        private readonly _rolRepository:Repository<RolEntity>,
+
+        /*@InjectRepository(RolUsuarioEntity)
+        private readonly _rolUsuarioRepository:Repository<RolUsuarioEntity>
+        */
     ){ }
 
     async autenticarUsuario(
@@ -40,6 +44,12 @@ export class UsuarioService {
 
     }
 
+
+    /*traerTodosRoles (usuarioId ? : FindManyOptions<RolUsuarioEntity>): Promise<RolUsuarioEntity []>{
+        const roles = this._rolUsuarioRepository.find({ relations: ["roles"] });
+        console.log('Supuestos todos los Roles:',roles);
+        return roles;
+    }*/
 
     buscarUsuarios(parametrosDeBusqueda ? : FindManyOptions<UsuarioEntity>)
     : Promise<UsuarioEntity []>{
@@ -68,17 +78,18 @@ export class UsuarioService {
         return this._usuarioRepository.findOne(usuarioId);
     }
 
-    obtenerRoles (usuarioId: Number){
-       return  [
-            {
-                id: 1,
-                nombre:'administrador'
-            },
-            {
-                id: 2,
-                nombre:'usuario'
+    async obtenerRoles (usuarioId: Number){
+       const usuriosMasRoles =   await this._usuarioRepository.find({ relations: ["roles"] });
+
+        var roles = [];
+
+        usuriosMasRoles.forEach( (usuario) => {
+            if(usuario.idUsuario === usuarioId ){
+                roles = usuario.roles
             }
-        ]
+            }
+        )
+        return roles;
     }
 
 
