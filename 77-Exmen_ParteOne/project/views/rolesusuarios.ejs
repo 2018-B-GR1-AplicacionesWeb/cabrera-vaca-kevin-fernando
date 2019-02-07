@@ -1,5 +1,12 @@
 <html>
 
+<style>
+    table,th,td{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+
 <header>
 
 
@@ -19,13 +26,13 @@
     </tr>
         <tr>
             <td>
-                <%= usuario.nombre%>
+                <%= usuario.nombreUsuario%>
             </td>
             <td>
                 <%= usuario.correo%>
             </td>
             <td>
-                <%= usuario.fecha_nacimiento%>
+                <%= usuario.fechaNacimiento%>
             </td>
         </tr>
 </table>

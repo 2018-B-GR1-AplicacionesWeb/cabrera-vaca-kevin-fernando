@@ -46,10 +46,10 @@
             <%= usuario.fechaNacimiento%>
         </td>
         <td>
-            <form action="/eliminarUsuario/<%usuario.idUsuario%>" method="POST">
+            <form action="/eliminarUsuario/<%= usuario.idUsuario%>" method="POST">
                 <button type="submit">Eliminar</button>
             </form>
-            <form action="/RolUsuario/<%usuario.idUsuario%>" method="GET">
+            <form action="/RolUsuario/<%= usuario.idUsuario%>" method="GET">
                 <button type="submit">Actualizar</button>
             </form>
 

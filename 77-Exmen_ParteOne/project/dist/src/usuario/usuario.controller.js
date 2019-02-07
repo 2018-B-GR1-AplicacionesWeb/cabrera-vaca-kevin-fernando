@@ -62,7 +62,7 @@ let UsuarioController = class UsuarioController {
         return __awaiter(this, void 0, void 0, function* () {
             const usuarioBorrado = yield this._usuarioService
                 .eliminarUsuario(Number(idUsuario));
-            response.redirect('Usuarios');
+            response.redirect('/Usuarios');
         });
     }
     rolePorUsuario(res, idUsuario) {

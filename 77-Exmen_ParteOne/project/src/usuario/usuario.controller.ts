@@ -76,7 +76,7 @@ export class UsuarioController {
         const  usuarioBorrado = await this._usuarioService
             .eliminarUsuario(Number(idUsuario));
 
-        response.redirect('Usuarios')
+        response.redirect('/Usuarios')
     }
 
     @Get('RolUsuario/:idUsuario')
