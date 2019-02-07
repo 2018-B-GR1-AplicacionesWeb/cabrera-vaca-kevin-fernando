@@ -81,12 +81,70 @@ export class UsuarioService {
         ]
     }
 
-    obtenerUsuarioId (correo : String){
+
+    camposValidos (newUsuario : Usuario) : Boolean {
+        if(this.correoValido(newUsuario.correo)){
+            return false
+        }
+
+
+
+
+
 
 
     }
 
 
+    correoValido (valor:string) :boolean {
+
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if(valor === ''){
+            console.log('email incorrecto / vacio');
+            return false;
+        }
+
+
+        else if (!filter.test(valor)) {
+            console.log('email incorrecto / no valido');
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    nombreValido (valor:string) : boolean{
+
+        var filter = /^[A-Za-z\_\-\.\s\xF1\xD1]+$/;
+
+        if(valor === ''){
+            console.log('nombre incorrecto / vacio');
+            return false;
+        }
+
+        else if (!filter.test(valor)) {
+            console.log('nombre incorrecto / no valido');
+            return false;
+        }
+        else {
+            return true;
+        }
+
+    }
+
+
+    fechaValida (valor : Date) : boolean {
+        var hoy = new Date();
+
+        if (hoy < valor) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
 
 
 }
