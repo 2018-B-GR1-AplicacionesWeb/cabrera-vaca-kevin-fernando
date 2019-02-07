@@ -83,16 +83,19 @@ export class UsuarioService {
 
 
     camposValidos (newUsuario : Usuario) : Boolean {
-        if(this.correoValido(newUsuario.correo)){
-            return false
+        if(!this.correoValido(newUsuario.correo)){
+            return false;
         }
 
+        else if(!this.nombreValido(newUsuario.nombreUsuario)){
+            return false;
+        }
 
+        else if(!this.fechaValida(newUsuario.fechaNacimiento)){
+            return false;
+        }
 
-
-
-
-
+        else {return true;}
     }
 
 
@@ -105,7 +108,7 @@ export class UsuarioService {
             return false;
         }
 
-
+//if(!re.exec(valor)){
         else if (!filter.test(valor)) {
             console.log('email incorrecto / no valido');
             return false;
@@ -128,22 +131,15 @@ export class UsuarioService {
             console.log('nombre incorrecto / no valido');
             return false;
         }
-        else {
-            return true;
-        }
-
+        else {return true;}
     }
 
 
     fechaValida (valor : Date) : boolean {
         var hoy = new Date();
 
-        if (hoy < valor) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        if (hoy < valor) {return false;}
+        else {return true;}
     }
 
 

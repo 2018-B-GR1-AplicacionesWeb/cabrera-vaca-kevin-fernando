@@ -63,7 +63,7 @@ export interface Usuario {
   nombreUsuario: string;
   correo: string;
   password: string;
-  fechaNacimiento: string;
+  fechaNacimiento: Date;
 }
 
 export interface RespuestaSession {

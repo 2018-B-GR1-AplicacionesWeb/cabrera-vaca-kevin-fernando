@@ -77,8 +77,17 @@ let UsuarioService = class UsuarioService {
         ];
     }
     camposValidos(newUsuario) {
-        if (this.correoValido(newUsuario.correo)) {
+        if (!this.correoValido(newUsuario.correo)) {
             return false;
+        }
+        else if (!this.nombreValido(newUsuario.nombreUsuario)) {
+            return false;
+        }
+        else if (!this.fechaValida(newUsuario.fechaNacimiento)) {
+            return false;
+        }
+        else {
+            return true;
         }
     }
     correoValido(valor) {
