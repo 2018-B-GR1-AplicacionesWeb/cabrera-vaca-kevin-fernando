@@ -17,9 +17,6 @@ export class UsuarioService {
         @InjectRepository(RolEntity)
         private readonly _rolRepository:Repository<RolEntity>,
 
-        /*@InjectRepository(RolUsuarioEntity)
-        private readonly _rolUsuarioRepository:Repository<RolUsuarioEntity>
-        */
     ){ }
 
     async autenticarUsuario(
@@ -41,15 +38,9 @@ export class UsuarioService {
         }else {
             return false;
         }
-
     }
 
 
-    /*traerTodosRoles (usuarioId ? : FindManyOptions<RolUsuarioEntity>): Promise<RolUsuarioEntity []>{
-        const roles = this._rolUsuarioRepository.find({ relations: ["roles"] });
-        console.log('Supuestos todos los Roles:',roles);
-        return roles;
-    }*/
 
     buscarUsuarios(parametrosDeBusqueda ? : FindManyOptions<UsuarioEntity>)
     : Promise<UsuarioEntity []>{
@@ -57,9 +48,14 @@ export class UsuarioService {
     }
 
     crearUsuario (usuario : Usuario) : Promise<UsuarioEntity>{
-    const usuarioEntity : UsuarioEntity = this._usuarioRepository.create(usuario)
 
-        return this._usuarioRepository.save(usuarioEntity)
+        if(!this.camposValidos(usuario)){
+            return
+        }
+        else {
+            const usuarioEntity: UsuarioEntity = this._usuarioRepository.create(usuario)
+            return this._usuarioRepository.save(usuarioEntity)
+        }
     }
 
     eliminarUsuario (usuarioId : number) : Promise <UsuarioEntity>{
@@ -68,8 +64,6 @@ export class UsuarioService {
             .create({
                 idUsuario : usuarioId
             })
-
-
         return this._usuarioRepository.remove(usuarioAEliminar);
 
     }
@@ -78,9 +72,8 @@ export class UsuarioService {
         return this._usuarioRepository.findOne(usuarioId);
     }
 
-    async obtenerRoles (usuarioId: Number){
+    async obtenerRolesDeUnUsuario (usuarioId: Number){
        const usuriosMasRoles =   await this._usuarioRepository.find({ relations: ["roles"] });
-
         var roles = [];
 
         usuriosMasRoles.forEach( (usuario) => {

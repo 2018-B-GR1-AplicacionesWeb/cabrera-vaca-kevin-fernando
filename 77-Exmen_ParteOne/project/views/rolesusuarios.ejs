@@ -53,7 +53,7 @@
             </td>
 
             <td>
-                <form action="/eliminarRol/<%= rol.nombre%>/<%= usuario.usuarioId%>" method="POST">
+                <form action="/eliminarRol/<%= usuario.usuarioId%>/<%= rol.nombre%>" method="POST">
                     <button type="submit">Eliminar</button>
                 </form>
 
@@ -66,17 +66,16 @@
 <h2> Agregar Roles</h2>
 
 
-
-<form action="/agregarRol/ ????" method="post">
-    <select id="rolNuevo" onChange="imprimirValor()">
-        <option value="1">Usuario</option>
-        <option value="2">Administrador</option>
+<form action="/agregarRol/<%=usuario.id%>" method="post">
+    <select id="rolNuevo" name="rol" onChange="imprimirValor()">
+        <option value="" disabled selected>Seleccione un rol...</option>
+        <% allroles.forEach((rol)=> {%>
+            <option value=<%= rol.idRol%>><%= rol.nombreRol%></option>
+        <%})%>
     </select>
 
     <button type="submit">Agregar</button>
-
 </form>
-
 
 
 
@@ -84,7 +83,8 @@
     function imprimirValor(){
         var select = document.getElementById("rolNuevo");
         var options=document.getElementsByTagName("option");
-        console.log(select.value);
+        console.log("ID",select.value);
+        console.log("Option",select.innerText);
     }
 </script>
 

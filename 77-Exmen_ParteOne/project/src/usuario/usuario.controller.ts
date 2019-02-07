@@ -7,12 +7,14 @@ import {Usuario} from "../app.controller";
 import {UsuarioService} from "./usuario.service";
 import {UsuarioEntity} from './usuario.entity';
 import {FindManyOptions, Like} from "typeorm";
+import {RolService} from "../rol/rol.service";
 
 @Controller()
 export class UsuarioController {
 
     constructor(
-        private readonly _usuarioService : UsuarioService
+        private readonly _usuarioService : UsuarioService,
+        private readonly _rolService : RolService,
     ){    }
 
 
@@ -89,21 +91,38 @@ export class UsuarioController {
 
         const usuarioFound = await this._usuarioService.buscarUsuarioPorId(Number(idUsuario));
 
-        const rolesUsuario = await this._usuarioService.obtenerRoles(Number(idUsuario));
+        const rolesUsuario = await this._usuarioService.obtenerRolesDeUnUsuario(Number(idUsuario));
+
+        const allRoles = await  this._rolService.buscarRoles();
+
+        console.log()
 
         res.render('rolesusuarios',{
             usuario : usuarioFound,
-            roles:rolesUsuario
+            roles:rolesUsuario,
+            allroles: allRoles
+
         })
     }
 
-    @Post('eliminarRol/:nombreRol/:correoUsuario')
+    @Post('eliminarRol/:idUsuario/:idRol')
     eliminarRol(
         @Res() response,
-        @Param('nombreRol') nombreRol : string,
-        @Param('correoUsuario') correoUsuario : string
+        @Param('idUsuario') idUsuario : number,
+        @Param('idRol') idRol : number
     ){
-        response.send(nombreRol + correoUsuario );
+
+
+    }
+
+    @Post('agregarRol/:idUsuario/:idRol')
+    agregarRol(
+        @Res() response,
+        @Param('idUsuario') idUsuario : number,
+        @Param('idRol') idRol : number
+    ){
+
+
     }
 
 

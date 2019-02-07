@@ -23,9 +23,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const usuario_service_1 = require("./usuario.service");
 const typeorm_1 = require("typeorm");
+const rol_service_1 = require("../rol/rol.service");
 let UsuarioController = class UsuarioController {
-    constructor(_usuarioService) {
+    constructor(_usuarioService, _rolService) {
         this._usuarioService = _usuarioService;
+        this._rolService = _rolService;
     }
     crearUsuario(response, usuario) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -68,15 +70,19 @@ let UsuarioController = class UsuarioController {
     rolePorUsuario(res, idUsuario) {
         return __awaiter(this, void 0, void 0, function* () {
             const usuarioFound = yield this._usuarioService.buscarUsuarioPorId(Number(idUsuario));
-            const rolesUsuario = yield this._usuarioService.obtenerRoles(Number(idUsuario));
+            const rolesUsuario = yield this._usuarioService.obtenerRolesDeUnUsuario(Number(idUsuario));
+            const allRoles = yield this._rolService.buscarRoles();
+            console.log();
             res.render('rolesusuarios', {
                 usuario: usuarioFound,
-                roles: rolesUsuario
+                roles: rolesUsuario,
+                allroles: allRoles
             });
         });
     }
-    eliminarRol(response, nombreRol, correoUsuario) {
-        response.send(nombreRol + correoUsuario);
+    eliminarRol(response, idUsuario, idRol) {
+    }
+    agregarRol(response, idUsuario, idRol) {
     }
 };
 __decorate([
@@ -112,17 +118,27 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], UsuarioController.prototype, "rolePorUsuario", null);
 __decorate([
-    common_1.Post('eliminarRol/:nombreRol/:correoUsuario'),
+    common_1.Post('eliminarRol/:idUsuario/:idRol'),
     __param(0, common_1.Res()),
-    __param(1, common_1.Param('nombreRol')),
-    __param(2, common_1.Param('correoUsuario')),
+    __param(1, common_1.Param('idUsuario')),
+    __param(2, common_1.Param('idRol')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, String, String]),
+    __metadata("design:paramtypes", [Object, Number, Number]),
     __metadata("design:returntype", void 0)
 ], UsuarioController.prototype, "eliminarRol", null);
+__decorate([
+    common_1.Post('agregarRol/:idUsuario/:idRol'),
+    __param(0, common_1.Res()),
+    __param(1, common_1.Param('idUsuario')),
+    __param(2, common_1.Param('idRol')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Number, Number]),
+    __metadata("design:returntype", void 0)
+], UsuarioController.prototype, "agregarRol", null);
 UsuarioController = __decorate([
     common_1.Controller(),
-    __metadata("design:paramtypes", [usuario_service_1.UsuarioService])
+    __metadata("design:paramtypes", [usuario_service_1.UsuarioService,
+        rol_service_1.RolService])
 ], UsuarioController);
 exports.UsuarioController = UsuarioController;
 //# sourceMappingURL=usuario.controller.js.map

@@ -51,8 +51,13 @@ let UsuarioService = class UsuarioService {
         return this._usuarioRepository.find(parametrosDeBusqueda);
     }
     crearUsuario(usuario) {
-        const usuarioEntity = this._usuarioRepository.create(usuario);
-        return this._usuarioRepository.save(usuarioEntity);
+        if (!this.camposValidos(usuario)) {
+            return;
+        }
+        else {
+            const usuarioEntity = this._usuarioRepository.create(usuario);
+            return this._usuarioRepository.save(usuarioEntity);
+        }
     }
     eliminarUsuario(usuarioId) {
         const usuarioAEliminar = this._usuarioRepository
@@ -64,7 +69,7 @@ let UsuarioService = class UsuarioService {
     buscarUsuarioPorId(usuarioId) {
         return this._usuarioRepository.findOne(usuarioId);
     }
-    obtenerRoles(usuarioId) {
+    obtenerRolesDeUnUsuario(usuarioId) {
         return __awaiter(this, void 0, void 0, function* () {
             const usuriosMasRoles = yield this._usuarioRepository.find({ relations: ["roles"] });
             var roles = [];
