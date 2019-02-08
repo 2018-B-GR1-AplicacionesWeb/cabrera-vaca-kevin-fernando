@@ -30,6 +30,19 @@
 
 </form>
 
+
+<% const existeMensaje = typeof mensaje !== "undefined" %>
+
+<% if(existeMensaje){ %>
+
+    <div class="alert alert-info" role="alert">
+            <span class="font-weight-bold">
+                MENSAJE
+            </span> : <%= mensaje %>
+    </div>
+<% } %>
+
+
 <h2>Sign up</h2>
 
 <p>Ingresa tus credenciales</p>

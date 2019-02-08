@@ -9,6 +9,8 @@ import {UsuarioEntity} from './usuario.entity';
 import {FindManyOptions, Like} from "typeorm";
 import {RolService} from "../rol/rol.service";
 import {RolEntity} from "../rol/rol.entity";
+import {CreateUsuarioDto} from './dto/create.dto';
+import {validate, ValidationError} from "class-validator";
 
 @Controller()
 export class UsuarioController {
@@ -26,9 +28,29 @@ export class UsuarioController {
         @Res() response,
         @Body() usuario:Usuario
     ){
-        await this._usuarioService.crearUsuario(usuario);
-        console.log('Usuario Nuevo', usuario);
-        response.redirect('Usuarios')
+        const objValUser = new CreateUsuarioDto();
+
+        //const hoy =  Date();
+
+        objValUser.nombre = usuario.nombreUsuario;
+        objValUser.correo = usuario.correo;
+        objValUser.password = usuario.password;
+        objValUser.fecha = usuario.fechaNacimiento;
+
+        const errores: ValidationError[] = await validate(objValUser);
+        console.log('Errores en la Validacion:',errores)
+
+        const hayErrores = errores.length >0
+
+        if(hayErrores ){
+            response.render('inicio',{
+                mensaje: "Datos no validos"
+            })
+        }else {
+            await this._usuarioService.crearUsuario(usuario);
+            console.log('Usuario Nuevo', usuario);
+            response.redirect('Usuarios')
+        }
     }
 
 

@@ -24,6 +24,8 @@ const common_1 = require("@nestjs/common");
 const usuario_service_1 = require("./usuario.service");
 const typeorm_1 = require("typeorm");
 const rol_service_1 = require("../rol/rol.service");
+const create_dto_1 = require("./dto/create.dto");
+const class_validator_1 = require("class-validator");
 let UsuarioController = class UsuarioController {
     constructor(_usuarioService, _rolService) {
         this._usuarioService = _usuarioService;
@@ -31,9 +33,24 @@ let UsuarioController = class UsuarioController {
     }
     crearUsuario(response, usuario) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield this._usuarioService.crearUsuario(usuario);
-            console.log('Usuario Nuevo', usuario);
-            response.redirect('Usuarios');
+            const objValUser = new create_dto_1.CreateUsuarioDto();
+            objValUser.nombre = usuario.nombreUsuario;
+            objValUser.correo = usuario.correo;
+            objValUser.password = usuario.password;
+            objValUser.fecha = usuario.fechaNacimiento;
+            const errores = yield class_validator_1.validate(objValUser);
+            console.log('Errores en la Validacion:', errores);
+            const hayErrores = errores.length > 0;
+            if (hayErrores) {
+                response.render('inicio', {
+                    mensaje: "Datos no validos"
+                });
+            }
+            else {
+                yield this._usuarioService.crearUsuario(usuario);
+                console.log('Usuario Nuevo', usuario);
+                response.redirect('Usuarios');
+            }
         });
     }
     Usuarios(res, busqueda, accion, usuarioName, sesion) {
