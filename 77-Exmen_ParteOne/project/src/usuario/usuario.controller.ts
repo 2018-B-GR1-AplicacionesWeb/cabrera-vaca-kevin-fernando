@@ -18,6 +18,8 @@ export class UsuarioController {
     ){    }
 
 
+
+
     @Post('crearUsuario')
     async crearUsuario(
         @Res() response,
@@ -106,23 +108,38 @@ export class UsuarioController {
     }
 
     @Post('eliminarRol/:idUsuario/:idRol')
-    eliminarRol(
+    async eliminarRol(
         @Res() response,
-        @Param('idUsuario') idUsuario : number,
-        @Param('idRol') idRol : number
+        @Param('idUsuario') idUsuario : string,
+        @Param('idRol') idRol : string
     ){
+        console.log('Usuario',idUsuario);
+        console.log('Rol a eliminar',idRol);
 
+        const usuarioFound = await this._usuarioService.buscarUsuarioPorId(Number(idUsuario));
+        const rolesUsuario = await this._usuarioService.obtenerRolesDeUnUsuario(Number(idUsuario));
 
+        await this._usuarioService.eliminarRolDeUnUsuario(usuarioFound,Number(idRol),rolesUsuario);
+
+        response.redirect('/Usuarios')
     }
 
-    @Post('agregarRol/:idUsuario/:idRol')
-    agregarRol(
+    @Post('agregarRol/:idUsuario')
+    async agregarRol(
         @Res() response,
         @Param('idUsuario') idUsuario : number,
-        @Param('idRol') idRol : number
+        @Body ('rolNuevo') rolNuevo : number
     ){
+        const usuarioFound = await this._usuarioService.buscarUsuarioPorId(Number(idUsuario));
+        const rolesUsuario = await this._usuarioService.obtenerRolesDeUnUsuario(Number(idUsuario));
+        const allRoles = await this._rolService.buscarRoles();
+        var mensaje = '';
 
+        if(!this._usuarioService.agregarRolAUnUsuario(usuarioFound,rolNuevo,rolesUsuario,allRoles)){
+             mensaje = 'El usuario ya posee el ROL';
+        }
 
+        response.redirect('/Usuarios',{mensajeExtra : mensaje })
     }
 
 

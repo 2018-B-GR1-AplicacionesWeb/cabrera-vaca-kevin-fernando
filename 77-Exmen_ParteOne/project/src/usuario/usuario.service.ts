@@ -1,7 +1,7 @@
 //Usuario Servicio
 
 import {Injectable} from "@nestjs/common";
-import {Usuario} from "../app.controller";
+import {RespuestaSession, Usuario} from "../app.controller";
 import {InjectRepository} from "@nestjs/typeorm"
 import {FindManyOptions, FindOneOptions, Repository} from "typeorm";
 import {UsuarioEntity} from "./usuario.entity";
@@ -19,10 +19,10 @@ export class UsuarioService {
 
     ){ }
 
-    async autenticarUsuario(
+    async autenticarUsuario (
         correo : string,
         password: string
-    ):Promise <boolean>{
+    ):Promise <RespuestaSession>{
 
         const consulta:FindOneOptions<UsuarioEntity>={
             where:{
@@ -31,19 +31,45 @@ export class UsuarioService {
             }
         };
 
-        const respuesta = await this._usuarioRepository.findOne(consulta);
+        const resultadoConsulta = await this._usuarioRepository.findOne(consulta);
 
-        if(respuesta){
-            return true;
+        console.log ('Usuario encontrado : ', resultadoConsulta);
+
+        if(resultadoConsulta){
+
+
+            const roles = await this.obtenerRolesDeUnUsuario(resultadoConsulta.idUsuario);
+
+
+
+
+            var respuestabuena : RespuestaSession={
+                valido :true,
+                nombre :resultadoConsulta.nombreUsuario,
+                roles :roles,
+            }
+
+
+
+            return respuestabuena;
+
         }else {
-            return false;
+            var respuestamala :RespuestaSession={
+                valido :false,
+                nombre :'',
+                roles :null,
+            }
+
+            return respuestamala;
         }
+
+
     }
 
 
 
     buscarUsuarios(parametrosDeBusqueda ? : FindManyOptions<UsuarioEntity>)
-    : Promise<UsuarioEntity []>{
+        : Promise<UsuarioEntity []>{
         return this._usuarioRepository.find(parametrosDeBusqueda);
     }
 
@@ -68,18 +94,18 @@ export class UsuarioService {
 
     }
 
-    buscarUsuarioPorId(usuarioId: number){
+    buscarUsuarioPorId(usuarioId: number):Promise<UsuarioEntity>{
         return this._usuarioRepository.findOne(usuarioId);
     }
 
-    async obtenerRolesDeUnUsuario (usuarioId: Number){
-       const usuriosMasRoles =   await this._usuarioRepository.find({ relations: ["roles"] });
+    async obtenerRolesDeUnUsuario (usuarioId: Number) : Promise<RolEntity[]>{
+        const usuriosMasRoles =   await this._usuarioRepository.find({ relations: ["roles"] });
         var roles = [];
 
         usuriosMasRoles.forEach( (usuario) => {
-            if(usuario.idUsuario === usuarioId ){
-                roles = usuario.roles
-            }
+                if(usuario.idUsuario === usuarioId ){
+                    roles = usuario.roles
+                }
             }
         )
         return roles;
@@ -100,6 +126,66 @@ export class UsuarioService {
         }
 
         else {return true;}
+    }
+
+    eliminarRolDeUnUsuario(usuario : Usuario , rolABorrarID : number,rolesDelUsuario :RolEntity[]) : Promise<UsuarioEntity>  {
+        var valor = 0;
+        const indiceRol = rolesDelUsuario.findIndex(
+            (rol)=>{
+                valor = valor+1;
+                return rol.idRol === rolABorrarID
+            }
+        )
+        var nuevosRoles = rolesDelUsuario.splice(valor,1);
+
+        const usuarioEntity : UsuarioEntity = this._usuarioRepository.create({
+            idUsuario : usuario.idUsuario,
+            nombreUsuario : usuario.nombreUsuario,
+            correo: usuario.correo,
+            password : usuario.password,
+            fechaNacimiento : usuario.fechaNacimiento,
+            roles: nuevosRoles
+        })
+        return this._usuarioRepository.save(usuarioEntity);
+    }
+
+    agregarRolAUnUsuario (usuario : Usuario , rolAAgregarID : number, rolesDelUsuario : RolEntity[] ,allRoles : RolEntity[]) :Promise<UsuarioEntity>{
+
+        const yaExiste = rolesDelUsuario.findIndex(
+            (rol)=>{
+                if( rol.idRol === rolAAgregarID){
+                    return true;
+                }
+            }
+        )
+
+        if(yaExiste){
+            return null;
+        }
+
+
+        var newRolAAgregar : RolEntity = allRoles.find(
+            (rol) => {
+                if(rol.idRol === rolAAgregarID)
+                    return true;
+            }
+        )
+
+        console.log(newRolAAgregar);
+
+        var newRoles : RolEntity[] = rolesDelUsuario;
+        newRoles.push(newRolAAgregar);
+
+        const usuarioEntity : UsuarioEntity = this._usuarioRepository.create({
+            idUsuario : usuario.idUsuario,
+            nombreUsuario : usuario.nombreUsuario,
+            correo: usuario.correo,
+            password : usuario.password,
+            fechaNacimiento : usuario.fechaNacimiento,
+            roles: newRoles
+        });
+
+        return this._usuarioRepository.save(usuarioEntity);
     }
 
 

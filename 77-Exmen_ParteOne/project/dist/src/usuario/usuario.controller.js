@@ -81,8 +81,26 @@ let UsuarioController = class UsuarioController {
         });
     }
     eliminarRol(response, idUsuario, idRol) {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log('Usuario', idUsuario);
+            console.log('Rol a eliminar', idRol);
+            const usuarioFound = yield this._usuarioService.buscarUsuarioPorId(Number(idUsuario));
+            const rolesUsuario = yield this._usuarioService.obtenerRolesDeUnUsuario(Number(idUsuario));
+            yield this._usuarioService.eliminarRolDeUnUsuario(usuarioFound, Number(idRol), rolesUsuario);
+            response.redirect('/Usuarios');
+        });
     }
-    agregarRol(response, idUsuario, idRol) {
+    agregarRol(response, idUsuario, rolNuevo) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const usuarioFound = yield this._usuarioService.buscarUsuarioPorId(Number(idUsuario));
+            const rolesUsuario = yield this._usuarioService.obtenerRolesDeUnUsuario(Number(idUsuario));
+            const allRoles = yield this._rolService.buscarRoles();
+            var mensaje = '';
+            if (!this._usuarioService.agregarRolAUnUsuario(usuarioFound, rolNuevo, rolesUsuario, allRoles)) {
+                mensaje = 'El usuario ya posee el ROL';
+            }
+            response.redirect('/Usuarios', { mensajeExtra: mensaje });
+        });
     }
 };
 __decorate([
@@ -123,17 +141,17 @@ __decorate([
     __param(1, common_1.Param('idUsuario')),
     __param(2, common_1.Param('idRol')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Number, Number]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:paramtypes", [Object, String, String]),
+    __metadata("design:returntype", Promise)
 ], UsuarioController.prototype, "eliminarRol", null);
 __decorate([
-    common_1.Post('agregarRol/:idUsuario/:idRol'),
+    common_1.Post('agregarRol/:idUsuario'),
     __param(0, common_1.Res()),
     __param(1, common_1.Param('idUsuario')),
-    __param(2, common_1.Param('idRol')),
+    __param(2, common_1.Body('rolNuevo')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Number, Number]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], UsuarioController.prototype, "agregarRol", null);
 UsuarioController = __decorate([
     common_1.Controller(),

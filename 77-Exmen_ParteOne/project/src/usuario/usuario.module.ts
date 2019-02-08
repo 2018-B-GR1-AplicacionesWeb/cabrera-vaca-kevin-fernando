@@ -16,7 +16,6 @@ import {RolService} from "../rol/rol.service";
             UsuarioEntity,
             RolEntity,
         ])
-
     ],
     modules:[
         RolModule,

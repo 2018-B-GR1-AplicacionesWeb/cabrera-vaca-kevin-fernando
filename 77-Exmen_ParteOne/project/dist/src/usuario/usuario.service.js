@@ -38,12 +38,24 @@ let UsuarioService = class UsuarioService {
                     password: password
                 }
             };
-            const respuesta = yield this._usuarioRepository.findOne(consulta);
-            if (respuesta) {
-                return true;
+            const resultadoConsulta = yield this._usuarioRepository.findOne(consulta);
+            console.log('Usuario encontrado : ', resultadoConsulta);
+            if (resultadoConsulta) {
+                const roles = yield this.obtenerRolesDeUnUsuario(resultadoConsulta.idUsuario);
+                var respuestabuena = {
+                    valido: true,
+                    nombre: resultadoConsulta.nombreUsuario,
+                    roles: roles,
+                };
+                return respuestabuena;
             }
             else {
-                return false;
+                var respuestamala = {
+                    valido: false,
+                    nombre: '',
+                    roles: null,
+                };
+                return respuestamala;
             }
         });
     }
@@ -94,6 +106,49 @@ let UsuarioService = class UsuarioService {
         else {
             return true;
         }
+    }
+    eliminarRolDeUnUsuario(usuario, rolABorrarID, rolesDelUsuario) {
+        var valor = 0;
+        const indiceRol = rolesDelUsuario.findIndex((rol) => {
+            valor = valor + 1;
+            return rol.idRol === rolABorrarID;
+        });
+        var nuevosRoles = rolesDelUsuario.splice(valor, 1);
+        const usuarioEntity = this._usuarioRepository.create({
+            idUsuario: usuario.idUsuario,
+            nombreUsuario: usuario.nombreUsuario,
+            correo: usuario.correo,
+            password: usuario.password,
+            fechaNacimiento: usuario.fechaNacimiento,
+            roles: nuevosRoles
+        });
+        return this._usuarioRepository.save(usuarioEntity);
+    }
+    agregarRolAUnUsuario(usuario, rolAAgregarID, rolesDelUsuario, allRoles) {
+        const yaExiste = rolesDelUsuario.findIndex((rol) => {
+            if (rol.idRol === rolAAgregarID) {
+                return true;
+            }
+        });
+        if (yaExiste) {
+            return null;
+        }
+        var newRolAAgregar = allRoles.find((rol) => {
+            if (rol.idRol === rolAAgregarID)
+                return true;
+        });
+        console.log(newRolAAgregar);
+        var newRoles = rolesDelUsuario;
+        newRoles.push(newRolAAgregar);
+        const usuarioEntity = this._usuarioRepository.create({
+            idUsuario: usuario.idUsuario,
+            nombreUsuario: usuario.nombreUsuario,
+            correo: usuario.correo,
+            password: usuario.password,
+            fechaNacimiento: usuario.fechaNacimiento,
+            roles: newRoles
+        });
+        return this._usuarioRepository.save(usuarioEntity);
     }
     correoValido(valor) {
         var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;

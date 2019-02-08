@@ -31,29 +31,28 @@ let AppController = class AppController {
     Login(res) {
         res.render('inicio');
     }
-    ejecutarLogin(correo, password, res, sesion) {
+    ejecutarLogin(correolg, passwordlg, res, sesion) {
         return __awaiter(this, void 0, void 0, function* () {
-            const respuestas = {
-                valido: true,
-                nombre: 'Juancho',
-                roles: [1, 2]
-            };
-            console.log(sesion);
+            console.log('correo', correolg);
+            console.log('password', passwordlg);
+            var respuestas = yield this._usuarioService.autenticarUsuario(correolg, passwordlg);
+            console.log(respuestas);
             if (respuestas.valido) {
                 sesion.usuario = respuestas.nombre;
                 sesion.roles = respuestas.roles;
-                res.send('ok');
+                res.redirect('Usuarios');
             }
             else {
                 res.redirect('Inicio');
             }
+            console.log(sesion);
         });
     }
     logout(res, sesion) {
         sesion.username = undefined;
         sesion.roles = undefined;
         sesion.destroy();
-        res.redirect('Inicio');
+        res.redirect('/Inicio');
     }
 };
 __decorate([
@@ -66,8 +65,8 @@ __decorate([
 __decorate([
     common_1.Post('login'),
     common_1.HttpCode(200),
-    __param(0, common_1.Body('email')),
-    __param(1, common_1.Body('password')),
+    __param(0, common_1.Body('correolg')),
+    __param(1, common_1.Body('passwordlg')),
     __param(2, common_1.Res()),
     __param(3, common_1.Session()),
     __metadata("design:type", Function),

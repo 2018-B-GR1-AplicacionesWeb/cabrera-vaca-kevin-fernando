@@ -1,6 +1,7 @@
 import {Controller, Get, HttpCode, Res, Req, Post, Body, Session, Param} from '@nestjs/common';
 import { AppService } from './app.service';
 import {UsuarioService} from "./usuario/usuario.service";
+import {RolEntity} from './rol/rol.entity';
 
 @Controller()
 export class AppController {
@@ -20,28 +21,24 @@ export class AppController {
   @Post('login')
   @HttpCode(200)
   async ejecutarLogin(
-      @Body('email') correo: string,
-      @Body('password') password: string,
+      @Body('correolg') correolg: string,
+      @Body('passwordlg') passwordlg: string,
       @Res() res,
       @Session() sesion
   ) {
-
-    const respuestas = {
-      valido:true,
-      nombre: 'Juancho',
-      roles: [1,2]
-    }
-
-
-        console.log(sesion);
-
+    console.log('correo',correolg);
+    console.log('password',passwordlg)
+   var respuestas  : RespuestaSession= await this._usuarioService.autenticarUsuario(correolg,passwordlg);
+        console.log(respuestas);
     if (respuestas.valido) {
       sesion.usuario = respuestas.nombre;
       sesion.roles = respuestas.roles;
-      res.send('ok');
+      res.redirect('Usuarios');
     } else {
       res.redirect('Inicio');
     }
+
+    console.log(sesion)
   }
 
 
@@ -53,7 +50,7 @@ export class AppController {
     sesion.username = undefined;
     sesion.roles = undefined;
     sesion.destroy();
-    res.redirect('Inicio');
+    res.redirect('/Inicio');
   }
 }
 
@@ -69,5 +66,5 @@ export interface Usuario {
 export interface RespuestaSession {
   valido:boolean;
   nombre?:string;
-  roles?: []
+  roles?: RolEntity[]
 }

@@ -21,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/app.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+            <state relative-caret-position="44">
+              <caret line="30" column="105" selection-start-line="30" selection-start-column="105" selection-end-line="30" selection-end-column="105" />
               <folding>
                 <element signature="e#0#95#0" expanded="true" />
               </folding>
@@ -31,13 +31,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/app.service.ts">
+        <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/views/donNadie.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="e#0#44#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -45,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/main.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+            <state relative-caret-position="493">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
                 <element signature="e#132#178#0" expanded="true" />
@@ -56,42 +53,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.controller.ts">
+        <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/views/inicio.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="102" column="20" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="20" />
-              <folding>
-                <element signature="e#22#110#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="23" column="30" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/views/rolesusuarios.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="84" column="49" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/views/rolesusuarios.ejs">
+        <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/views/usuarios.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="84" column="49" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="49" />
+            <state relative-caret-position="469">
+              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/rol/rol.entity.ts">
+        <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+            <state relative-caret-position="65">
+              <caret line="34" column="18" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="18" />
               <folding>
-                <element signature="e#20#62#0" expanded="true" />
+                <element signature="e#22#110#0" expanded="true" />
+                <element signature="n#!!block;n#crearUsuario#0;n#UsuarioController#0" />
+                <element signature="n#!!block;n#Usuarios#0;n#UsuarioController#0" />
+                <element signature="n#!!block;n#eliminarUsuario#0;n#UsuarioController#0" />
+                <element signature="n#!!block;n#rolePorUsuario#0;n#UsuarioController#0" />
+                <element signature="n#!!block;n#eliminarRol#0;n#UsuarioController#0" />
+                <element signature="n#!!block;n#agregarRol#0;n#UsuarioController#0" />
               </folding>
             </state>
           </provider>
@@ -100,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="135">
+              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -110,10 +110,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.entity.ts">
+        <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11">
-              <caret line="5" column="16" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="16" />
+            <state relative-caret-position="-272">
+              <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+              <folding>
+                <element signature="e#20#62#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,8 +124,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+            <state relative-caret-position="170">
+              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
               <folding>
                 <element signature="e#19#57#0" expanded="true" />
               </folding>
@@ -148,6 +151,7 @@
       <find>preguntarIdUsuario</find>
       <find>rolesusu</find>
       <find>rolesusuario</find>
+      <find>RolUsuario</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Kevin Cabrera\Documents\GitHub\cabrera-vaca-kevin-fernando</dir>
@@ -187,7 +191,6 @@
         <option value="$PROJECT_DIR$/03-https/videos/views/inicio.ejs" />
         <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario.service.ts" />
         <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/app.service.ts" />
-        <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/main.ts" />
         <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuarios/usuario.entity.ts" />
         <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuarios/usuario.service.ts" />
         <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuarios/usuario.module.ts" />
@@ -198,32 +201,48 @@
         <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/views/holaUsuario.ejs" />
         <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/views/donNadie.ejs" />
         <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.entity.ts" />
-        <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/views/usuarios.ejs" />
-        <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/app.controller.ts" />
         <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/rol-usuario/rol-usuario.entity.ts" />
         <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/rol/rol.entity.ts" />
         <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/app.module.ts" />
         <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/rol/rol.module.ts" />
         <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/rol/rol.controller.ts" />
         <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/rol/rol.service.ts" />
-        <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.service.ts" />
-        <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.controller.ts" />
-        <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.module.ts" />
         <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/views/rolesusuarios.ejs" />
+        <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.module.ts" />
+        <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.controller.ts" />
+        <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.service.ts" />
+        <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/main.ts" />
+        <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/src/app.controller.ts" />
+        <option value="$PROJECT_DIR$/77-Exmen_ParteOne/project/views/usuarios.ejs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="75" />
-    <option name="y" value="396" />
-    <option name="width" value="1185" />
-    <option name="height" value="835" />
+    <option name="x" value="952" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cabrera-vaca-kevin-fernando" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cabrera-vaca-kevin-fernando" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cabrera-vaca-kevin-fernando" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cabrera-vaca-kevin-fernando" type="462c0819:PsiDirectoryNode" />
+              <item name="96-Proyecto_Agregar_Eliminar_Buscar" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -254,39 +273,7 @@
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="77-Exmen_ParteOne" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="project" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="rol" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="cabrera-vaca-kevin-fernando" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="77-Exmen_ParteOne" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="project" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="usuario" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="cabrera-vaca-kevin-fernando" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="77-Exmen_ParteOne" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="project" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="cabrera-vaca-kevin-fernando" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cabrera-vaca-kevin-fernando" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cabrera-vaca-kevin-fernando" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cabrera-vaca-kevin-fernando" type="462c0819:PsiDirectoryNode" />
-              <item name="96-Proyecto_Agregar_Eliminar_Buscar" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -419,11 +406,12 @@
       <workItem from="1549509687550" duration="21739000" />
       <workItem from="1549537055003" duration="2267000" />
       <workItem from="1549547788826" duration="15155000" />
+      <workItem from="1549572133026" duration="28706000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195689000" />
+    <option name="totallyTimeSpent" value="224395000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -436,15 +424,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17580965" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17448777" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32808024" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32719547" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32808024" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39974126" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -592,20 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/views/holaUsuario.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/views/donNadie.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/03-https/videos/src/noticia/noticia-entity.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -711,13 +686,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/rol-usuario/rol-usuario.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/rol-usuario/rol-usuario.entity.ts" />
     <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/node_modules/@nestjs/core/injector/injector.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -725,10 +694,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/views/usuarios.ejs">
+    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/views/holaUsuario.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret selection-end-line="5" selection-end-column="8" />
+        <state relative-caret-position="85">
+          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/rol/rol.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/rol/rol.entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -742,63 +725,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/rol/rol.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/rol/rol.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="16" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/views/inicio.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="102" column="20" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="20" />
-          <folding>
-            <element signature="e#22#110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/app.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#95#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -813,10 +745,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/views/donNadie.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/views/inicio.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+          <folding>
+            <element signature="e#19#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="18" />
+          <folding>
+            <element signature="e#22#110#0" expanded="true" />
+            <element signature="n#!!block;n#crearUsuario#0;n#UsuarioController#0" />
+            <element signature="n#!!block;n#Usuarios#0;n#UsuarioController#0" />
+            <element signature="n#!!block;n#eliminarUsuario#0;n#UsuarioController#0" />
+            <element signature="n#!!block;n#rolePorUsuario#0;n#UsuarioController#0" />
+            <element signature="n#!!block;n#eliminarRol#0;n#UsuarioController#0" />
+            <element signature="n#!!block;n#agregarRol#0;n#UsuarioController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding>
+            <element signature="e#20#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
             <element signature="e#132#178#0" expanded="true" />
@@ -824,37 +823,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.service.ts">
+    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/app.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+        <state relative-caret-position="44">
+          <caret line="30" column="105" selection-start-line="30" selection-start-column="105" selection-end-line="30" selection-end-column="105" />
           <folding>
-            <element signature="e#20#62#0" expanded="true" />
+            <element signature="e#0#95#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/usuario/usuario.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-          <folding>
-            <element signature="e#19#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/src/rol/rol.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/views/rolesusuarios.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="84" column="49" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="49" />
+        <state relative-caret-position="254">
+          <caret line="84" column="49" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/77-Exmen_ParteOne/project/views/usuarios.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
         </state>
       </provider>
     </entry>
