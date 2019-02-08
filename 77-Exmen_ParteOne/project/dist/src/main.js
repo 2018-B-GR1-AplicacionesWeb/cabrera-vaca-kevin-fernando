@@ -14,6 +14,7 @@ const http_server = require('http-server');
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const FileSession = require("session-file-store");
+const express = require("express");
 const FileStore = FileSession(session);
 function bootstrap() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -28,6 +29,7 @@ function bootstrap() {
             name: 'server-session-id',
             store: new FileStore()
         }));
+        app.use(express.static('publico'));
         yield app.listen(3001);
     });
 }

@@ -113,7 +113,9 @@ let UsuarioService = class UsuarioService {
             valor = valor + 1;
             return rol.idRol === rolABorrarID;
         });
+        console.log('Antiguos Roles', rolesDelUsuario);
         var nuevosRoles = rolesDelUsuario.splice(valor, 1);
+        console.log('Nuevos Roles', nuevosRoles);
         const usuarioEntity = this._usuarioRepository.create({
             idUsuario: usuario.idUsuario,
             nombreUsuario: usuario.nombreUsuario,

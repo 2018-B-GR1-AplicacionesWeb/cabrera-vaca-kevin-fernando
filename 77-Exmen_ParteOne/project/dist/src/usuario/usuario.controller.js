@@ -36,8 +36,20 @@ let UsuarioController = class UsuarioController {
             response.redirect('Usuarios');
         });
     }
-    Usuarios(res, busqueda) {
+    Usuarios(res, busqueda, accion, usuarioName, sesion) {
         return __awaiter(this, void 0, void 0, function* () {
+            console.log('Sesion desde Usuarios', sesion);
+            var visibleUsuairio = false;
+            var visbleAdmin = false;
+            if (sesion.roles != undefined) {
+                const rolesDelUsuario = sesion.roles;
+                const indiceRol = rolesDelUsuario.findIndex((rol) => {
+                    return rol.idRol === 2;
+                });
+                if (indiceRol) {
+                    visbleAdmin = true;
+                }
+            }
             let usuariosct;
             if (busqueda) {
                 const consulta = {
@@ -55,16 +67,42 @@ let UsuarioController = class UsuarioController {
             else {
                 usuariosct = yield this._usuarioService.buscarUsuarios();
             }
+            let mensaje = undefined;
+            let clase = undefined;
+            if (accion) {
+                switch (accion) {
+                    case 'borrar':
+                        mensaje = 'Registro eliminado.';
+                        clase = 'alert alert-danger';
+                        break;
+                    case 'actualizar':
+                        mensaje = 'Registro actualizado.';
+                        clase = 'alert alert-info';
+                        break;
+                    case 'error':
+                        mensaje = 'Error';
+                        break;
+                }
+            }
+            console.log('Mensaje', mensaje);
+            console.log('clase', clase);
             res.render('Usuarios', {
-                usuarios: usuariosct
+                usuarios: usuariosct,
+                mensaje: mensaje,
+                usuaroView: visibleUsuairio,
+                adminView: visbleAdmin
             });
         });
+    }
+    redireccionar(response) {
+        response.render('holaUsuario');
     }
     eliminarUsuario(response, idUsuario) {
         return __awaiter(this, void 0, void 0, function* () {
             const usuarioBorrado = yield this._usuarioService
                 .eliminarUsuario(Number(idUsuario));
-            response.redirect('/Usuarios');
+            var mensaje = '?accion=borrar';
+            response.redirect('/Usuarios' + mensaje);
         });
     }
     rolePorUsuario(res, idUsuario) {
@@ -95,11 +133,11 @@ let UsuarioController = class UsuarioController {
             const usuarioFound = yield this._usuarioService.buscarUsuarioPorId(Number(idUsuario));
             const rolesUsuario = yield this._usuarioService.obtenerRolesDeUnUsuario(Number(idUsuario));
             const allRoles = yield this._rolService.buscarRoles();
-            var mensaje = '';
+            var mensaje = undefined;
             if (!this._usuarioService.agregarRolAUnUsuario(usuarioFound, rolNuevo, rolesUsuario, allRoles)) {
-                mensaje = 'El usuario ya posee el ROL';
+                mensaje = '?accion = error';
             }
-            response.redirect('/Usuarios', { mensajeExtra: mensaje });
+            response.redirect('/Usuarios' + mensaje);
         });
     }
 };
@@ -115,10 +153,20 @@ __decorate([
     common_1.Get('Usuarios'),
     __param(0, common_1.Res()),
     __param(1, common_1.Query('busqueda')),
+    __param(2, common_1.Query('accion')),
+    __param(3, common_1.Query('usuarioName')),
+    __param(4, common_1.Session()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, String]),
+    __metadata("design:paramtypes", [Object, String, String, String, Object]),
     __metadata("design:returntype", Promise)
 ], UsuarioController.prototype, "Usuarios", null);
+__decorate([
+    common_1.Get('holaUsuario'),
+    __param(0, common_1.Res()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], UsuarioController.prototype, "redireccionar", null);
 __decorate([
     common_1.Post('eliminarUsuario/:idUsuario'),
     __param(0, common_1.Res()),

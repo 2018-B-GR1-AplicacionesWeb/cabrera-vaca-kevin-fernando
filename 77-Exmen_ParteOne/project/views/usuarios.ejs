@@ -1,15 +1,33 @@
-<style>
-    table,th,td{
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-</style>
+<!DOCTYPE html>
 
 <header>
-
+    <style>
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
 </header>
 
 <body>
+
+<% if(!adminView){ %>
+    <META HTTP-EQUIV="REFRESH" CONTENT="2;URL=/holaUsuario">
+<%} %>
+
+<% const existeMensaje = typeof mensaje !== "undefined" %>
+
+<% if(existeMensaje){ %>
+
+    <div class="alert alert-info" role="alert">
+            <span class="font-weight-bold">
+                MENSAJE
+            </span> : <%= mensaje %>
+    </div>
+<% } %>
+
+
+
 
 <h1>Usuarios</h1>
 

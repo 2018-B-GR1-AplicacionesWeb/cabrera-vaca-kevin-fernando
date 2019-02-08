@@ -1,13 +1,14 @@
 // usuario.controller
 import {
     Body,
-    Controller, Get, Param, Post, Query, Res
+    Controller, Get, Param, Post, Query, Res, Session
 } from '@nestjs/common';
 import {Usuario} from "../app.controller";
 import {UsuarioService} from "./usuario.service";
 import {UsuarioEntity} from './usuario.entity';
 import {FindManyOptions, Like} from "typeorm";
 import {RolService} from "../rol/rol.service";
+import {RolEntity} from "../rol/rol.entity";
 
 @Controller()
 export class UsuarioController {
@@ -36,8 +37,34 @@ export class UsuarioController {
     async Usuarios(
         @Res() res,
         @Query('busqueda') busqueda: string,
+        @Query('accion') accion: string,
+        @Query('usuarioName') usuarioName: string,
+        @Session () sesion
+
     )
     {
+
+        console.log('Sesion desde Usuarios',sesion);
+        var visibleUsuairio = false;
+
+        var visbleAdmin= false;
+
+        if (sesion.roles != undefined){
+            const rolesDelUsuario : RolEntity[] = sesion.roles
+            const indiceRol = rolesDelUsuario.findIndex(
+                (rol)=>{
+                    return rol.idRol === 2;
+                }
+            )
+
+            if(indiceRol){
+                visbleAdmin = true;
+            }
+        }
+
+
+
+
         let usuariosct: UsuarioEntity[];
 
         if (busqueda) {
@@ -63,16 +90,49 @@ export class UsuarioController {
         //const derp = await this._usuarioService.obtenerRoles(5);
         //console.log(derp);
 
+        let mensaje = undefined;
+        let clase = undefined;
+
+        if (accion) {
+            switch (accion) {
+                case 'borrar':
+                    mensaje = 'Registro eliminado.';
+                    clase = 'alert alert-danger';
+                    break;
+
+                case 'actualizar':
+                    mensaje = 'Registro actualizado.';
+                    clase = 'alert alert-info';
+                    break;
+
+                case 'error':
+                    mensaje = 'Error';
+                    break;
+            }
+        }
+
+        console.log('Mensaje',mensaje);
+        console.log('clase',clase);
 
         res.render(
             'Usuarios',
             {
-                usuarios: usuariosct
+                usuarios: usuariosct,
+                mensaje : mensaje,
+                usuaroView: visibleUsuairio,
+                adminView: visbleAdmin
             }
         );
     }
 
 
+    @Get('holaUsuario')
+    redireccionar(
+        @Res() response,
+    ){
+        response.render('holaUsuario');
+
+    }
 
     @Post('eliminarUsuario/:idUsuario')
     async eliminarUsuario(
@@ -82,7 +142,9 @@ export class UsuarioController {
         const  usuarioBorrado = await this._usuarioService
             .eliminarUsuario(Number(idUsuario));
 
-        response.redirect('/Usuarios')
+        var mensaje = '?accion=borrar'
+
+        response.redirect('/Usuarios'+mensaje);
     }
 
     @Get('RolUsuario/:idUsuario')
@@ -133,13 +195,13 @@ export class UsuarioController {
         const usuarioFound = await this._usuarioService.buscarUsuarioPorId(Number(idUsuario));
         const rolesUsuario = await this._usuarioService.obtenerRolesDeUnUsuario(Number(idUsuario));
         const allRoles = await this._rolService.buscarRoles();
-        var mensaje = '';
+        var mensaje = undefined;
 
         if(!this._usuarioService.agregarRolAUnUsuario(usuarioFound,rolNuevo,rolesUsuario,allRoles)){
-             mensaje = 'El usuario ya posee el ROL';
+            mensaje = '?accion = error';
         }
 
-        response.redirect('/Usuarios',{mensajeExtra : mensaje })
+        response.redirect('/Usuarios' + mensaje);
     }
 
 
