@@ -12,7 +12,7 @@ import {
 
 const hoy =(new Date());
 
-export class CreateUsuarioDto {
+export class CreateUsuarioDto  {
     @IsNotEmpty()
     @IsString()
     @IsAlphanumeric()

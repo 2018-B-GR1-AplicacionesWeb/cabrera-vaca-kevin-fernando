@@ -30,7 +30,7 @@ export class UsuarioController {
     ){
         const objValUser = new CreateUsuarioDto();
 
-        //const hoy =  Date();
+        //const hoy = new Date();
 
         objValUser.nombre = usuario.nombreUsuario;
         objValUser.correo = usuario.correo;
@@ -84,7 +84,7 @@ export class UsuarioController {
             }
         }
 
-
+console.log('Es visible para el admin ?',visbleAdmin)
 
 
         let usuariosct: UsuarioEntity[];
@@ -141,7 +141,6 @@ export class UsuarioController {
             {
                 usuarios: usuariosct,
                 mensaje : mensaje,
-                usuaroView: visibleUsuairio,
                 adminView: visbleAdmin
             }
         );

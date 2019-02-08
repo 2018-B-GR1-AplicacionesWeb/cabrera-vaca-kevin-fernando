@@ -67,6 +67,7 @@ let UsuarioController = class UsuarioController {
                     visbleAdmin = true;
                 }
             }
+            console.log('Es visible para el admin ?', visbleAdmin);
             let usuariosct;
             if (busqueda) {
                 const consulta = {
@@ -106,7 +107,6 @@ let UsuarioController = class UsuarioController {
             res.render('Usuarios', {
                 usuarios: usuariosct,
                 mensaje: mensaje,
-                usuaroView: visibleUsuairio,
                 adminView: visbleAdmin
             });
         });

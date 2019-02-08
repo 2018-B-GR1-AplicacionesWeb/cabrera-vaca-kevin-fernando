@@ -28,7 +28,7 @@ async function bootstrap() {
   app.use(
       session({
         secret: 'Ante la duda la mas tetuda',
-        resave: false,
+        resave: true,
         saveUninitialized: true,
         cookie: {secure: false},
         name: 'server-session-id',
