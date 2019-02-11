@@ -33,14 +33,20 @@ export class AppController {
     if (respuestas.valido) {
       sesion.usuario = respuestas.nombre;
       sesion.roles = respuestas.roles;
-      res.redirect('Usuarios');
+      console.log(sesion)
+      console.log(respuestas)
+
+            res.send('OK');
+
     } else {
       res.redirect('Inicio');
     }
-
-    console.log(sesion)
   }
 
+  @Get('Grilla')
+  grilla(@Res() res,){
+    res.render('grillas');
+  }
 
   @Get('logout')
   logout(

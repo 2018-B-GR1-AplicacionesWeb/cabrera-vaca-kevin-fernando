@@ -40,13 +40,17 @@ let AppController = class AppController {
             if (respuestas.valido) {
                 sesion.usuario = respuestas.nombre;
                 sesion.roles = respuestas.roles;
-                res.redirect('Usuarios');
+                console.log(sesion);
+                console.log(respuestas);
+                res.send('OK');
             }
             else {
                 res.redirect('Inicio');
             }
-            console.log(sesion);
         });
+    }
+    grilla(res) {
+        res.render('grillas');
     }
     logout(res, sesion) {
         sesion.username = undefined;
@@ -73,6 +77,13 @@ __decorate([
     __metadata("design:paramtypes", [String, String, Object, Object]),
     __metadata("design:returntype", Promise)
 ], AppController.prototype, "ejecutarLogin", null);
+__decorate([
+    common_1.Get('Grilla'),
+    __param(0, common_1.Res()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "grilla", null);
 __decorate([
     common_1.Get('logout'),
     __param(0, common_1.Res()),

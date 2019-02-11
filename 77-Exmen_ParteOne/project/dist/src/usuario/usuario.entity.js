@@ -30,10 +30,6 @@ __decorate([
     __metadata("design:type", String)
 ], UsuarioEntity.prototype, "password", void 0);
 __decorate([
-    typeorm_1.Column(),
-    __metadata("design:type", Date)
-], UsuarioEntity.prototype, "fechaNacimiento", void 0);
-__decorate([
     typeorm_1.ManyToMany(type => rol_entity_1.RolEntity),
     typeorm_1.JoinTable(),
     __metadata("design:type", Array)

@@ -64,7 +64,7 @@
 <h2> Agregar Roles</h2>
 
 
-<form action="agregarRol/<%=usuario.idUsuario%>" method="POST">
+<form action="/agregarRol/<%=usuario.idUsuario%>" method="POST">
     <select id="rolNuevo" name="rolNuevo" onChange="imprimirValor()">
         <option value="" disabled selected>Seleccione un rol...</option>
         <% allroles.forEach((rol)=> {%>
@@ -80,9 +80,9 @@
 <script>
     function imprimirValor(){
         var select = document.getElementById("rolNuevo");
-        /*var options=document.getElementsByTagName("option");
+        //var options=document.getElementsByTagName("option");
         console.log("ID",select.value);
-        console.log("Option",select.innerText);*/
+        //console.log("Option",select.innerText);
     }
 </script>
 

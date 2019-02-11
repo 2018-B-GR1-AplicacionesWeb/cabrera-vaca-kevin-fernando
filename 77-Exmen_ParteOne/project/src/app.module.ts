@@ -17,7 +17,7 @@ import {UsuarioModule} from "./usuario/usuario.module";
       username: 'root',
       password: 'P@ssw0rd',
       database: 'examen',
-      synchronize:false,
+      synchronize:true,
       dropSchema:false,
       entities : [
         UsuarioEntity,

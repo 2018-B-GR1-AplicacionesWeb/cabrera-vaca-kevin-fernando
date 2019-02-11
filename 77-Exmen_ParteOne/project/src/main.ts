@@ -16,25 +16,27 @@ const FileStore = FileSession(session);
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  app.use(cookieParser(
-      'ante la duda la mas tetuda',
-      {
-        //opciones
-      }
-  ));
+
 
 
     app.set('view engine', 'ejs');
   app.use(
       session({
         secret: 'Ante la duda la mas tetuda',
-        resave: true,
+        resave: false,
         saveUninitialized: true,
         cookie: {secure: false},
         name: 'server-session-id',
         store: new FileStore()
       })
   );
+
+    app.use(cookieParser(
+        'ante la duda la mas tetuda',
+        {
+            //opciones
+        }
+    ));
 
   app.use(express.static('publico'))
   await app.listen(3001);

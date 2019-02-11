@@ -25,7 +25,7 @@ AppModule = __decorate([
                 username: 'root',
                 password: 'P@ssw0rd',
                 database: 'examen',
-                synchronize: false,
+                synchronize: true,
                 dropSchema: false,
                 entities: [
                     usuario_entity_1.UsuarioEntity,

@@ -10,7 +10,7 @@ import {
     Validator
 } from "class-validator";
 
-const hoy =(new Date());
+//const hoy =(new Date());
 
 export class CreateUsuarioDto  {
     @IsNotEmpty()
@@ -25,13 +25,9 @@ export class CreateUsuarioDto  {
 
     @IsNotEmpty()
     @IsString()
-    @MinLength(11)
-    @Contains("123456789")
-    @Contains("ABCDEFGHIJKLMNOPQRSTUVW")
+    @MinLength(5)
     password: string;
 
-    @IsDate()
     @IsNotEmpty()
-    @MaxDate(hoy )
     fecha: Date;
 }

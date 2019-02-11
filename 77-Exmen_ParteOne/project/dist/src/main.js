@@ -19,16 +19,16 @@ const FileStore = FileSession(session);
 function bootstrap() {
     return __awaiter(this, void 0, void 0, function* () {
         const app = yield core_1.NestFactory.create(app_module_1.AppModule);
-        app.use(cookieParser('ante la duda la mas tetuda', {}));
         app.set('view engine', 'ejs');
         app.use(session({
             secret: 'Ante la duda la mas tetuda',
-            resave: true,
+            resave: false,
             saveUninitialized: true,
             cookie: { secure: false },
             name: 'server-session-id',
             store: new FileStore()
         }));
+        app.use(cookieParser('ante la duda la mas tetuda', {}));
         app.use(express.static('publico'));
         yield app.listen(3001);
     });

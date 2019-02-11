@@ -10,7 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const class_validator_1 = require("class-validator");
-const hoy = (new Date());
 class CreateUsuarioDto {
 }
 __decorate([
@@ -28,15 +27,11 @@ __decorate([
 __decorate([
     class_validator_1.IsNotEmpty(),
     class_validator_1.IsString(),
-    class_validator_1.MinLength(11),
-    class_validator_1.Contains("123456789"),
-    class_validator_1.Contains("ABCDEFGHIJKLMNOPQRSTUVW"),
+    class_validator_1.MinLength(5),
     __metadata("design:type", String)
 ], CreateUsuarioDto.prototype, "password", void 0);
 __decorate([
-    class_validator_1.IsDate(),
     class_validator_1.IsNotEmpty(),
-    class_validator_1.MaxDate(hoy),
     __metadata("design:type", Date)
 ], CreateUsuarioDto.prototype, "fecha", void 0);
 exports.CreateUsuarioDto = CreateUsuarioDto;

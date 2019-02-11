@@ -17,8 +17,6 @@ export class UsuarioEntity {
     @Column()
     password : string;
 
-    @Column()
-    fechaNacimiento : Date;
 
     @ManyToMany(type => RolEntity)
     @JoinTable()

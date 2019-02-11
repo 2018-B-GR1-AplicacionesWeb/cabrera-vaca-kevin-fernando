@@ -41,7 +41,8 @@ let UsuarioController = class UsuarioController {
             const errores = yield class_validator_1.validate(objValUser);
             console.log('Errores en la Validacion:', errores);
             const hayErrores = errores.length > 0;
-            if (hayErrores) {
+            var fechaValida = this._usuarioService.fechaValida(usuario.fechaNacimiento);
+            if (hayErrores || !fechaValida) {
                 response.render('inicio', {
                     mensaje: "Datos no validos"
                 });
@@ -147,14 +148,14 @@ let UsuarioController = class UsuarioController {
     }
     agregarRol(response, idUsuario, rolNuevo) {
         return __awaiter(this, void 0, void 0, function* () {
+            console.log('UsuaioId a agrgar', idUsuario);
+            console.log('RolId a agregar', rolNuevo);
             const usuarioFound = yield this._usuarioService.buscarUsuarioPorId(Number(idUsuario));
             const rolesUsuario = yield this._usuarioService.obtenerRolesDeUnUsuario(Number(idUsuario));
             const allRoles = yield this._rolService.buscarRoles();
             var mensaje = undefined;
-            if (!this._usuarioService.agregarRolAUnUsuario(usuarioFound, rolNuevo, rolesUsuario, allRoles)) {
-                mensaje = '?accion = error';
-            }
-            response.redirect('/Usuarios' + mensaje);
+            yield this._usuarioService.agregarRolAUnUsuario(usuarioFound, rolNuevo, rolesUsuario, allRoles);
+            response.redirect('/Usuarios');
         });
     }
 };

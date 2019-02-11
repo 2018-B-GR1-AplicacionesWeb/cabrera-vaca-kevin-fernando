@@ -42,7 +42,9 @@ export class UsuarioController {
 
         const hayErrores = errores.length >0
 
-        if(hayErrores ){
+        var fechaValida = this._usuarioService.fechaValida(usuario.fechaNacimiento);
+
+        if(hayErrores || !fechaValida ){
             response.render('inicio',{
                 mensaje: "Datos no validos"
             })
@@ -65,7 +67,6 @@ export class UsuarioController {
 
     )
     {
-
         console.log('Sesion desde Usuarios',sesion);
         var visibleUsuairio = false;
 
@@ -213,17 +214,17 @@ console.log('Es visible para el admin ?',visbleAdmin)
         @Param('idUsuario') idUsuario : number,
         @Body ('rolNuevo') rolNuevo : number
     ){
+        console.log('UsuaioId a agrgar',idUsuario);
+        console.log('RolId a agregar',rolNuevo);
+
         const usuarioFound = await this._usuarioService.buscarUsuarioPorId(Number(idUsuario));
         const rolesUsuario = await this._usuarioService.obtenerRolesDeUnUsuario(Number(idUsuario));
+
         const allRoles = await this._rolService.buscarRoles();
         var mensaje = undefined;
 
-        if(!this._usuarioService.agregarRolAUnUsuario(usuarioFound,rolNuevo,rolesUsuario,allRoles)){
-            mensaje = '?accion = error';
-        }
+        await this._usuarioService.agregarRolAUnUsuario(usuarioFound,rolNuevo,rolesUsuario,allRoles);
 
-        response.redirect('/Usuarios' + mensaje);
+        response.redirect('/Usuarios');
     }
-
-
 }

@@ -108,49 +108,53 @@ let UsuarioService = class UsuarioService {
         }
     }
     eliminarRolDeUnUsuario(usuario, rolABorrarID, rolesDelUsuario) {
-        var valor = 0;
         const indiceRol = rolesDelUsuario.findIndex((rol) => {
-            valor = valor + 1;
-            return rol.idRol === rolABorrarID;
+            return rol.idRol === +rolABorrarID;
         });
+        console.log("Supuesto ID que me viene para busacar y eliminar", rolABorrarID);
         console.log('Antiguos Roles', rolesDelUsuario);
-        var nuevosRoles = rolesDelUsuario.splice(valor, 1);
-        console.log('Nuevos Roles', nuevosRoles);
+        console.log("Numero del Indice del Rol a Eliminar", indiceRol);
+        rolesDelUsuario.splice(indiceRol, 1);
         const usuarioEntity = this._usuarioRepository.create({
             idUsuario: usuario.idUsuario,
             nombreUsuario: usuario.nombreUsuario,
             correo: usuario.correo,
             password: usuario.password,
             fechaNacimiento: usuario.fechaNacimiento,
-            roles: nuevosRoles
+            roles: rolesDelUsuario
         });
         return this._usuarioRepository.save(usuarioEntity);
     }
     agregarRolAUnUsuario(usuario, rolAAgregarID, rolesDelUsuario, allRoles) {
-        const yaExiste = rolesDelUsuario.findIndex((rol) => {
-            if (rol.idRol === rolAAgregarID) {
-                return true;
-            }
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log("rolAAgregarId", rolAAgregarID);
+            console.log("Allroles", allRoles);
+            var newRolAAgregar = allRoles.find((rol) => {
+                console.log('rol', rol);
+                console.log('rol', rolAAgregarID);
+                if (rol.idRol === +rolAAgregarID) {
+                    console.log("Rol Encontrado en All", rol);
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            });
+            console.log("Nuevo Rol a Agregar", newRolAAgregar);
+            var newRoles = rolesDelUsuario;
+            newRoles.push(newRolAAgregar);
+            console.log("Nuevos roles", newRoles);
+            const usuarioEntity = this._usuarioRepository.create({
+                idUsuario: usuario.idUsuario,
+                nombreUsuario: usuario.nombreUsuario,
+                correo: usuario.correo,
+                password: usuario.password,
+                fechaNacimiento: usuario.fechaNacimiento,
+                roles: newRoles
+            });
+            console.log("Usuario con un nuevo rol", usuarioEntity);
+            return this._usuarioRepository.save(usuarioEntity);
         });
-        if (yaExiste) {
-            return null;
-        }
-        var newRolAAgregar = allRoles.find((rol) => {
-            if (rol.idRol === rolAAgregarID)
-                return true;
-        });
-        console.log(newRolAAgregar);
-        var newRoles = rolesDelUsuario;
-        newRoles.push(newRolAAgregar);
-        const usuarioEntity = this._usuarioRepository.create({
-            idUsuario: usuario.idUsuario,
-            nombreUsuario: usuario.nombreUsuario,
-            correo: usuario.correo,
-            password: usuario.password,
-            fechaNacimiento: usuario.fechaNacimiento,
-            roles: newRoles
-        });
-        return this._usuarioRepository.save(usuarioEntity);
     }
     correoValido(valor) {
         var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
